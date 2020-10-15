@@ -73,3 +73,7 @@ body {
 .testing_heading{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.css-class-test{
+    color: green;
+}
