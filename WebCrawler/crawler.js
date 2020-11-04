@@ -26,7 +26,7 @@ function Scrape(link, filename){
 
 
 
-
+        var arrImage = [] ;
         var arrItems = [] ;
         var arrPrice = [] ;
         $('.myProductName span').each((i, el) => {
@@ -42,6 +42,18 @@ function Scrape(link, filename){
             arrPrice.push(removed);
         });
 
+        $('.image a').each((i, el) => {
+            const image = $(el).text();
+            //const removefirst = Price.trim();
+            //var removed = removefirst.replace(/\s/g, '');
+            //removed = removed.replace("IncludingVAT",'');
+            var FIndex = image.indexOf('/repository');
+            var last = image.lastIndexOf('jpg');
+            var src = image.slice(FIndex,last);
+            arrImage.push('https://evetech.co.za'+src+'jpg');
+            
+        });
+        console.log(arrImage);
         // for( var i = 0 ; i<= arrItems.length; i++){
         //     if(res[i] != undefined){
         //         console.log("display "+ i);
@@ -59,7 +71,8 @@ function Scrape(link, filename){
         for( var i = 0 ; i< arrItems.length; i++){
             objGPU.items.push({
                 name: arrItems[i],
-                price: arrPrice[i]
+                price: arrPrice[i],
+                url: arrImage[i]
             });
         }
         //write to Json file
