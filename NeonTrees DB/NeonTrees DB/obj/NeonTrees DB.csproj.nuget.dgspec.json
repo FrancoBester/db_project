@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\John\\source\\repos\\NeonTrees DB\\NeonTrees DB\\NeonTrees DB.csproj": {}
+    "C:\\Univercity IT\\Third Year 2020\\Second semester\\CMPG 321 Databases\\db_project\\NeonTrees DB\\NeonTrees DB\\NeonTrees DB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\John\\source\\repos\\NeonTrees DB\\NeonTrees DB\\NeonTrees DB.csproj": {
+    "C:\\Univercity IT\\Third Year 2020\\Second semester\\CMPG 321 Databases\\db_project\\NeonTrees DB\\NeonTrees DB\\NeonTrees DB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\John\\source\\repos\\NeonTrees DB\\NeonTrees DB\\NeonTrees DB.csproj",
+        "projectUniqueName": "C:\\Univercity IT\\Third Year 2020\\Second semester\\CMPG 321 Databases\\db_project\\NeonTrees DB\\NeonTrees DB\\NeonTrees DB.csproj",
         "projectName": "NeonTrees DB",
-        "projectPath": "C:\\Users\\John\\source\\repos\\NeonTrees DB\\NeonTrees DB\\NeonTrees DB.csproj",
-        "packagesPath": "C:\\Users\\John\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\John\\source\\repos\\NeonTrees DB\\NeonTrees DB\\obj\\",
+        "projectPath": "C:\\Univercity IT\\Third Year 2020\\Second semester\\CMPG 321 Databases\\db_project\\NeonTrees DB\\NeonTrees DB\\NeonTrees DB.csproj",
+        "packagesPath": "C:\\Users\\EnricoIT\\.nuget\\packages\\",
+        "outputPath": "C:\\Univercity IT\\Third Year 2020\\Second semester\\CMPG 321 Databases\\db_project\\NeonTrees DB\\NeonTrees DB\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\John\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\EnricoIT\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -43,6 +43,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Devart.Data.Oracle.EFCore": {
+              "target": "Package",
+              "version": "[9.13.1127, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.9, )"
@@ -66,6 +70,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[3.1.9, )"
+            },
+            "Oracle.ManagedDataAccess.Core": {
+              "target": "Package",
+              "version": "[2.19.91, )"
             }
           },
           "imports": [
