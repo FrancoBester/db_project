@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\api",
+    "\\api\\models",
+    "\\api\\nodejs-mongodb",
+    "\\api\\routes",
+    "\\api\\steam",
+    "\\models",
+    "\\routes"
+  ],
+  "SelectedNode": "\\api\\routes\\RawProduct.js",
+  "PreviewInSolutionExplorer": false
+}
