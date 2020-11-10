@@ -1,7 +1,75 @@
 ﻿@{
-    ViewData["Title"] = "Psu Page";
+    ViewData["Title"] = "Power Supplies";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<p> This is the page for pwoer stuff <P>
+<link rel="stylesheet" href="~/css/styles.css" />
+
+<table style="width: 100%" class="table">
+    <colgroup>
+        <col span="1" style="width: 10%;">
+        <col span="1" style="width: 15%;">
+        <col span="1" style="width: 10%;">
+        <col span="1" style="width: 12%;">
+        <col span="1" style="width: 13%;">
+        <col span="1" style="width: 15%;">
+        <col span="1" style="width: 15%;">
+    </colgroup>
+
+    <tr>
+        <th></th>
+        <th>Brand</th>
+        <th>Name</th>
+        <th>Wattige</th>
+        <th>Efficiency Rating</th>
+        <th>Module Cables</th>
+        <th>Price</th>
+    </tr>
+    <tr>
+        <td><img src="~/images/500w.gif" class="img_cooler" /></td>
+        <td>Gamdias</td>
+        <td>Kratos</td>
+        <td>500W</td>
+        <td>80+ White</td>
+        <td>No</td>
+        <td>R 699</td>
+    </tr>
+    <tr>
+        <td><img src="~/images/700w.jpg" class="img_cooler" /></td>
+        <td>Antec</td>
+        <td>VP</td>
+        <td>700W</td>
+        <td>80+ White</td>
+        <td>No</td>
+        <td>R 1,299</td>
+    </tr>
+    <tr>
+        <td><img src="~/images/650w.jpg" class="img_cooler" /></td>
+        <td>Corsair</td>
+        <td>RMx series</td>
+        <td>650W</td>
+        <td>80+ Gold</td>
+        <td>Yes</td>
+        <td>R 1,999</td>
+    </tr>
+    <tr>
+        <td><img src="~/images/750w.jpg" class="img_cooler" /></td>
+        <td>Asus</td>
+        <td>ROG Strix</td>
+        <td>750W</td>
+        <td>80+ Gold</td>
+        <td>Yes</td>
+        <td>R 2,800</td>
+    </tr>
+    <tr>
+        <td><img src="~/images/1300w.jpg" class="img_cooler" /></td>
+        <td>Antec</td>
+        <td>Signature</td>
+        <td>1300W</td>
+        <td>80+ Platinum</td>
+        <td>Yes</td>
+        <td>R 4,999</td>
+    </tr>
+
+</table>
