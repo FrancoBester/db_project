@@ -1,82 +1,65 @@
 ﻿@{
-    ViewData["Title"] = "Processors";
+    ViewData["Title"] = "Processors Available";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<link rel="stylesheet" href="~/css/styles.css" />
-
-<table style="width: 100%" class="table">
+<table class="table">
     <colgroup>
-        <col span="1" style="width: 10%;">
-        <col span="1" style="width: 10%;">
-        <col span="1" style="width: 10%;">
+        <col span="1" style="width: 25%; background-color:white">
+        <col span="1" style="width: 25%;">
+        <col span="1" style="width: 20%;">
         <col span="1" style="width: 15%;">
         <col span="1" style="width: 15%;">
-        <col span="1" style="width: 15%;">
-        <col span="1" style="width: 15%;">
-        <col span="1" style="width: 10%;">
     </colgroup>
 
-    <tr>
-        <th></th>
-        <th>Brand</th>
-        <th>Name</th>
-        <th>Core/Thread Count</th>
-        <th>Base Clock Speed</th>
-        <th>Boost Clock Speed</th>
-        <th>Includes Cooler</th>
-        <th>Price</th>
-    </tr>
-    <tr>
-        <td><img src="~/images/3600.jpg" class="img_cooler" /></td>
-        <td>AMD</td>
-        <td>Ryzen 5 3600</td>
-        <td>6/12</td>
-        <td>3.6 GHz</td>
-        <td>4.2 Ghz</td>
-        <td>Yes</td>
-        <td>R 4,200</td>
-    </tr>
-    <tr>
-        <td><img src="~/images/10100.jpg" class="img_cooler" /></td>
-        <td>Intel</td>
-        <td>Core i3 10100</td>
-        <td>4/8</td>
-        <td>3.6 GHz</td>
-        <td>4.3 Ghz</td>
-        <td>Yes</td>
-        <td>R 2,900</td>
-    </tr>
-    <tr>
-        <td><img src="~/images/3950.jpg" class="img_cooler" /></td>
-        <td>AMD</td>
-        <td>Ryzen 9 3950x</td>
-        <td>16/32</td>
-        <td>3.5 GHz</td>
-        <td>4.7 Ghz</td>
-        <td>No</td>
-        <td>R 15,000</td>
-    </tr>
-    <tr>
-        <td><img src="~/images/10700.jpg" class="img_cooler" /></td>
-        <td>Intel</td>
-        <td>Core i7 10700</td>
-        <td>8/16</td>
-        <td>2.9 GHz</td>
-        <td>4.8 Ghz</td>
-        <td>No</td>
-        <td>R 7,500</td>
-    </tr>
-    <tr>
-        <td><img src="~/images/9900.jpg" class="img_cooler" /></td>
-        <td>Intel</td>
-        <td>Core i9 9900k</td>
-        <td>8/16</td>
-        <td>3.6 GHz</td>
-        <td>5.0 Ghz</td>
-        <td>No</td>
-        <td>R 9,600</td>
-    </tr>
+    <thead>
+        <tr style="text-align:center">
+            <th></th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Price</th>
+            <th>Options</th>
+        </tr>
 
+        <tr style="font-size:22px; text-align:center">
+            <td><img src="~/images/10100.jpg" class="larger_product_img" /></td>
+            <td>Core i3-10100</td>
+            <td>Intel</td>
+            <td>R 2,899.00</td>
+            <th><button class="add_btn">Add to Basket</button></th>
+        </tr>
+
+        <tr style="font-size:22px; text-align:center">
+            <td><img src="~/images/3600.jpg" class="larger_product_img" /></td>
+            <td>Ryzen 5 3600</td>
+            <td>AMD</td>
+            <td>R 4,199.00</td>
+            <th><button class="add_btn">Add to Basket</button></th>
+        </tr>
+
+        <tr style="font-size:22px; text-align:center">
+            <td><img src="~/images/3800.jpg" class="larger_product_img" /></td>
+            <td>Ryzen 7 3800XT</td>
+            <td>AMD</td>
+            <td>R 8,099.00</td>
+            <th><button class="add_btn">Add to Basket</button></th>
+        </tr>
+
+        <tr style="font-size:22px; text-align:center">
+            <td><img src="~/images/10900.jpg" class="larger_product_img" /></td>
+            <td>Core i9-10850KA</td>
+            <td>Intel</td>
+            <td>R 9,999.00</td>
+            <th><button class="add_btn">Add to Basket</button></th>
+        </tr>
+
+        <tr style="font-size:22px; text-align:center">
+            <td><img src="~/images/3990.jpg" class="larger_product_img" /></td>
+            <td>Ryzen Threadripper 3990X</td>
+            <td>AMD</td>
+            <td>R 84,599.00</td>
+            <th><button class="add_btn">Add to Basket</button></th>
+        </tr>
+    </thead>
 </table> 

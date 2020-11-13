@@ -56,5 +56,9 @@ namespace NeonTrees.Controllers
             return View();
         }
 
+        public IActionResult Basket()
+        {
+            return View();
+        }
     }
 }

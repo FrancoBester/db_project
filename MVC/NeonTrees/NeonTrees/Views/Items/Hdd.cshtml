@@ -1,75 +1,67 @@
 ﻿@{
-    ViewData["Title"] = "Hard Drives";
+    ViewData["Title"] = "Hard Drives Available";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<link rel="stylesheet" href="~/css/styles.css" />
+<table class="table">
 
-<table style="width: 100%" class="table">
     <colgroup>
-        <col span="1" style="width: 10%;">
-        <col span="1" style="width: 15%;">
-        <col span="1" style="width: 10%;">
-        <col span="1" style="width: 12%;">
-        <col span="1" style="width: 13%;">
+        <col span="1" style="width: 25%; background-color:white">
+        <col span="1" style="width: 25%;">
+        <col span="1" style="width: 20%;">
         <col span="1" style="width: 15%;">
         <col span="1" style="width: 15%;">
     </colgroup>
 
-    <tr>
-        <th></th>
-        <th>Brand</th>
-        <th>Type</th>
-        <th>Capacity</th>
-        <th>Cache Size</th>
-        <th>Speed</th>
-        <th>Price</th>
-    </tr>
-    <tr>
-        <td><img src="~/images/4tb.jpg" class="img_cooler" /></td>
-        <td>Western Digital</td>
-        <td>Internal</td>
-        <td>4TB</td>
-        <td>256MB</td>
-        <td>7200 RPM</td>
-        <td>R 2,300</td>
-    </tr>
-    <tr>
-        <td><img src="~/images/2tb.jpg" class="img_cooler" /></td>
-        <td>Seagate</td>
-        <td>External</td>
-        <td>2TB</td>
-        <td>64MB</td>
-        <td>5600 RPM</td>
-        <td>R 1,200</td>
-    </tr>
-    <tr>
-        <td><img src="~/images/10tb.jpg" class="img_cooler" /></td>
-        <td>Seagate</td>
-        <td>Interal</td>
-        <td>10TB</td>
-        <td>256MB</td>
-        <td>7200 RPM</td>
-        <td>R 6,300</td>
-    </tr>
-    <tr>
-        <td><img src="~/images/1tb.jpg" class="img_cooler" /></td>
-        <td>Western Digital</td>
-        <td>External</td>
-        <td>1TB</td>
-        <td>64MB</td>
-        <td>5600 RPM</td>
-        <td>R 800</td>
-    </tr>
-    <tr>
-        <td><img src="~/images/ts1tb.jpg" class="img_cooler" /></td>
-        <td>Toshiba</td>
-        <td>External</td>
-        <td>1TB</td>
-        <td>64MB</td>
-        <td>5600 RPM</td>
-        <td>R 900</td>
-    </tr>
+    <thead>
+        <tr style="text-align:center">
+            <th></th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Price</th>
+            <th>Options</th>
+        </tr>
+
+        <tr style="font-size:22px; text-align:center">
+            <td><img src="~/images/1tb.jpg" class="smaller_product_img" /></td>
+            <td>Element 2.5" Portable</td>
+            <td>Western Digital</td>
+            <td>R 849.00</td>
+            <th><button class="add_btn">Add to Basket</button></th>
+        </tr>
+
+        <tr style="font-size:22px; text-align:center">
+            <td><img src="~/images/2tb.jpg" class="smaller_product_img" /></td>
+            <td>Expansion Portable External</td>
+            <td>Seagate</td>
+            <td>R 1,199.00</td>
+            <th><button class="add_btn">Add to Basket</button></th>
+        </tr>
+
+        <tr style="font-size:22px; text-align:center">
+            <td><img src="~/images/4tb.jpg" class="smaller_product_img" /></td>
+            <td>Blue</td>
+            <td>Western Digital</td>
+            <td>R 1,999.00</td>
+            <th><button class="add_btn">Add to Basket</button></th>
+        </tr>
+
+        <tr style="font-size:22px; text-align:center">
+            <td><img src="~/images/5tb.jpg" class="smaller_product_img" /></td>
+            <td>Basic Portable External</td>
+            <td>Seagate</td>
+            <td>R 2,399.00</td>
+            <th><button class="add_btn">Add to Basket</button></th>
+        </tr>
+
+        <tr style="font-size:22px; text-align:center">
+            <td><img src="~/images/10tb.jpg" class="smaller_product_img" /></td>
+            <td>BarraCuda</td>
+            <td>Seagate</td>
+            <td>R 6,249.00</td>
+            <th><button class="add_btn">Add to Basket</button></th>
+        </tr>
+    </thead>
 
 </table>

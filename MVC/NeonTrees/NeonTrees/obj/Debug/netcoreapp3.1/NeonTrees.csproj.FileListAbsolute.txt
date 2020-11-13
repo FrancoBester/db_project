@@ -714,3 +714,4 @@ C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netc
 C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.genruntimeconfig.cache
 C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Items\Case.cshtml.g.cs
 C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Home\Options.cshtml.g.cs
+C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Items\Basket.cshtml.g.cs
