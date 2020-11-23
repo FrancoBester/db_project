@@ -50,7 +50,7 @@ namespace NeonTrees
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");//Used to navigate to home page we want
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

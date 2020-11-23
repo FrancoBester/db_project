@@ -207,9 +207,6 @@ svg {
 
 table {
   border-collapse: collapse;
-  border-bottom-color:darkorchid;
-  background-color:dimgrey;
-  
 }
 
 caption {
@@ -1517,8 +1514,7 @@ pre code {
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: chartreuse;
-  border:thick;
+  color: #212529;
 }
 
 .table th,
