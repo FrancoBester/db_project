@@ -24,6 +24,17 @@ namespace WebApplication1.Services
             {
                 using (OracleConnection con = new OracleConnection(_connectionString))
                 {
+                    //con.Open();
+                    //OracleCommand cmd = new OracleCommand();
+                    //cmd.CommandText = "Select Column1 from Testing";
+                    //cmd.Connection = con;
+                    //cmd.CommandType = System.Data.CommandType.Text;
+                    //OracleDataReader reader = cmd.ExecuteReader();
+                    //while(reader.Read())
+                    //{
+                    //    string stest = reader.GetValue(0).ToString();
+                    //}
+
                     using (OracleCommand cmd = con.CreateCommand())
                     {
                         int counter = 0;
@@ -56,41 +67,58 @@ namespace WebApplication1.Services
             User student = new User();
             using (OracleConnection con = new OracleConnection(_connectionString))
             {
+                
                 using (OracleCommand cmd = con.CreateCommand())
                 {
                     con.Open();
-                    cmd.CommandText = "Select * from Student where Id=" + eid + "";
+                    cmd.CommandText = "Select * from Testing where Column1='Franco'";
                     OracleDataReader rdr = cmd.ExecuteReader();
                     while (rdr.Read())
                     {
                         User stu = new User
                         {
-                            Id = Convert.ToInt32(rdr["Id"]),
-                            Name = rdr["Name"].ToString(),
+                            Id = 1,
+                            Name = rdr.GetValue(0).ToString(),
                         };
                         student = stu;
                     }
+                    //cmd.Dispose();
+                    //rdr.Close();
                 }
+                
+                con.Close();
             }
             return student;
         }
 
-        public void AddUser(User user)
+        public void AddUser(User user) 
         {
             try
             {
                 using (OracleConnection con = new OracleConnection(_connectionString))
                 {
-                    using (OracleCommand cmd = new OracleCommand())
-                    {
-                        con.Open();
-                        cmd.CommandText = "Insert into Student(Id, Name, Email)Values(" + user.Id + ",'" + user.Name + "')";
-                        cmd.ExecuteNonQuery();
-                    }
+                    //OracleCommand cmd = new OracleCommand();
+                    //cmd.CommandText = "Select * from "
+                    con.Open();
+                    OracleCommand cmd = new OracleCommand();
+                    cmd.CommandText = "Insert Into Testing(Column1) Values('"+user.Name+"')";
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.ExecuteNonQuery();
+                   
+                    //using (OracleCommand cmd = new OracleCommand())
+                    //{
+                    //    con.Open();
+                    //    cmd.CommandText = cmd.CommandText = "Select Column1 from Testing";
+                    //    OracleDataReader rdr = cmd.ExecuteReader();
+                    //    //cmd.CommandText = "Insert into Testing(Column1) Values('" + user.Name + "')";
+                    //    //cmd.ExecuteNonQuery();
+                    //}
                 }
             }
-            catch
+            catch(Exception ex)
             {
+                string test = ex.ToString();
                 throw;
             }
         }
@@ -100,12 +128,18 @@ namespace WebApplication1.Services
             {
                 using (OracleConnection con = new OracleConnection(_connectionString))
                 {
-                    using (OracleCommand cmd = new OracleCommand())
-                    {
-                        con.Open();
-                        cmd.CommandText = "Update Student Set Name='" + user.Name + "' where Id=" + user.Id + "";
-                        cmd.ExecuteNonQuery();
-                    }
+                    con.Open();
+                    OracleCommand cmd = new OracleCommand();
+                    cmd.CommandText = "Update Testing Set COlumn1='" + user.Name + "' where Column1 ='Franco'";
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.ExecuteNonQuery();
+                    //using (OracleCommand cmd = new OracleCommand())
+                    //{
+                    //    con.Open();
+                    //    cmd.CommandText = "Update Testing Set COlumn1='" + user.Name + "' where Column1 ='Franco'";
+                    //    cmd.ExecuteNonQuery();
+                    //}
                 }
             }
             catch
@@ -119,12 +153,19 @@ namespace WebApplication1.Services
             {
                 using (OracleConnection con = new OracleConnection(_connectionString))
                 {
-                    using (OracleCommand cmd = new OracleCommand())
-                    {
-                        con.Open();
-                        cmd.CommandText = "Delete from Student where Id=" + user.Id + "";
-                        cmd.ExecuteNonQuery();
-                    }
+                    string test = user.Id.ToString();
+                    con.Open();
+                    OracleCommand cmd = new OracleCommand();
+                    cmd.CommandText = "Delete from Testing Where Column1='"+ test +"'";
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.ExecuteNonQuery();
+                    //using (OracleCommand cmd = new OracleCommand())
+                    //{
+                    //    con.Open();
+                    //    cmd.CommandText = "Delete from Student where Id=" + user.Id + "";
+                    //    cmd.ExecuteNonQuery();
+                    //}
                 }
             }
             catch

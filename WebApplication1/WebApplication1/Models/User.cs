@@ -11,6 +11,5 @@ namespace WebApplication1.Models
 
         public string Name { get; set; }
 
-        public IEnumerable<User> user { get; set; }
     }
 }

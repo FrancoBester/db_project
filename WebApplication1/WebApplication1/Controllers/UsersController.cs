@@ -19,6 +19,7 @@ namespace WebApplication1.Controllers
         }
 
         public IActionResult Index()
+        
         {
            var user = userService.GetAllUsers();
             return View(user);
