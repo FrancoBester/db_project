@@ -10,9 +10,7 @@ namespace NeonTrees_DB.Models
     {
         [Key]
         public int customerID { get; set; }
-
         public string customerName { get; set; }
-
         public string customerSurname { get; set; }
         public int phone { get; set; }
         public string email { get; set; }
