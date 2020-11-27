@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FUFY+sgJ7ToWqoD+rrgeSV/yW1ueYNtZFS4aH/AAU6f5f+Re61/8+p6f8WGxnwY5X58+rfaPq9fuQ1/xrLA0rA==",
+  "dgSpecHash": "3AaoJEQICDfZTT+F+dizPN+Pxl+6mTYyLcxQqAdQdqxurmPSaxDcyzfc1Ujc3Z7jeclM5YPVFDYT4UyNZAs/Sg==",
   "success": true,
-  "projectFilePath": "C:\\Univercity IT\\Third Year 2020\\Second semester\\CMPG 321 Databases\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj",
+  "projectFilePath": "C:\\Users\\EnricoIT\\Desktop\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\EnricoIT\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\EnricoIT\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\3.1.8\\microsoft.aspnetcore.mvc.razor.extensions.3.1.8.nupkg.sha512",

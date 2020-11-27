@@ -41,7 +41,6 @@ namespace NeonTrees.Services
                             Date = DateTime.Parse(reader.GetValue(1).ToString()).Date,
                             Total = double.Parse(reader.GetValue(3).ToString()),
                             OrderDetails = reader.GetValue(4).ToString(),
-                            ProductIDs = reader.GetValue(5).ToString(),
                         };
                         buildList.Add(_build);
                     }
@@ -73,7 +72,6 @@ namespace NeonTrees.Services
                         Date = DateTime.Parse(reader.GetValue(1).ToString()),
                         Total = double.Parse(reader.GetValue(3).ToString()),
                         OrderDetails = reader.GetValue(4).ToString(),
-                        ProductIDs = reader.GetValue(5).ToString(),
                     };
                     build = _build;
                 }
@@ -91,8 +89,11 @@ namespace NeonTrees.Services
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
-                    cmd.CommandText = "Insert into Build(Builddate,customerID,Total,ORderDetails,productids)" +
-                        "Values('"+ formated_date + "',0," + build.Total + ",'" + build.OrderDetails + "','"+build.ProductIDs+"')";
+                    //cmd.CommandText = "Insert into Build(Builddate,customerID,Total,ORderDetails,ProductID)" +
+                    //    "Values('"+ formated_date + "',0," + build.Total + ",'" + build.OrderDetails + "','"+build.ProductIDs+"')";
+
+                    cmd.CommandText = "Insert into Build(Builddate,customerID,Total,ORderDetails,ProductIds)" +
+                        "Values('" + formated_date + "',0,"+build.Total+",'"+build.OrderDetails+"','"+build.ProductIDs+"')";
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
@@ -113,7 +114,7 @@ namespace NeonTrees.Services
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
-                    cmd.CommandText = "Update build Set Builddate = '" + formated_date + "',Total = " + build.Total + ",OrderDetails = '" + build.OrderDetails + "', productIDs = '"+ build.ProductIDs + "'";
+                    cmd.CommandText = "Update build Set Builddate = '" + formated_date + "',Total = " + build.Total + ",OrderDetails = '" + build.OrderDetails + "', productIDs = '"+ build.OrderDetails +"' Where BuildID = "+build.ID+"";
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
