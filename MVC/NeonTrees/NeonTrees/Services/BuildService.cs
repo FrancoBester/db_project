@@ -89,16 +89,8 @@ namespace NeonTrees.Services
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
-<<<<<<< HEAD
-                    //cmd.CommandText = "Insert into Build(Builddate,customerID,Total,ORderDetails,ProductID)" +
-                    //    "Values('"+ formated_date + "',0," + build.Total + ",'" + build.OrderDetails + "','"+build.ProductIDs+"')";
-
-                    cmd.CommandText = "Insert into Build(Builddate,customerID,Total,ORderDetails,ProductIds)" +
-                        "Values('" + formated_date + "',0,"+build.Total+",'"+build.OrderDetails+"','"+build.ProductIDs+"')";
-=======
                     cmd.CommandText = "Insert into Build(Builddate,customerID,Total,ORderDetails,productid)" +
                         "Values('"+ formated_date + "',0," + build.Total + ",'" + build.OrderDetails + "',0)";
->>>>>>> parent of 8472cd3... New CRUD
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
@@ -119,11 +111,7 @@ namespace NeonTrees.Services
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
-<<<<<<< HEAD
-                    cmd.CommandText = "Update build Set Builddate = '" + formated_date + "',Total = " + build.Total + ",OrderDetails = '" + build.OrderDetails + "', productIDs = '"+ build.OrderDetails +"' Where BuildID = "+build.ID+"";
-=======
                     cmd.CommandText = "Update build Set Builddate = '" + formated_date + "',Total = " + build.Total + ",OrderDetails = '" + build.OrderDetails + "'";
->>>>>>> parent of 8472cd3... New CRUD
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
