@@ -770,3 +770,4 @@ C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netc
 C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Product\Create.cshtml.g.cs
 C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Product\Edit.cshtml.g.cs
 C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Product\Delete.cshtml.g.cs
+C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Home\Analytics.cshtml.g.cs

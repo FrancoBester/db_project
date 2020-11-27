@@ -5,18 +5,10 @@ using System.Threading.Tasks;
 
 namespace NeonTrees.Models
 {
-    public class Build
+    public class Login
     {
         public int ID { get; set; }
-
-        public DateTime Date {get;set;}
-
         public int CustomerID { get; set; }
-
-        public double Total { get; set; }
-
-        public string OrderDetails { get; set; }
-
-        public string ProductIDs { get; set; }
+        public string password { get; set; }
     }
 }
