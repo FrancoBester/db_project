@@ -89,11 +89,16 @@ namespace NeonTrees.Services
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
+<<<<<<< HEAD
                     //cmd.CommandText = "Insert into Build(Builddate,customerID,Total,ORderDetails,ProductID)" +
                     //    "Values('"+ formated_date + "',0," + build.Total + ",'" + build.OrderDetails + "','"+build.ProductIDs+"')";
 
                     cmd.CommandText = "Insert into Build(Builddate,customerID,Total,ORderDetails,ProductIds)" +
                         "Values('" + formated_date + "',0,"+build.Total+",'"+build.OrderDetails+"','"+build.ProductIDs+"')";
+=======
+                    cmd.CommandText = "Insert into Build(Builddate,customerID,Total,ORderDetails,productid)" +
+                        "Values('"+ formated_date + "',0," + build.Total + ",'" + build.OrderDetails + "',0)";
+>>>>>>> parent of 8472cd3... New CRUD
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
@@ -114,7 +119,11 @@ namespace NeonTrees.Services
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
+<<<<<<< HEAD
                     cmd.CommandText = "Update build Set Builddate = '" + formated_date + "',Total = " + build.Total + ",OrderDetails = '" + build.OrderDetails + "', productIDs = '"+ build.OrderDetails +"' Where BuildID = "+build.ID+"";
+=======
+                    cmd.CommandText = "Update build Set Builddate = '" + formated_date + "',Total = " + build.Total + ",OrderDetails = '" + build.OrderDetails + "'";
+>>>>>>> parent of 8472cd3... New CRUD
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
@@ -161,17 +170,17 @@ namespace NeonTrees.Services
                     break;
                 case 4: returnValue = returnValue + "APR/";
                     break;
-                case 5: returnValue = returnValue + "MAY/";
+                case 5:returnValue = returnValue + "MAY/";
                     break;
-                case 6: returnValue = returnValue + "JUN/";
+                case 6:returnValue = returnValue + "JUN/";
                     break;
-                case 7: returnValue = returnValue + "JUL/";
+                case 7:returnValue = returnValue + "JUL/";
                     break;
-                case 8: returnValue = returnValue + "AUG/";
+                case 8:returnValue = returnValue + "AUG/";
                     break;
                 case 9: returnValue = returnValue + "SEP/";
                     break;
-                case 10: returnValue = returnValue + "OCT/";
+                case 10:returnValue = returnValue + "OCT/";
                     break;
                 case 11: returnValue = returnValue + "NOV/";
                     break;
@@ -183,125 +192,6 @@ namespace NeonTrees.Services
             returnValue = returnValue + year[2] + year[3];
 
             return returnValue;
-        }
-
-        public List<int> GetBuildPriceData()
-        {
-            List<int> repeat_total = new List<int>();
-            try
-            {
-                double value = MaxBuildCost();
-                int total = Convert.ToInt32(value);
-                for (int i = 0; i < total; i += 5001)
-                {
-                    using (OracleConnection con = new OracleConnection(_connectionString))
-                    {
-
-                        con.Open();
-                        OracleCommand cmd = new OracleCommand();
-                        cmd.CommandText = "Select count(*) from Build Where Total  Between "+i+" ANd "+(i+5000)+"";
-                        cmd.Connection = con;
-                        cmd.CommandType = CommandType.Text;
-                        OracleDataReader reader = cmd.ExecuteReader();
-                        while (reader.Read())
-                        {
-                            repeat_total.Add(int.Parse(reader.GetValue(0).ToString()));
-                        }
-                    }
-                }
-                
-            }
-            catch(Exception ex)
-            {
-                string error = ex.ToString();
-            }
-            return repeat_total;
-        }
-
-        private double MaxBuildCost()
-        {
-            double maxTotal = 0;
-            using(OracleConnection con = new OracleConnection(_connectionString))
-            {
-                con.Open();
-                OracleCommand cmd = new OracleCommand();
-                cmd.Connection = con;
-                cmd.CommandText = "Select Max(Total) from Build";
-                cmd.CommandType = CommandType.Text;
-                OracleDataReader reader = cmd.ExecuteReader();
-                while(reader.Read())
-                {
-                    maxTotal = double.Parse(reader.GetValue(0).ToString());
-                }
-            }
-            return maxTotal;
-        }
-
-
-        //public List<int> GetCpuData()
-        //{
-        //    List<int> repeat_cpu = new List<int>();
-        //    try
-        //    {
-
-        //    }
-        //    catch(Exception ex)
-        //    {
-        //        string error = ex.ToString();
-        //    }
-        //}
-
-        //public List<int> GetAverageCustomerBuild()
-        //{
-        //    List<int> list_info = new List<int>();
-        //    try
-        //    {
-        //        using (OracleConnection con = new OracleConnection(_connectionString))
-        //        {
-
-        //        }
-        //    }
-        //    catch(Exception ex)
-        //    {
-
-        //    }
-        //}
-
-        public List<int> GetBuildPerMonth()
-        {
-            List<int> info_list = new List<int>();
-            string[] months = { "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC" };
-            string year_string = (DateTime.Now.Year).ToString();
-            string year_short = year_string[2].ToString() + year_string[3].ToString();
-
-            try
-            {
-                for (int i = 0; i < 12; i++)
-                {
-                    string month = months[i];
-                    string short_date = month + "/" + year_short;
-
-                    using (OracleConnection con = new OracleConnection(_connectionString))
-                    {
-                        con.Open();
-                        OracleCommand cmd = new OracleCommand();
-                        cmd.CommandText = "Select count(*) from Build Where buildDate = '%JAN%'";
-                        cmd.Connection = con;
-                        cmd.CommandType = CommandType.Text;
-                        OracleDataReader reader = cmd.ExecuteReader();
-                        while(reader.Read())
-                        {
-                            info_list.Add(int.Parse(reader.GetValue(0).ToString()));
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                string error = ex.ToString();
-            }
-
-            return info_list;
         }
     }
 }

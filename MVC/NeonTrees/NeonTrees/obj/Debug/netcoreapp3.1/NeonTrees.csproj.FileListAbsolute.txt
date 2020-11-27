@@ -770,6 +770,7 @@ C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netc
 C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Product\Create.cshtml.g.cs
 C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Product\Edit.cshtml.g.cs
 C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Product\Delete.cshtml.g.cs
+<<<<<<< HEAD
 C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Home\Analytics.cshtml.g.cs
 C:\Univercity IT\Third Year 2020\Second semester\CMPG 321 Databases\db_project\MVC\NeonTrees\NeonTrees\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Univercity IT\Third Year 2020\Second semester\CMPG 321 Databases\db_project\MVC\NeonTrees\NeonTrees\bin\Debug\netcoreapp3.1\appsettings.json
@@ -1191,3 +1192,5 @@ C:\Univercity IT\Third Year 2020\Second semester\CMPG 321 Databases\db_project\M
 C:\Univercity IT\Third Year 2020\Second semester\CMPG 321 Databases\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.dll
 C:\Univercity IT\Third Year 2020\Second semester\CMPG 321 Databases\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.pdb
 C:\Univercity IT\Third Year 2020\Second semester\CMPG 321 Databases\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.genruntimeconfig.cache
+=======
+>>>>>>> parent of 8472cd3... New CRUD

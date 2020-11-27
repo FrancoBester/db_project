@@ -17,6 +17,6 @@ namespace NeonTrees.Models
 
         public string OrderDetails { get; set; }
 
-        public string ProductIDs { get; set; }
+        public int ProductID { get; set; }
     }
 }

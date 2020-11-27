@@ -13,7 +13,5 @@ namespace NeonTrees.Interface
         void AddBuild(Build build);
         void EditBuild(Build build);
         void DeleteBuild(Build build);
-        public List<int> GetBuildPriceData();
-        public List<int> GetBuildPerMonth();
     }
 }
