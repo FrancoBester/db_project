@@ -1194,3 +1194,13 @@ C:\Univercity IT\Third Year 2020\Second semester\CMPG 321 Databases\db_project\M
 C:\Univercity IT\Third Year 2020\Second semester\CMPG 321 Databases\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.genruntimeconfig.cache
 =======
 >>>>>>> parent of 8472cd3... New CRUD
+C:\Univercity IT\Third Year 2020\Second semester\CMPG 323 IT Development\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.csprojAssemblyReference.cache
+C:\Univercity IT\Third Year 2020\Second semester\CMPG 323 IT Development\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.AssemblyInfoInputs.cache
+C:\Univercity IT\Third Year 2020\Second semester\CMPG 323 IT Development\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.AssemblyInfo.cs
+C:\Univercity IT\Third Year 2020\Second semester\CMPG 323 IT Development\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.csproj.CoreCompileInputs.cache
+C:\Univercity IT\Third Year 2020\Second semester\CMPG 323 IT Development\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.MvcApplicationPartsAssemblyInfo.cs
+C:\Univercity IT\Third Year 2020\Second semester\CMPG 323 IT Development\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.MvcApplicationPartsAssemblyInfo.cache
+C:\Univercity IT\Third Year 2020\Second semester\CMPG 323 IT Development\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.RazorAssemblyInfo.cache
+C:\Univercity IT\Third Year 2020\Second semester\CMPG 323 IT Development\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.RazorAssemblyInfo.cs
+C:\Univercity IT\Third Year 2020\Second semester\CMPG 323 IT Development\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.dll
+C:\Univercity IT\Third Year 2020\Second semester\CMPG 323 IT Development\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.pdb
