@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YiUj5SicMi3tlQxgu8q6+d8CnOpOVnQzJ55yoxOwqzIsHc48Ep76c4wQWlvTHIGXP6QBLPf5PTKM1yZ8PMeg6A==",
+  "dgSpecHash": "woXGRMqULDYPgKQT/bRVWOWKN/LUEz8mxjcJs1ENonHzm8jWOoNaLxwTplOeJoKMxSnpnHcY/9jS9AVDpeAWEw==",
   "success": true,
-  "projectFilePath": "C:\\Coding\\CMPG 322\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj",
+  "projectFilePath": "C:\\Coding\\CMPG 321\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\John\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\3.1.8\\microsoft.aspnetcore.mvc.razor.extensions.3.1.8.nupkg.sha512",
     "C:\\Users\\John\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\3.1.8\\microsoft.aspnetcore.mvc.razor.runtimecompilation.3.1.8.nupkg.sha512",

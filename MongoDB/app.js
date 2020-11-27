@@ -8,11 +8,12 @@ const mongoose = require('mongoose');
 const ProductRoutes = require('./api/routes/RawProduct');
 
 mongoose.connect("mongodb+srv://26047179:operator12@cluster0.wh8ke.mongodb.net/NeonTrees+DB>?retryWrites=true&w=majority",// " + process.env.MONGO_ATLAS_PW +"
-{ useUnifiedTopology: true,
-  useNewUrlParser: true})
+    {
+        useUnifiedTopology: true,
+        useNewUrlParser: true
+    })
 .then(() => console.log('Database Connected'))
 .catch(err => console.log(err));
-
 
 
 app.use(morgan('dev'));//show me if i get a "get" request
@@ -37,8 +38,6 @@ app.use((req, res, next) => {
 }); every request is funeled through*/
 
 //Request is funelled
-
-
 app.use('/RawProduct', ProductRoutes);
 
 app.use((req, res, next ) => {

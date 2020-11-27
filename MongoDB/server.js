@@ -4,7 +4,7 @@ var fs = require('fs');
 
 
 const host = '0.0.0.0';
-const port = process.env.PORT || 3300;
+const port = process.env.PORT || 4000;
 
 const server = http.createServer(app);
 
