@@ -26,7 +26,7 @@ namespace NeonTrees.Services
             {
                 con.Open();
                 OracleCommand cmd = new OracleCommand();
-                cmd.CommandText = "Select * from Login Where userName = '" + login.userName + "' AND password = '"+login.password+"'";
+                cmd.CommandText = "Select * from Login Where userName = '" + login.Name + "' AND password = '"+login.Password+"'";
                 cmd.Connection = con;
                 cmd.CommandType = CommandType.Text;
                 OracleDataReader reader = cmd.ExecuteReader();
@@ -46,7 +46,7 @@ namespace NeonTrees.Services
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
-                    cmd.CommandText = "Update Login Set Password = '" + login.password + "', username = '" + login.userName + "' Where loginID = '" + login.ID + "'";
+                    cmd.CommandText = "Update Login Set Password = '" + login.Password + "', username = '" + login.Name + "' Where loginID = '" + login.ID + "'";
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
@@ -70,7 +70,7 @@ namespace NeonTrees.Services
                     OracleCommand cmd = new OracleCommand();
                     cmd.Connection = con;
                     cmd.CommandText = "Insert into Login(CustomerID,Password,Username)" +
-                        "Values(" + login.CustomerID + ",'" + login.password + "','" + login.userName + "')";
+                        "Values(" + login.CustomerID + ",'" + login.Password + "','" + login.Name + "')";
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
                 }
@@ -111,7 +111,7 @@ namespace NeonTrees.Services
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
                     cmd.Connection = con;
-                    cmd.CommandText = "Select loginID from login where CustomerID = "+login.CustomerID+" AND Password = '"+ login.password +"' and username = '"+ login.userName +"'";
+                    cmd.CommandText = "Select loginID from login where CustomerID = "+login.CustomerID+" AND Password = '"+ login.Password +"' and username = '"+ login.Name +"'";
                     cmd.CommandType = CommandType.Text;
                     OracleDataReader reader = cmd.ExecuteReader();
                     while(reader.Read())
