@@ -1,0 +1,152 @@
+﻿@model NeonTrees.Models.Product
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+    <h1>Create</h1>
+
+    <h4>Product</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="ID" class="control-label"></label>
+                    <input asp-for="ID" class="form-control" />
+                    <span asp-validation-for="ID" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" id="lName" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="InventoryValue" class="control-label"></label>
+                    <input asp-for="InventoryValue" class="form-control" runat="server" />
+                    <span asp-validation-for="InventoryValue" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PartType" class="control-label"></label>
+                    <input id="lPartType" asp-for="PartType" class="form-control" />
+                    <span asp-validation-for="PartType" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="URL" class="control-label"></label>
+                    <input asp-for="URL" class="form-control" />
+                    <span asp-validation-for="URL" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+
+
+            </form>
+
+            <form asp-action="Create">
+                
+            </form>
+
+                <ul id="authors"></ul>
+                <ul id="fetchstuff"></ul>
+                <button>Authors</button>
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script type="text/javascript">
+
+
+                const form = document.getElementById('fetchstuff');
+                const ul = document.getElementById('authors');
+
+                const lName = document.getElementById('lName');
+                const lDescription = document.getElementById('lDescription');
+                const lInventoryValue = document.getElementById('lInventoryValue');
+                //const lPartType = document.getElementById('lPartType');
+                const lurl = document.getElementById('lurl');
+
+
+                var obj = [];
+                var arrStuff = {};
+                var cout = 0;
+
+                function Product(fname, des, val, parttypes, url) {
+                    this.name = fname;
+                    this.description = des;
+                    this.InventoryValue = val;
+                    this.PartType = parttypes;
+                    this.url = url;
+                }
+                async function getFile() {
+
+                    const url = 'https://nameless-forest-23875.herokuapp.com/RawProduct/';
+                    fetch(url)
+                        .then((response) => {
+                            return response.json()
+                        })
+                        .then((data) => {
+                            var arrStuff = [];
+                            // Work with JSON data here
+                            //console.log(JSON.stringify(data));
+                            for (var items of data) {
+                                cout++;
+                                //arrStuff = items;
+                                let id = items._id;//.replace(/['"]+/g, '');
+                                let name = items.name;//.replace(/['"]+/g, '');.replace(/['"]+/g, '');
+                                let description = items.description;//.replace(/['"]+/g, '');.replace(/['"]+/g, '');
+                                let InventoryValue = items.InventoryValue;//.replace(/['"]+/g, '');.replace(/['"]+/g, '');
+                                let PartType = items.PartType;//.replace(/['"]+/g, '');.replace(/['"]+/g, '');
+                                let url = items.url;//.replace(/['"]+/g, '');.replace(/['"]+/g, '');
+
+                                // let re = "/^(Dr|Mr|Mrs|Ms|Er)\.[A-z]+$/")
+                                //var myData = { Prop1: '', Prop2: '' }; // #1
+
+                                //$.post('/ProductController/Create', { arrStuff });
+                                console.log(cout);
+                                if (cout == 1) {
+                                    arrStuff = new Product(name, description, InventoryValue, PartType, url);
+                                }
+                            };
+                            //console.log(id + name + description + + InventoryValue + PartType + url);
+
+                            postStu(arrStuff);
+                        })
+                        .catch((err) => {
+                            // Do something for an error here
+                            console.log(err.message);
+                        });
+                }
+
+                getFile();
+
+
+                async function postStu(data = []) {
+                    console.log('calling');
+                    console.log(JSON.stringify(data));
+                    document.getElementById("lPartType").PartType = JSON.stringify(data.PartType);
+
+
+                    //fetchstuff.innerHtml = html;
+                    fetchstuff.innerHTML = JSON.stringify(data.PartType);
+                    // expected output: "resolved"
+
+
+                };
+
+
+
+                </script>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+    }

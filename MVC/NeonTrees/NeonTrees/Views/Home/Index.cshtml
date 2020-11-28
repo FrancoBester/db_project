@@ -1,38 +1,8 @@
-﻿@{ ViewData["Title"] = "Home Page"; }
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
 
-
-<head>
-    
-</head>
-<body>
-    <div class="text-center">
-        <h1 class="display-4">Welcome</h1>
-        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    </div>
-
-    <form action="https://nameless-forest-23875.herokuapp.com/RawProduct/" method="post" id="default" target="_blank" onsubmit="Formvalidation()" style="background-color:  #adbec5">
-        <!-- hiddenFrame: put this in target when/if you don't want json confirmation, A script can be written for an alert, but I pref this output for an assignment <iframe name="hiddenFrame" class="hide"></iframe>-->
-
-        <p style="font-size: 2vh;">NodeJS Express REST</p><br>
-        <b>Name:</b> <input type="text" name="name" id="name"><br>
-        <b>Product Name:</b> <input type="text" name="ProductName" id="ProductName"><br>
-        <b>description:</b> <br><textarea name="description" id="description" cols="1000" rows="4"></textarea><br> <!-- width does not load out of css with the initial call -->
-        <b>Inventory Value:</b> <input type="number" name="InventoryValue" id="InventoryValue"><br>
-        <b>Part Type:</b> <input type="text" name="PartType" id="PartType"><br>
-        <b>url:</b> <input type="text" name="url" id="url"><br>
-        <script type="">
-
-
-        </script>
-        <button type="submit" name="Submit" value="Submit"><b>Submit</b></button><br>
-        <button type="reset" name="button"><b>Reset</b></button><br>
-        <!-- Upload resume: <input type="file" name="" value="" accept="pdf"> -->
-    </form>
-
-    <form action="https://nameless-forest-23875.herokuapp.com/RawProduct/" method="get" id="default" target="_blank" onsubmit="Formvalidation()" style="background-color:  #adbec5">
-      
-    </form>
-</body>
-</html>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

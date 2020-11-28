@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Coding\\CMPG 321\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj": {}
+    "C:\\Coding\\CMPG 321\\db_project-NeonTrees-DB-with-Register-Login\\db_project-NeonTrees-DB-with-Register-Login\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj": {}
   },
   "projects": {
-    "C:\\Coding\\CMPG 321\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj": {
+    "C:\\Coding\\CMPG 321\\db_project-NeonTrees-DB-with-Register-Login\\db_project-NeonTrees-DB-with-Register-Login\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Coding\\CMPG 321\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj",
+        "projectUniqueName": "C:\\Coding\\CMPG 321\\db_project-NeonTrees-DB-with-Register-Login\\db_project-NeonTrees-DB-with-Register-Login\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj",
         "projectName": "NeonTrees",
-        "projectPath": "C:\\Coding\\CMPG 321\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj",
+        "projectPath": "C:\\Coding\\CMPG 321\\db_project-NeonTrees-DB-with-Register-Login\\db_project-NeonTrees-DB-with-Register-Login\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj",
         "packagesPath": "C:\\Users\\John\\.nuget\\packages\\",
-        "outputPath": "C:\\Coding\\CMPG 321\\db_project\\MVC\\NeonTrees\\NeonTrees\\obj\\",
+        "outputPath": "C:\\Coding\\CMPG 321\\db_project-NeonTrees-DB-with-Register-Login\\db_project-NeonTrees-DB-with-Register-Login\\MVC\\NeonTrees\\NeonTrees\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -43,31 +43,17 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[3.1.8, )"
             },
-            "Microsoft.EntityFrameworkCore": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[3.1.4, )"
             },
             "Oracle.ManagedDataAccess.Core": {
               "target": "Package",
               "version": "[2.19.100, )"
-            },
-            "Oracle.ManagedDataAccess.EntityFramework": {
-              "target": "Package",
-              "version": "[19.7.0, )"
             }
           },
           "imports": [
