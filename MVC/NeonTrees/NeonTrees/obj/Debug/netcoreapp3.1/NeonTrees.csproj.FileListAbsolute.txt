@@ -1191,3 +1191,5 @@ C:\Users\EnricoIT\Desktop\db_project\MVC\NeonTrees\NeonTrees\bin\Debug\netcoreap
 C:\Users\EnricoIT\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.Views.pdb
 C:\Users\EnricoIT\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.csproj.CopyComplete
 C:\Users\EnricoIT\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.genruntimeconfig.cache
+C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Login\Create.cshtml.g.cs
+C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Login\Login.cshtml.g.cs
