@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Data;
+using Microsoft.AspNetCore.Http;
 
 namespace NeonTrees.Services
 {
@@ -25,7 +26,7 @@ namespace NeonTrees.Services
             {
                 con.Open();
                 OracleCommand cmd = new OracleCommand();
-                cmd.CommandText = "Select * from Login Where userName = '" + login.Name + "' AND password = '"+login.Password+"'";
+                cmd.CommandText = "Select * from Login Where userName = '" + login.userName + "' AND password = '"+login.password+"'";
                 cmd.Connection = con;
                 cmd.CommandType = CommandType.Text;
                 OracleDataReader reader = cmd.ExecuteReader();
@@ -45,7 +46,7 @@ namespace NeonTrees.Services
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
-                    cmd.CommandText = "Update Login Set Password = '" + login.Password + "', username = '" + login.Name + "' Where loginID = '" + login.ID + "'";
+                    cmd.CommandText = "Update Login Set Password = '" + login.password + "', username = '" + login.userName + "' Where loginID = '" + login.ID + "'";
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
@@ -69,7 +70,7 @@ namespace NeonTrees.Services
                     OracleCommand cmd = new OracleCommand();
                     cmd.Connection = con;
                     cmd.CommandText = "Insert into Login(CustomerID,Password,Username)" +
-                        "Values(" + login.ID + ",'" + login.Password + "','" + login.Name + "')";
+                        "Values(" + login.CustomerID + ",'" + login.password + "','" + login.userName + "')";
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
                 }
@@ -98,6 +99,33 @@ namespace NeonTrees.Services
             {
                 string error = ex.ToString();
             }
+        }
+
+        public int GetNewLoginId(Login login)
+        {
+            int new_login_id = -1;
+            try
+            {
+                using (OracleConnection con = new OracleConnection(_connectionString))
+                {
+                    con.Open();
+                    OracleCommand cmd = new OracleCommand();
+                    cmd.Connection = con;
+                    cmd.CommandText = "Select loginID from login where CustomerID = "+login.CustomerID+" AND Password = '"+ login.password +"' and username = '"+ login.userName +"'";
+                    cmd.CommandType = CommandType.Text;
+                    OracleDataReader reader = cmd.ExecuteReader();
+                    while(reader.Read())
+                    {
+                        new_login_id = int.Parse(reader.GetValue(0).ToString());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                string error = ex.ToString();
+            }
+
+            return new_login_id;
         }
     }
 }
