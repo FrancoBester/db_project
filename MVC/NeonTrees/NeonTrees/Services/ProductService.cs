@@ -146,5 +146,42 @@ namespace NeonTrees.Services
                 string error = ex.ToString();
             }
         }
+
+        public IEnumerable<Product> FilterProduct(string product_category)
+        {
+            List<Product> productList = new List<Product>();
+
+            try
+            {
+                using (OracleConnection con = new OracleConnection(_connectionString))
+                {
+                    con.Open();
+                    OracleCommand cmd = new OracleCommand();
+                    cmd.CommandText = "Select * from Product Where catergory = '"+product_category+"'";
+                    cmd.Connection = con;
+                    cmd.CommandType = CommandType.Text;
+                    OracleDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        Product _product = new Product
+                        {
+                            ID = int.Parse(reader.GetValue(0).ToString()),
+                            Name = reader.GetValue(1).ToString(),
+                            Description = reader.GetValue(2).ToString(),
+                            Price = double.Parse(reader.GetValue(3).ToString()),
+                            Brand = reader.GetValue(4).ToString(),
+                            Category = reader.GetValue(5).ToString()
+                        };
+                        productList.Add(_product);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                string error = ex.ToString();
+            }
+            return productList;
+        }
+
     }
 }
