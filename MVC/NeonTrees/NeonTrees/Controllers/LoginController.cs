@@ -35,12 +35,19 @@ namespace NeonTrees.Controllers
         [HttpPost]
         public ActionResult Create(Login login)
         {
-            int value = (int)HttpContext.Session.GetInt32("new_customer_id");
-            login.CustomerID = value;
-            loginService.AddLogin(login);
-            int login_id = loginService.GetNewLoginId(login);
-            UpdateCustomerInfo(value, login_id);
-            return RedirectToAction();
+            if (loginService.CheckUserName(login))
+            {
+                int value = (int)HttpContext.Session.GetInt32("new_customer_id");
+                login.CustomerID = value;
+                loginService.AddLogin(login);
+                int login_id = loginService.GetNewLoginId(login);
+                UpdateCustomerInfo(value, login_id);
+                return RedirectToAction();
+            }
+
+            ViewBag.Message = string.Format("TestLogin");
+            return View();
+
         }
 
         public ActionResult Login()
