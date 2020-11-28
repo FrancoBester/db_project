@@ -273,19 +273,36 @@ namespace NeonTrees.Services
             string[] months = { "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC" };
             string year_string = (DateTime.Now.Year).ToString();
             string year_short = year_string[2].ToString() + year_string[3].ToString();
+            string start_date,end_date,month;
 
             try
             {
-                for (int i = 0; i < 12; i++)
+                for (int i = 1; i < 13; i++)
                 {
-                    string month = months[i];
-                    string short_date = month + "/" + year_short;
+                    int montharr = i - 1;
+                    month = months[montharr];
+
+                    start_date = "01/" + month + "/" + year_short;
+
+                    if(i == 2)
+                    {
+                        end_date = "28/" + month + "/" + year_short;
+                    }
+                    else if( i == 4 || i == 6 || i == 9 || i == 11)
+                    {
+                        end_date = "30/" + month + "/" + year_short;
+                    }
+                    else
+                    {
+                        end_date = "31/" + month + "/" + year_short;
+                    }
+                    
 
                     using (OracleConnection con = new OracleConnection(_connectionString))
                     {
                         con.Open();
                         OracleCommand cmd = new OracleCommand();
-                        cmd.CommandText = "Select count(*) from Build Where buildDate = '%JAN%'";
+                        cmd.CommandText = "Select count(*) from Build Where buildDate between '"+start_date+"' and '"+end_date+"'";
                         cmd.Connection = con;
                         cmd.CommandType = CommandType.Text;
                         OracleDataReader reader = cmd.ExecuteReader();
@@ -294,6 +311,7 @@ namespace NeonTrees.Services
                             info_list.Add(int.Parse(reader.GetValue(0).ToString()));
                         }
                     }
+
                 }
             }
             catch (Exception ex)
