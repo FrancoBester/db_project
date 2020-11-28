@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NeonTrees.Interface;
 using NeonTrees.Models;
@@ -32,7 +33,17 @@ namespace NeonTrees.Controllers
         public ActionResult Create(Customer customer)
         {
             customerService.AddCustomer(customer);
-            return RedirectToAction(nameof(Index));
+            int id = customerService.GetNewCustomerID(customer);
+            if(id == -1)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+            else
+            {
+                //HttpContext.Session.SetInt32("new_customer_id",id);
+                return RedirectToAction("Create", "Login");
+            }
+            //return RedirectToAction(nameof(Index));
         }
 
         public ActionResult Edit(int id)
