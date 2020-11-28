@@ -1,152 +1,306 @@
 ﻿@model NeonTrees.Models.Product
 
-@{
-    ViewData["Title"] = "Create";
-}
+@{ ViewData["Title"] = "Create"; }
 
-    <h1>Create</h1>
+<h1>Create</h1>
 
-    <h4>Product</h4>
-    <hr />
-    <div class="row">
-        <div class="col-md-4">
-            <form asp-action="Create">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-group">
-                    <label asp-for="ID" class="control-label"></label>
-                    <input asp-for="ID" class="form-control" />
-                    <span asp-validation-for="ID" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Name" class="control-label"></label>
-                    <input asp-for="Name" id="lName" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <label asp-for="Description" class="control-label"></label>
-                    <input asp-for="Description" class="form-control" />
-                    <span asp-validation-for="Description" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="InventoryValue" class="control-label"></label>
-                    <input asp-for="InventoryValue" class="form-control" runat="server" />
-                    <span asp-validation-for="InventoryValue" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="PartType" class="control-label"></label>
-                    <input id="lPartType" asp-for="PartType" class="form-control" />
-                    <span asp-validation-for="PartType" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="URL" class="control-label"></label>
-                    <input asp-for="URL" class="form-control" />
-                    <span asp-validation-for="URL" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-primary" />
-                </div>
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Creater" style="background-color:  #adbec5">
+            <!-- hiddenFrame: put this in target when/if you don't want json confirmation, A script can be written for an alert, but I pref this output for an assignment <iframe name="hiddenFrame" class="hide"></iframe>-->
+
+            <p style="font-size: 2vh;">NodeJS Express REST</p><br>
+            <b>Name:</b> <input type="text" name="name" id="name" runat="server"><br>
+            <b>Description:</b> <input type="text" name="description" id="description"><br>
+            <b>Inventory Value:</b> <input type="text" name="InventoryValue" id="InventoryValue" runat="server"><br> <!-- width does not load out of css with the initial call -->
+            <b>Part Type:</b> <input id="PartType" type="text" name="PartType" runat="server"><br>
+            <b>URL:</b> <input type="text" name="url" id="url" runat="server"><br>
+            <div class="form-group">
+                <input id="saveIt" type="submit" value="Create" class="btn btn-primary" />
+            </div>
+            <button type="reset" name="button"><b>Reset</b></button><br>
+            <!-- Upload resume: <input type="file" name="" value="" accept="pdf"> -->
+        </form>
 
 
-            </form>
 
-            <form asp-action="Create">
+
+
+        <ul id="authors"></ul>
+        <ul id="fetchstuff"></ul>
+        <button>Authors</button>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript">
+
+            const lName = document.getElementById('name');
+            const lDescription = document.getElementById('description');
+            const lInventoryValue = document.getElementById('InventoryValue');
+            const lPartType = document.getElementById('PartType');
+            const lurl = document.getElementById('url');
+
+
+            var arrStuff = [];
+            var obj = [];
+            getFile();
+            let bflag = false;
+
+            var name = "";
+            var description = "";
+            var InventoryValue = "";
+            var PartType = "";
+            var url = "";
+
+            var cout = 0;
+
+            function Product(fname, des, val, parttypes, url) {
+                this.name = fname;
+                this.description = des;
+                this.InventoryValue = val;
+                this.PartType = parttypes;
+                this.url = url;
+            };
+            async function getFile() {
+
+                const url = 'https://nameless-forest-23875.herokuapp.com/RawProduct/';
+                await fetch(url, {
+                    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+                    mode: 'cors', // no-cors, *cors, same-origin
+                    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+                    credentials: 'same-origin', // include, *same-origin, omit
+                    headers: {
+                        'Content-Type': 'application/json'
+                        // 'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    // redirect: 'follow', // manual, *follow, error
+                    referrerPolicy: 'origin', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+                })
+                    .then((response) => {
+                        return response.json()
+                    })
+                    .then((data) => {
+                        // Work with JSON data here
+                        //console.log(JSON.stringify(data));
+                        
+                        //alert(JSON.stringify(data));
+                        parseDataStuff(data);
+                       
+                    })
+                    .catch((err) => {
+                        // Do something for an error here
+                        console.log(err.message);
+                    });
+            };
+
+            
+
+            async function parseDataStuff(data = []) {
                 
-            </form>
-
-                <ul id="authors"></ul>
-                <ul id="fetchstuff"></ul>
-                <button>Authors</button>
-
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                <script type="text/javascript">
-
-
-                const form = document.getElementById('fetchstuff');
-                const ul = document.getElementById('authors');
-
-                const lName = document.getElementById('lName');
-                const lDescription = document.getElementById('lDescription');
-                const lInventoryValue = document.getElementById('lInventoryValue');
-                //const lPartType = document.getElementById('lPartType');
-                const lurl = document.getElementById('lurl');
-
-
-                var obj = [];
-                var arrStuff = {};
-                var cout = 0;
-
-                function Product(fname, des, val, parttypes, url) {
-                    this.name = fname;
-                    this.description = des;
-                    this.InventoryValue = val;
-                    this.PartType = parttypes;
-                    this.url = url;
-                }
-                async function getFile() {
-
-                    const url = 'https://nameless-forest-23875.herokuapp.com/RawProduct/';
-                    fetch(url)
-                        .then((response) => {
-                            return response.json()
-                        })
-                        .then((data) => {
-                            var arrStuff = [];
-                            // Work with JSON data here
-                            //console.log(JSON.stringify(data));
-                            for (var items of data) {
-                                cout++;
-                                //arrStuff = items;
-                                let id = items._id;//.replace(/['"]+/g, '');
-                                let name = items.name;//.replace(/['"]+/g, '');.replace(/['"]+/g, '');
-                                let description = items.description;//.replace(/['"]+/g, '');.replace(/['"]+/g, '');
-                                let InventoryValue = items.InventoryValue;//.replace(/['"]+/g, '');.replace(/['"]+/g, '');
-                                let PartType = items.PartType;//.replace(/['"]+/g, '');.replace(/['"]+/g, '');
-                                let url = items.url;//.replace(/['"]+/g, '');.replace(/['"]+/g, '');
-
-                                // let re = "/^(Dr|Mr|Mrs|Ms|Er)\.[A-z]+$/")
-                                //var myData = { Prop1: '', Prop2: '' }; // #1
-
-                                //$.post('/ProductController/Create', { arrStuff });
-                                console.log(cout);
-                                if (cout == 1) {
-                                    arrStuff = new Product(name, description, InventoryValue, PartType, url);
-                                }
-                            };
-                            //console.log(id + name + description + + InventoryValue + PartType + url);
-
-                            postStu(arrStuff);
-                        })
-                        .catch((err) => {
-                            // Do something for an error here
-                            console.log(err.message);
+                for (var items of data) {
+                    //cout++;
+                    //items =JSON.stringify(items);
+                    obj.push(items);
+                    //let id = await items._id.replace(/['"]+/g, '');
+                    window.setTimeout(function () {
+                        $.each($('.alert'), function () {
+                            closeAlert(this);
                         });
-                }
+                    }, 2000);
 
-                getFile();
+                    function closeAlert(alert) {
+                        $(alert).fadeTo(2000, 500).slideUp(500, function () {
+                            $(alert).hide();
+                        });
+                    };
+                    let name = await items.name;//.replace(/['"]+/g, '');
+                    let description = await items.description;//.replace(/['"]+/g, '');
+                    let InventoryValue1 = await items.InventoryValue;//.replace(/['"]+/g, '');
+                    //let InventoryValue2 = InventoryValue1.replace(",", ".");
+                    let PartType = await items.PartType;//.replace(/['"]+/g, '');
+                    let url = await items.url;//.replace(/['"]+/g, '');
+                    lName.value = name;//.replace(/['"]+/g, '');
+                    // let re = "/^(Dr|Mr|Mrs|Ms|Er)\.[A-z]+$/")
+                    //var myData = { Prop1: '', Prop2: '' }; // #1
 
+                    //$.post('/ProductController/Create', { arrStuff });
+                    window.setTimeout(function () {
+                        $.each($('.alert'), function () {
+                            closeAlert(this);
+                        });
+                    }, 2000);
 
-                async function postStu(data = []) {
-                    console.log('calling');
-                    console.log(JSON.stringify(data));
-                    document.getElementById("lPartType").PartType = JSON.stringify(data.PartType);
-
-
-                    //fetchstuff.innerHtml = html;
-                    fetchstuff.innerHTML = JSON.stringify(data.PartType);
-                    // expected output: "resolved"
-
-
+                    function closeAlert(alert) {
+                        $(alert).fadeTo(2000, 500).slideUp(500, function () {
+                            $(alert).hide();
+                        });
+                    };
+                                   
+                    var arrStuff = new Product(name, description, InventoryValue1, PartType, url);
+                    saveToOra(arrStuff);  
+                    //$.post('/Product/Create', { arrStuff });
                 };
+                //console.log(id + name + description + + InventoryValue + PartType + url);
+            };
+
+            async function saveToOra(data = []) {//this is the one that does only 1
+                //for()
+                //alert("Running the save function" + JSON.stringify(data) + "------Test name" + JSON.stringify(data.name));
+                window.setTimeout(function () {
+                    $.each($('.alert'), function () {
+                        closeAlert(this);
+                    });
+                }, 2000);
+
+                function closeAlert(alert) {
+                    $(alert).fadeTo(2000, 500).slideUp(500, function () {
+                        $(alert).hide();
+                    });
+                };
+                //for (items of data) { console.log(items);}
+                //alert(data.name);
+                name = data.name;//.replace(/['"]+/g, '');
+                description = data.description;//.replace(/['"]+/g, '');
+                InventoryValue = data.InventoryValue;//.replace(/['"]+/g, '');
+                PartType = data.PartType;//.replace(/['"]+/g, '');
+                url = data.url;//.replace(/['"]+/g, '');
+                //alert("STOPPPPU!");
+                console.log(name);  
+                lName.value = name;//.replace(/['"]+/g, '');
+                lDescription.value = description;//.replace(/['"]+/g, '');
+                document.getElementById('InventoryValue').value = InventoryValue;//.replace(/['"]+/g, '');
+                lPartType.value = PartType;//.re    place(/['"]+/g, '');
+                lurl.value = url;//.replace(/['"]+/g, '');
+                // expected output: "resolved"
+                // 
+                SENDIT();
+                //alert("That's 1!");
+
+              
 
 
 
-                </script>
-        </div>
+                //arrStuff.push(new Product(name, description, InventoryValue, PartType, url));
+                
+               // $.post('/Product/Create', { arrStuff });
+            }
+
+            async function SENDIT() {
+                lName.value = name;
+                lDescription.value = description;
+                await document.getElementById("saveIt").click();
+            }
+
+            async function postStu(data = []) {
+                console.log('calling');
+                //console.log(JSON.stringify(data).replace(/['"]+/g, ''));
+                //document.getElementById("PartType").value = JSON.stringify(data.PartType);
+               // console.log(JSON.stringify(data));
+                //fetchstuff.innerHtml = html;
+
+                //THESE GO TO THE CONTROLLER
+                var namer ="";
+                var descr = "";
+                var vals = "";
+                var ptype = "";
+                var curl = "";
+
+                var prevVal = "";
+
+
+                let cleanData = await JSON.stringify(data).replace(/['"]+/g, '');
+               // if (cleanData.includes(" ")) {
+              //      cleanData = cleanData.replace(" ", "%20");
+              //  }
+                let cleanerData = await cleanData.replace(/({|})/g, "");  
+                alert('i am here ' + cleanerData);
+                var splitter1 = await cleanerData.split(",");
+                var someFlag = false;
+                
+                alert("splitter second" + splitter1[4]);
+                /*for (var ite of splitter1) {
+
+
+                    //lName.value = splitter1[ite];
+                    if (ite.includes("[")) {
+                        ite = ite.replace("[", "");
+                    } else if (ite.includes("]")) {
+                        ite = ite.replace("]", "");
+                    } else if (ite.includes("/http/g")) {
+                        ite = ite.slice(4);
+                        curl = ite;
+                        alert('look an url was sliced ' + curl);
+                    } else if (!ite.includes("/http/g")) {
+                        var splitter2 = ite.split(":");
+                    };
+
+                        
+
+                    alert("This is ite: " + ite);
+                    for (var items2 of splitter2) {
+                        if (prevVal == 'name') {
+                            namer = items2; alert("here is a name!" + namer);
+                        } else if (prevVal == 'description') {
+                            descr = items2;
+                        } else if (prevVal == 'InventoryValue') {
+                            vals = items2;
+                        } else if (prevVal == 'PartType') {
+                            ptype = items2;
+                        }
+                        alert("this item of splitter 2:" + items2);
+                        //alert("this is 2nd item of splitter 2:" + splitter1[2]);
+                    
+
+                        if (items2 == 'name') { // this is quite redundant, i do know
+                            prevVal = items2;
+                        } else if (items2 == 'description') {
+                            prevVal === items2;
+                        } else if (items2 == 'InventoryValue') {
+                            prevVal == items2;
+                        } else if (items2 == 'PartType') {
+                            prevVal = items2;
+                        someFlag = true;
+                        }//see we could use const var
+
+                    };
+                   
+                };
+                //let cleanestData = a
+                if (someFlag) { fetchstuff.innerHtml = namer; }
+                
+                bflag = true;
+                //$.post('/Product/Create', { arrStuff });
+                
+
+
+
+         
+                for (var i = 0; i <= data.length; i++) {
+                        lName.value = data[i].name;//.replace(/['"]+/g, '');
+                    lDescription.value = data[i].description;//.replace(/['"]+/g, '');
+                    document.getElementById('InventoryValue').value = data[i].InventoryValue;//.replace(/['"]+/g, '');
+                    lPartType.value = data[i].PartType;//.re    place(/['"]+/g, '');
+                    lurl.value = data[i].url;//.replace(/['"]+/g, '');
+                        // expected output: "resolved"
+                        // 
+
+                   // document.getElementById("saveIt").click();
+                    
+              
+
+*/
+
+            };
+
+        </script>
     </div>
+</div>
 
-    <div>
-        <a asp-action="Index">Back to List</a>
-    </div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
 
-    @section Scripts {
-        @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
-    }
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

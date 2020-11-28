@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -48,14 +49,21 @@ namespace NeonTrees.Controllers
         public ActionResult Create(Product product)
         {
             productService.AddProduct(product); 
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Create));
         }
 
         [HttpPost]
-        public ActionResult ImportJSON(Product product)
+        public ActionResult Creater(Product product)
         {
-            Console.WriteLine("Hello--");
             productService.AddProduct(product);
+            return RedirectToAction(nameof(Create));
+        }
+
+
+        [HttpPost]
+        public ActionResult ImportJSON(string[] data)
+        {            
+            productService.AddProductJ(data);
             return RedirectToAction(nameof(Index));
         }
 
