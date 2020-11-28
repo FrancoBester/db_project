@@ -19,7 +19,5 @@ namespace NeonTrees.Models
 
         public string Category { get; set; }
 
-        public int BuildID { get; set; }
-
     }
 }

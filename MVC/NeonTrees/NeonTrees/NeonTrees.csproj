@@ -6,13 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Views\Login\**" />
-    <Content Remove="Views\Login\**" />
-    <EmbeddedResource Remove="Views\Login\**" />
-    <None Remove="Views\Login\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.8" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
     <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="2.19.100" />

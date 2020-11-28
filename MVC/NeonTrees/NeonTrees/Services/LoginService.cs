@@ -18,30 +18,23 @@ namespace NeonTrees.Services
             _connectionString = _configuration.GetConnectionString("DefaultConnection");
         }
 
-        public Login GetLoginByUser(string username)
+        public bool GetLoginByUser(Login login)
         {
-            Login login = new Login();
+            bool isValid = false;
             using (OracleConnection con = new OracleConnection(_connectionString))
             {
                 con.Open();
                 OracleCommand cmd = new OracleCommand();
-                cmd.CommandText = "Select * from Login Where userName = '" + username + "'";
+                cmd.CommandText = "Select * from Login Where userName = '" + login.userName + "' AND password = '"+login.password+"'";
                 cmd.Connection = con;
                 cmd.CommandType = CommandType.Text;
                 OracleDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    Login _login = new Login
-                    {
-                        ID = int.Parse(reader.GetValue(0).ToString()),
-                        CustomerID = int.Parse(reader.GetValue(1).ToString()),
-                        password = reader.GetValue(2).ToString(),
-                        userName = reader.GetValue(3).ToString()
-                    };
-                    login = _login;
+                    isValid = true;
                 }
             }
-            return login;
+            return isValid;
         }
 
         public void EditLogin(Login login)
@@ -70,7 +63,7 @@ namespace NeonTrees.Services
         {
             try
             {
-                using (OracleConnection con = new OracleConnection())
+                using (OracleConnection con = new OracleConnection(_connectionString))
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();

@@ -17,10 +17,34 @@ namespace NeonTrees.Controllers
         {
             loginService = _loginService;
         }
-        public IActionResult Index(string username)
+        //public IActionResult Index(string username)
+        //{
+        //    Login login = loginService.GetLoginByUser(username);
+        //    return View(login);
+        //}
+
+        public ActionResult Create()
         {
-            Login login = loginService.GetLoginByUser(username);
-            return View(login);
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Login login)
+        {
+            loginService.AddLogin(login);
+            return RedirectToAction();
+        }
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(Login login)
+        {
+            bool validLogin = loginService.GetLoginByUser(login);
+            return View();
         }
     }
 }
