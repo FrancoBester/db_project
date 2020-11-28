@@ -163,9 +163,10 @@ namespace NeonTrees.Services
             {
                 con.Open();
                 OracleCommand cmd = new OracleCommand();
-                cmd.CommandText = "Select CustomerID from Customer Where CustomerName = '" + customer.Name + "', CustomerSurname = '"+customer.Surname+"', email = '"+customer.Email+"'";
+                cmd.CommandText = "Select CustomerID from Customer Where CustomerName = '" + customer.Name + "'AND CustomerSurname = '"+customer.Surname+"' AND email = '"+customer.Email+"'";
                 cmd.Connection = con;
                 cmd.CommandType = CommandType.Text;
+
                 OracleDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
