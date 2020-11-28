@@ -155,6 +155,24 @@ namespace NeonTrees.Services
                 string error = ex.ToString();
             }
         }
-   
+
+        public int GetNewCustomerID(Customer customer)
+        {
+            int new_customer_id = -1;
+            using (OracleConnection con = new OracleConnection(_connectionString))
+            {
+                con.Open();
+                OracleCommand cmd = new OracleCommand();
+                cmd.CommandText = "Select CustomerID from Customer Where CustomerName = '" + customer.Name + "', CustomerSurname = '"+customer.Surname+"', email = '"+customer.Email+"'";
+                cmd.Connection = con;
+                cmd.CommandType = CommandType.Text;
+                OracleDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    new_customer_id = int.Parse(reader.GetValue(0).ToString());
+                }
+            }
+            return new_customer_id;
+        }
     }
 }
