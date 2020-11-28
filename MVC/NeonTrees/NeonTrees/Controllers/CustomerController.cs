@@ -40,7 +40,7 @@ namespace NeonTrees.Controllers
             }
             else
             {
-                //HttpContext.Session.SetInt32("new_customer_id",id);
+                HttpContext.Session.SetInt32("new_customer_id", id);
                 return RedirectToAction("Create", "Login");
             }
             //return RedirectToAction(nameof(Index));
