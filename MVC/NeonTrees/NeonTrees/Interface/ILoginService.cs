@@ -9,5 +9,6 @@ namespace NeonTrees.Services
         void EditLogin(Login login);
         public bool GetLoginByUser(Login login);
         public int GetNewLoginId(Login login);
+        public bool CheckUserName(Login login);
     }
 }
