@@ -15,5 +15,6 @@ namespace NeonTrees.Interface
         void DeleteBuild(Build build);
         public List<int> GetBuildPriceData();
         public List<int> GetBuildPerMonth();
+        public IEnumerable<Build> GetAllUserBuilds(int user_id);
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NeonTrees.Interface;
 using NeonTrees.Models;
@@ -19,8 +20,20 @@ namespace NeonTrees.Controllers
 
         public IActionResult Index()
         {
-            IEnumerable<Build> build = buildService.GetAllBuilds();
-            return View(build);
+            var user_id = HttpContext.Session.GetInt32("UserID");
+            int id_user = (int)user_id;
+            if(id_user != 0)
+            {
+                IEnumerable<Build> build = buildService.GetAllUserBuilds(id_user);
+                return View(build);
+            }
+            else
+            {
+                return View();
+            }
+            
+            //IEnumerable<Build> build = buildService.GetAllBuilds();
+            //return View(build);
         }
 
         public ActionResult Create()

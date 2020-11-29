@@ -322,5 +322,39 @@ namespace NeonTrees.Services
 
             return info_list;
         }
+
+        public IEnumerable<Build> GetAllUserBuilds(int user_id)
+        {
+            List<Build> buildList = new List<Build>();
+            try
+            {
+                using (OracleConnection con = new OracleConnection(_connectionString))
+                {
+                    con.Open();
+                    OracleCommand cmd = new OracleCommand();
+                    cmd.CommandText = "Select * from Build Where customerid = "+user_id+"";
+                    cmd.Connection = con;
+                    cmd.CommandType = CommandType.Text;
+                    OracleDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        Build _build = new Build
+                        {
+                            ID = int.Parse(reader.GetValue(0).ToString()),
+                            CustomerID = int.Parse(reader.GetValue(2).ToString()),
+                            Date = DateTime.Parse(reader.GetValue(1).ToString()).Date,
+                            Total = double.Parse(reader.GetValue(3).ToString()),
+                            OrderDetails = reader.GetValue(4).ToString(),
+                        };
+                        buildList.Add(_build);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                string error = ex.ToString();
+            }
+            return buildList;
+        }
     }
 }

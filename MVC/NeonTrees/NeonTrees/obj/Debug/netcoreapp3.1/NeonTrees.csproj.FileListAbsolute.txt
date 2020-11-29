@@ -1619,3 +1619,5 @@ C:\Coding\CMPG 321\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Ne
 C:\Coding\CMPG 321\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.genruntimeconfig.cache
 C:\Coding\CMPG 321\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_TableButtonPartial.cshtml.g.cs
 C:\Coding\CMPG 321\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_TableButtons.cshtml.g.cs
+C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_TableButtonPartial.cshtml.g.cs
+C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_TableButtons.cshtml.g.cs

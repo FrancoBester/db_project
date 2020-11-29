@@ -7,8 +7,9 @@ namespace NeonTrees.Services
         public void AddLogin(Login login);
         void DeleteLogin(Login login);
         void EditLogin(Login login);
-        public bool GetLoginByUser(Login login);
+        public bool CheckPasswprd(Login login);
         public int GetNewLoginId(Login login);
         public bool CheckUserName(Login login);
+        public int GetUserID(Login login);
     }
 }

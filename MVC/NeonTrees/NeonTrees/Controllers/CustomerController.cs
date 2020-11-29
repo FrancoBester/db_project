@@ -47,8 +47,6 @@ namespace NeonTrees.Controllers
                 }
             }
             return RedirectToAction("Create", "Login");
-
-            //return RedirectToAction(nameof(Index));
         }
 
         public ActionResult Edit(int id)

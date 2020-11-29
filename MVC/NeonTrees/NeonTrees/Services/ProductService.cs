@@ -106,7 +106,6 @@ namespace NeonTrees.Services
 
         public void AddProductJ(string name, string description, string InventoryValue, string Parttype, string url)
         {
-            ///Console.WriteLine("!HELLLO" + data);
             try
             {
                 using (OracleConnection con = new OracleConnection(_connectionString))

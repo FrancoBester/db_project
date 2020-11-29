@@ -21,12 +21,6 @@ namespace NeonTrees.Controllers
             customerService = _customerService;
         }
 
-        //public IActionResult Index(string username)
-        //{
-        //    Login login = loginService.GetLoginByUser(username);
-        //    return View(login);
-        //}
-
         public ActionResult Create()
         {
             return View();
@@ -37,12 +31,15 @@ namespace NeonTrees.Controllers
         {
             if (loginService.CheckUserName(login))
             {
-                int value = (int)HttpContext.Session.GetInt32("new_customer_id");
-                login.CustomerID = value;
-                loginService.AddLogin(login);
-                int login_id = loginService.GetNewLoginId(login);
-                UpdateCustomerInfo(value, login_id);
-                return RedirectToAction();
+                if (ValidPassword(login.Password))
+                {
+                    int value = (int)HttpContext.Session.GetInt32("new_customer_id");
+                    login.CustomerID = value;
+                    loginService.AddLogin(login);
+                    int login_id = loginService.GetNewLoginId(login);
+                    UpdateCustomerInfo(value, login_id);
+                    return RedirectToAction();
+                }
             }
 
             ViewBag.Message = string.Format("TestLogin");
@@ -58,8 +55,25 @@ namespace NeonTrees.Controllers
         [HttpPost]
         public ActionResult Login(Login login)
         {
-            bool validLogin = loginService.GetLoginByUser(login);
-            return View();
+            //bool value = ValidPassword(login.Name);
+            if (!loginService.CheckUserName(login))
+            {
+                if(loginService.CheckPasswprd(login))
+                {
+                    int user_id = loginService.GetUserID(login);
+                    HttpContext.Session.SetInt32("UserID", user_id);
+                    return RedirectToAction("Index","Build");
+                }
+                else
+                {
+                    return View();//show error msg pass incorrect
+                }
+            }
+            else
+            {
+                return View();//show error msg user incorrect
+            }
+
         }
 
         public void UpdateCustomerInfo(int customerID,int loginID)
@@ -67,7 +81,23 @@ namespace NeonTrees.Controllers
             Customer customer = customerService.GetCustomerById(customerID);
             customer.LoginID = loginID;
             customerService.EditCustomer(customer);
+        }
 
+        public bool ValidPassword(string password)
+        {
+            bool isValid = false;
+            if(password.Length >= 8)
+            {
+                if (password.Any(char.IsUpper))
+                {
+                    if (System.Text.RegularExpressions.Regex.IsMatch(password, ":;!@#%&"))
+                    {
+                        isValid = true;
+                    }
+                }
+            }
+
+            return isValid;
         }
     }
 }
