@@ -178,7 +178,7 @@ namespace NeonTrees.Services
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
-                    cmd.CommandText = "Select * from Product Where catergory = '"+product_category+"'";
+                    cmd.CommandText = "Select * from Product Where parttype = '"+product_category+"'";
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     OracleDataReader reader = cmd.ExecuteReader();

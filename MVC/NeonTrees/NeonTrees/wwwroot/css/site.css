@@ -89,6 +89,6 @@ body {
 
 .nav-item :hover {
     background-color: purple;
-    border-radius: 50%;
-    box-shadow: 5px 5px green;
+    border-radius: 60%;
+    box-shadow: 5px 5px yellow;
 }
