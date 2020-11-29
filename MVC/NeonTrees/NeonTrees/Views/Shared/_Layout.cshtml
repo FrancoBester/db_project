@@ -6,15 +6,9 @@
     <title>@ViewData["Title"] - NeonTrees</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-<<<<<<< Updated upstream
-=======
     <link rel="stylesheet" href="~/css/styles.css" />
     <script src="https://kit.fontawesome.com/ecddb1c16f.js" crossorigin="anonymous"></script>
 
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 </head>
 <body onload="DoneLoading();">
     <header>
@@ -26,26 +20,10 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-=======
-=======
->>>>>>> Stashed changes
                     <ul class="navbar-nav flex-grow-1  ">
                         <!-- <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li> -->
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Analytics" onclick="busyLoading();">Analytics</a>
                         </li>
@@ -60,22 +38,14 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index" onclick="busyLoading();">Product</a>
-<<<<<<< Updated upstream
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Customer" asp-action="Create">Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Login">Login</a>
-=======
->>>>>>> Stashed changes
-                        </li>
+
                     </ul>
+
                 </div>
+
             </div>
         </nav>
-<<<<<<< Updated upstream
-=======
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm float-right navbar-light border-bottom box-shadow mb-3" style="        position: absolute;
         right: 10%;
         top:0;
@@ -88,59 +58,39 @@
                     <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Login">Login</a>
                 </li>
             </ul>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-            </nav>
->>>>>>> Stashed changes
-=======
         </nav>
->>>>>>> Stashed changes
-=======
-        </nav>
->>>>>>> Stashed changes
     </header>
     <div class="container">
         <div id="loader"></div>
         <main id="loaded" role="main" class="pb-3">
 
-            @RenderBody()
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
+            <fieldset>
+                @RenderBody()
 
 
->>>>>>> Stashed changes
-=======
+                <button onclick="topFunction()" id="ScrollToTop" title="Go to top">Top</button>
+                <script>
+                    //ScrollToTop button
+                    var mybutton = document.getElementById("ScrollToTop");
+                    window.onscroll = function () { scrollFunction() };
 
-
->>>>>>> Stashed changes
-            <button onclick="topFunction()" id="ScrollToTop" title="Go to top">Top</button>
-            <script>
-                //ScrollToTop button
-                var mybutton = document.getElementById("ScrollToTop");
-                window.onscroll = function () { scrollFunction() };
-
-                function scrollFunction() {
-                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                        mybutton.style.display = "block";
-                    } else {
-                        mybutton.style.display = "none";
+                    function scrollFunction() {
+                        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                            mybutton.style.display = "block";
+                        } else {
+                            mybutton.style.display = "none";
+                        }
                     }
-                }
 
-                function topFunction() {
-                    document.body.scrollTop = 0;
-                    document.documentElement.scrollTop = 0;
-                }
-            </script>
+                    function topFunction() {
+                        document.body.scrollTop = 0;
+                        document.documentElement.scrollTop = 0;
+                    }
+                </script>
+            </fieldset>
         </main>
     </div>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-    <hr />  
+    <hr />
     <footer class="border-top footer text-white-50" style="background-color: #343a40;">
         <div id="foot-flexer">
             <div id="first-foot">
@@ -178,32 +128,6 @@
                     <li><a href="www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
                     <li><a href="www.instagram.com"><i class="fa fa-instagram"></i></a></li>
                 </div>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
-=======
->>>>>>> Stashed changes
-            </div>
-            <div class="vl"></div>
-            <div id="fifth-foot">
-                &copy; Neon Trees<br>
-                North West Univirsity<br>
-                Hendrick Van Eck Boulevard<br>
-                Vanderbijlpark
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-            </div>
-            <div class="vl"></div>
-            <div id="fifth-foot">
-                &copy; Neon Trees<br>
-                North West Univirsity<br>
-                Hendrick Van Eck Boulevard<br>
-                Vanderbijlpark
->>>>>>> Stashed changes
             </div>
             <div class="vl"></div>
             <div id="fifth-foot">
@@ -212,18 +136,9 @@
                 Hendrick Van Eck Boulevard<br>
                 Vanderbijlpark
             </div>
->>>>>>> Stashed changes
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - NeonTrees - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
     <script type="text/javascript">
 
         function busyLoading() {
@@ -241,10 +156,6 @@
         }
 
     </script>
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

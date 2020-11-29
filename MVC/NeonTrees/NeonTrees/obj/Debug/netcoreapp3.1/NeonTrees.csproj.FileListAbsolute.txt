@@ -1193,8 +1193,6 @@ C:\Users\EnricoIT\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreap
 C:\Users\EnricoIT\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.genruntimeconfig.cache
 C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Login\Create.cshtml.g.cs
 C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Login\Login.cshtml.g.cs
-<<<<<<< Updated upstream
-=======
 C:\Users\EnricoIT\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Login\Create.cshtml.g.cs
 C:\Users\EnricoIT\Desktop\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Login\Login.cshtml.g.cs
 C:\Coding\CMPG 321\db_project\MVC\NeonTrees\NeonTrees\bin\Debug\netcoreapp3.1\appsettings.Development.json
@@ -2036,7 +2034,3 @@ C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreap
 C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.pdb
 C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.genruntimeconfig.cache
 C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Items\Index.cshtml.g.cs
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
