@@ -1,9 +1,15 @@
 {
   "version": 2,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   "dgSpecHash": "rAXNWJsSrRG/SSnPjFGuFRL1gz85R1ukHNpvaFrUr1KrIL7osrVfMTOFsWayAzPFLikzwqQik37f6ySwY7Zvog==",
   "success": true,
   "projectFilePath": "C:\\Users\\Franco Bester\\Desktop\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj",
+=======
+  "dgSpecHash": "MyifeFoJZ/f/ukLSAKFpTSRwyHUCl1oVTXvRIy7UqD16MGlGmULpySypR2StDrVvx3xjOo5y8oaEOiwCTvNgqw==",
+  "success": true,
+  "projectFilePath": "C:\\Coding\\CMPG 321\\Backup\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj",
+>>>>>>> Stashed changes
 =======
   "dgSpecHash": "MyifeFoJZ/f/ukLSAKFpTSRwyHUCl1oVTXvRIy7UqD16MGlGmULpySypR2StDrVvx3xjOo5y8oaEOiwCTvNgqw==",
   "success": true,

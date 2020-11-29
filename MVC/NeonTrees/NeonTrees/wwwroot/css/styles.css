@@ -21,7 +21,11 @@
     bottom: 0;
     width: 100%;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     margin-top:1px;
+=======
+    margin-top:10%;
+>>>>>>> Stashed changes
 =======
     margin-top:10%;
 >>>>>>> Stashed changes
@@ -74,6 +78,7 @@
     width: 15%;
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     height: 100%;
     float: left;
     padding-top: 5px;
@@ -103,6 +108,8 @@
     padding-top: 5px;
 >>>>>>> Stashed changes
 =======
+=======
+>>>>>>> Stashed changes
     height: 100%;
     float: left;
     padding-top: 5px;
@@ -116,6 +123,9 @@
     height: 100%;
     float: left;
     padding-top: 5px;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }
 
@@ -132,7 +142,10 @@ li {
     list-style: none;
     margin:5px;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 }
 
 #paddingAdd {
@@ -173,6 +186,7 @@ li {
     width: 12rem;
     height: 12rem;
     animation: spin 2s linear infinite;
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 }
 >>>>>>> Stashed changes
@@ -192,11 +206,28 @@ li {
     }
 }
 
+=======
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+>>>>>>> Stashed changes
 .hidden {
     display: none;
 }
 
 .display {
     display: initial;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }

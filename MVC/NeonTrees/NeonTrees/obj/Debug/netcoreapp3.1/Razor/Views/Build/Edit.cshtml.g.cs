@@ -1,5 +1,9 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #pragma checksum "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "ab86214f8e37262cc44846080c707e9c3c0f1054"
+=======
+#pragma checksum "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "ab86214f8e37262cc44846080c707e9c3c0f1054"
+>>>>>>> Stashed changes
 =======
 #pragma checksum "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "ab86214f8e37262cc44846080c707e9c3c0f1054"
 >>>>>>> Stashed changes
@@ -18,7 +22,11 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 1 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+=======
+#line 1 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 1 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
 >>>>>>> Stashed changes
@@ -29,7 +37,11 @@ using NeonTrees;
 #nullable disable
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 2 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+=======
+#line 2 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 2 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
 >>>>>>> Stashed changes
@@ -80,7 +92,11 @@ using NeonTrees.Models;
             WriteLiteral("\r\n");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 3 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+=======
+#line 3 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 3 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
 >>>>>>> Stashed changes
@@ -92,9 +108,15 @@ using NeonTrees.Models;
 #nullable disable
             WriteLiteral("\r\n<h1>Edit</h1>\r\n\r\n<h4>Build</h4>\r\n<hr />\r\n<div class=\"row\">\r\n    <div class=\"col-md-4\">\r\n        ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f10545969", async() => {
                 WriteLiteral("\r\n            ");
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f10546239", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f10545949", async() => {
+                WriteLiteral("\r\n            ");
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f10546219", async() => {
+>>>>>>> Stashed changes
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f10545949", async() => {
                 WriteLiteral("\r\n            ");
@@ -106,7 +128,11 @@ using NeonTrees.Models;
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper);
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 14 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+=======
+#line 14 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 14 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
 >>>>>>> Stashed changes
@@ -126,7 +152,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper.ValidationSumma
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n            <div class=\"form-group\">\r\n                ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f10547974", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f10547949", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f10547949", async() => {
 >>>>>>> Stashed changes
@@ -136,7 +166,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper.ValidationSumma
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper);
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 16 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+=======
+#line 16 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 16 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
 >>>>>>> Stashed changes
@@ -156,7 +190,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ab86214f8e37262cc44846080c707e9c3c0f10549574", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ab86214f8e37262cc44846080c707e9c3c0f10549544", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ab86214f8e37262cc44846080c707e9c3c0f10549544", async() => {
 >>>>>>> Stashed changes
@@ -166,7 +204,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper);
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 17 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+=======
+#line 17 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 17 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
 >>>>>>> Stashed changes
@@ -186,7 +228,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105411168", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105411133", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105411133", async() => {
 >>>>>>> Stashed changes
@@ -196,7 +242,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper);
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 18 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+=======
+#line 18 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 18 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
 >>>>>>> Stashed changes
@@ -216,7 +266,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n            </div>\r\n            <div class=\"form-group\">\r\n                ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105412903", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105412863", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105412863", async() => {
 >>>>>>> Stashed changes
@@ -226,7 +280,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper);
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 21 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+=======
+#line 21 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 21 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
 >>>>>>> Stashed changes
@@ -246,7 +304,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ab86214f8e37262cc44846080c707e9c3c0f105414506", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ab86214f8e37262cc44846080c707e9c3c0f105414461", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ab86214f8e37262cc44846080c707e9c3c0f105414461", async() => {
 >>>>>>> Stashed changes
@@ -256,7 +318,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper);
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 22 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+=======
+#line 22 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 22 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
 >>>>>>> Stashed changes
@@ -276,7 +342,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105416103", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105416053", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105416053", async() => {
 >>>>>>> Stashed changes
@@ -286,7 +356,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper);
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 23 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+=======
+#line 23 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 23 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
 >>>>>>> Stashed changes
@@ -306,7 +380,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n            </div>\r\n            <div class=\"form-group\">\r\n                ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105417840", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105417785", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105417785", async() => {
 >>>>>>> Stashed changes
@@ -316,7 +394,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper);
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 26 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+=======
+#line 26 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 26 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
 >>>>>>> Stashed changes
@@ -336,7 +418,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ab86214f8e37262cc44846080c707e9c3c0f105419449", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ab86214f8e37262cc44846080c707e9c3c0f105419389", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ab86214f8e37262cc44846080c707e9c3c0f105419389", async() => {
 >>>>>>> Stashed changes
@@ -346,7 +432,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper);
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 27 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+=======
+#line 27 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 27 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
 >>>>>>> Stashed changes
@@ -366,7 +456,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105421052", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105420987", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105420987", async() => {
 >>>>>>> Stashed changes
@@ -376,7 +470,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper);
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 28 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+=======
+#line 28 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 28 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
 >>>>>>> Stashed changes
@@ -396,7 +494,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n            </div>\r\n            <div class=\"form-group\">\r\n                ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105422795", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105422725", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105422725", async() => {
 >>>>>>> Stashed changes
@@ -406,7 +508,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper);
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 31 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+=======
+#line 31 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 31 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
 >>>>>>> Stashed changes
@@ -426,7 +532,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ab86214f8e37262cc44846080c707e9c3c0f105424399", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ab86214f8e37262cc44846080c707e9c3c0f105424324", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ab86214f8e37262cc44846080c707e9c3c0f105424324", async() => {
 >>>>>>> Stashed changes
@@ -436,7 +546,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper);
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 32 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+=======
+#line 32 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 32 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
 >>>>>>> Stashed changes
@@ -456,7 +570,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105425997", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105425917", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105425917", async() => {
 >>>>>>> Stashed changes
@@ -466,7 +584,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper);
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 33 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+=======
+#line 33 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 33 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
 >>>>>>> Stashed changes
@@ -486,7 +608,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n            </div>\r\n            <div class=\"form-group\">\r\n                ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105427735", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105427650", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105427650", async() => {
 >>>>>>> Stashed changes
@@ -496,7 +622,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper);
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 36 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+=======
+#line 36 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 36 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
 >>>>>>> Stashed changes
@@ -516,7 +646,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ab86214f8e37262cc44846080c707e9c3c0f105429346", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ab86214f8e37262cc44846080c707e9c3c0f105429256", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ab86214f8e37262cc44846080c707e9c3c0f105429256", async() => {
 >>>>>>> Stashed changes
@@ -526,7 +660,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper);
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 37 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+=======
+#line 37 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 37 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
 >>>>>>> Stashed changes
@@ -546,7 +684,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105430951", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105430856", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105430856", async() => {
 >>>>>>> Stashed changes
@@ -556,7 +698,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper);
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 38 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+=======
+#line 38 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 38 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
 >>>>>>> Stashed changes
@@ -592,7 +738,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n    </div>\r\n</div>\r\n\r\n<div>\r\n    ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105434010", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105433910", async() => {
+>>>>>>> Stashed changes
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab86214f8e37262cc44846080c707e9c3c0f105433910", async() => {
 >>>>>>> Stashed changes
@@ -615,7 +765,11 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
                 WriteLiteral("\r\n");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 52 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+=======
+#line 52 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 52 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Build\Edit.cshtml"
 >>>>>>> Stashed changes

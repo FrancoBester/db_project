@@ -1,5 +1,9 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #pragma checksum "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "a7ed35e612f032218fe8ddfdccc4722222c57d0c"
+=======
+#pragma checksum "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "a49fcb07ea02537ab3ae5beb73dcb91e412fd07d"
+>>>>>>> Stashed changes
 =======
 #pragma checksum "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "a49fcb07ea02537ab3ae5beb73dcb91e412fd07d"
 >>>>>>> Stashed changes
@@ -18,7 +22,11 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 1 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+=======
+#line 1 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 1 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
 >>>>>>> Stashed changes
@@ -29,7 +37,11 @@ using NeonTrees;
 #nullable disable
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 2 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+=======
+#line 2 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 2 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
 >>>>>>> Stashed changes
@@ -38,6 +50,7 @@ using NeonTrees.Models;
 #line default
 #line hidden
 #nullable disable
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a7ed35e612f032218fe8ddfdccc4722222c57d0c", @"/Views/Customer/Index.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4b6bc9972631f9632edd5a80fcd8c13d45d9fe9a", @"/Views/_ViewImports.cshtml")]
@@ -53,10 +66,20 @@ using NeonTrees.Models;
     public class Views_Customer_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<NeonTrees.Models.Customer>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Create", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+=======
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a49fcb07ea02537ab3ae5beb73dcb91e412fd07d", @"/Views/Customer/Index.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a233dd4d465801631d196157b503be1fcdde2ed7", @"/Views/_ViewImports.cshtml")]
+    public class Views_Customer_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<NeonTrees.Models.Customer>>
+    {
+        private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Create", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+>>>>>>> Stashed changes
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_1 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("btn btn-primary text-white"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_2 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Edit", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_3 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("btn btn-danger text-white"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_4 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Delete", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         #line hidden
         #pragma warning disable 0649
@@ -85,7 +108,11 @@ using NeonTrees.Models;
             WriteLiteral("\r\n");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 3 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
+=======
+#line 3 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 3 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
 >>>>>>> Stashed changes
@@ -118,6 +145,9 @@ using NeonTrees.Models;
     <p>
         ");
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a49fcb07ea02537ab3ae5beb73dcb91e412fd07d5326", async() => {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                 WriteLiteral("Create New");
             }
@@ -136,9 +166,12 @@ using NeonTrees.Models;
             WriteLiteral("\r\n</p>\r\n<table class=\"table\">\r\n    <thead>\r\n        <tr>\r\n            <th>\r\n                ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 16 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
            Write(Html.DisplayNameFor(model => model.ID));
 =======
+=======
+>>>>>>> Stashed changes
 #line 29 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
                Write(Html.DisplayNameFor(model => model.Name));
 >>>>>>> Stashed changes
@@ -149,9 +182,12 @@ using NeonTrees.Models;
             WriteLiteral("\r\n            </th>\r\n            <th>\r\n                ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 19 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
            Write(Html.DisplayNameFor(model => model.Name));
 =======
+=======
+>>>>>>> Stashed changes
 #line 32 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
                Write(Html.DisplayNameFor(model => model.Surname));
 >>>>>>> Stashed changes
@@ -162,9 +198,12 @@ using NeonTrees.Models;
             WriteLiteral("\r\n            </th>\r\n            <th>\r\n                ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 22 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
            Write(Html.DisplayNameFor(model => model.Surname));
 =======
+=======
+>>>>>>> Stashed changes
 #line 35 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
                Write(Html.DisplayNameFor(model => model.Phone));
 >>>>>>> Stashed changes
@@ -175,9 +214,12 @@ using NeonTrees.Models;
             WriteLiteral("\r\n            </th>\r\n            <th>\r\n                ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 25 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
            Write(Html.DisplayNameFor(model => model.Phone));
 =======
+=======
+>>>>>>> Stashed changes
 #line 38 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
                Write(Html.DisplayNameFor(model => model.Email));
 >>>>>>> Stashed changes
@@ -187,6 +229,7 @@ using NeonTrees.Models;
 #nullable disable
             WriteLiteral("\r\n            </th>\r\n            <th>\r\n                ");
 #nullable restore
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 #line 28 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
            Write(Html.DisplayNameFor(model => model.Email));
@@ -207,6 +250,8 @@ using NeonTrees.Models;
 #line 34 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
            Write(Html.DisplayNameFor(model => model.LoginID));
 =======
+=======
+>>>>>>> Stashed changes
 #line 50 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
              foreach (var item in Model)
             {
@@ -218,9 +263,12 @@ using NeonTrees.Models;
             WriteLiteral("\r\n            </th>\r\n            <th></th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 40 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
  foreach (var item in Model) {
 =======
+=======
+>>>>>>> Stashed changes
 #line 54 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
                    Write(Html.DisplayFor(modelItem => item.Name));
 >>>>>>> Stashed changes
@@ -231,9 +279,12 @@ using NeonTrees.Models;
             WriteLiteral("        <tr>\r\n            <td>\r\n                ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 43 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
            Write(Html.DisplayFor(modelItem => item.ID));
 =======
+=======
+>>>>>>> Stashed changes
 #line 57 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
                    Write(Html.DisplayFor(modelItem => item.Surname));
 >>>>>>> Stashed changes
@@ -244,9 +295,12 @@ using NeonTrees.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 46 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
            Write(Html.DisplayFor(modelItem => item.Name));
 =======
+=======
+>>>>>>> Stashed changes
 #line 60 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
                    Write(Html.DisplayFor(modelItem => item.Phone));
 >>>>>>> Stashed changes
@@ -257,9 +311,12 @@ using NeonTrees.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 49 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
            Write(Html.DisplayFor(modelItem => item.Surname));
 =======
+=======
+>>>>>>> Stashed changes
 #line 63 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
                    Write(Html.DisplayFor(modelItem => item.Email));
 >>>>>>> Stashed changes
@@ -270,9 +327,12 @@ using NeonTrees.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 52 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
            Write(Html.DisplayFor(modelItem => item.Phone));
 =======
+=======
+>>>>>>> Stashed changes
 #line 66 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
                    Write(Html.DisplayFor(modelItem => item.Registered));
 >>>>>>> Stashed changes
@@ -283,9 +343,12 @@ using NeonTrees.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 55 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
            Write(Html.DisplayFor(modelItem => item.Email));
 =======
+=======
+>>>>>>> Stashed changes
 #line 69 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
                    Write(Html.DisplayFor(modelItem => item.LoginID));
 >>>>>>> Stashed changes
@@ -310,9 +373,15 @@ using NeonTrees.Models;
 #line default
 #line hidden
 #nullable disable
+<<<<<<< Updated upstream
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a7ed35e612f032218fe8ddfdccc4722222c57d0c10826", async() => {
                 WriteLiteral("Edit");
+=======
+            WriteLiteral("\r\n                    </td> -->\r\n                <td>\r\n                    ");
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a49fcb07ea02537ab3ae5beb73dcb91e412fd07d10710", async() => {
+                WriteLiteral("\r\n                        <i class=\"fas fa-edit\"></i>\r\n                    ");
+>>>>>>> Stashed changes
 =======
             WriteLiteral("\r\n                    </td> -->\r\n                <td>\r\n                    ");
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a49fcb07ea02537ab3ae5beb73dcb91e412fd07d10710", async() => {
@@ -332,8 +401,13 @@ using NeonTrees.Models;
             BeginWriteTagHelperAttribute();
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 64 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
                                        WriteLiteral(item.ID);
+=======
+#line 72 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
+                                                                              WriteLiteral(item.ID);
+>>>>>>> Stashed changes
 =======
 #line 72 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
                                                                               WriteLiteral(item.ID);
@@ -353,9 +427,15 @@ using NeonTrees.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             WriteLiteral(" |\r\n                ");
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a7ed35e612f032218fe8ddfdccc4722222c57d0c13006", async() => {
                 WriteLiteral("Details");
+=======
+            WriteLiteral("\r\n                    ");
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a49fcb07ea02537ab3ae5beb73dcb91e412fd07d13086", async() => {
+                WriteLiteral("\r\n                        <i class=\"fas fa-trash\"></i>\r\n                    ");
+>>>>>>> Stashed changes
 =======
             WriteLiteral("\r\n                    ");
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a49fcb07ea02537ab3ae5beb73dcb91e412fd07d13086", async() => {
@@ -375,8 +455,13 @@ using NeonTrees.Models;
             BeginWriteTagHelperAttribute();
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 65 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
                                           WriteLiteral(item.ID);
+=======
+#line 75 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
+                                                                               WriteLiteral(item.ID);
+>>>>>>> Stashed changes
 =======
 #line 75 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
                                                                                WriteLiteral(item.ID);
@@ -395,6 +480,7 @@ using NeonTrees.Models;
             }
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
             WriteLiteral(" |\r\n                ");
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a7ed35e612f032218fe8ddfdccc4722222c57d0c15192", async() => {
@@ -424,6 +510,11 @@ using NeonTrees.Models;
             if (!__tagHelperExecutionContext.Output.IsContentModified)
             {
                 await __tagHelperExecutionContext.SetOutputContentAsync();
+=======
+            WriteLiteral("\r\n                </td>\r\n                </tr>\r\n");
+#nullable restore
+#line 80 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Index.cshtml"
+>>>>>>> Stashed changes
 =======
             WriteLiteral("\r\n                </td>\r\n                </tr>\r\n");
 #nullable restore

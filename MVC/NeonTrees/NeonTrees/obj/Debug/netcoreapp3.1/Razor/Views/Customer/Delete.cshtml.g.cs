@@ -1,5 +1,9 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #pragma checksum "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "9a8f6472710a98b8d2e85217d8601e534c74b852"
+=======
+#pragma checksum "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "bd869ce1382095b697e49bc257256dbe726a7ac5"
+>>>>>>> Stashed changes
 =======
 #pragma checksum "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "bd869ce1382095b697e49bc257256dbe726a7ac5"
 >>>>>>> Stashed changes
@@ -18,7 +22,11 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 1 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+=======
+#line 1 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 1 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
 >>>>>>> Stashed changes
@@ -29,7 +37,11 @@ using NeonTrees;
 #nullable disable
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 2 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+=======
+#line 2 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 2 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
 >>>>>>> Stashed changes
@@ -73,7 +85,11 @@ using NeonTrees.Models;
             WriteLiteral("\r\n");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 3 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+=======
+#line 3 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 3 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
 >>>>>>> Stashed changes
@@ -86,7 +102,11 @@ using NeonTrees.Models;
             WriteLiteral("\r\n<h1>Delete</h1>\r\n\r\n<h3>Are you sure you want to delete this?</h3>\r\n<div>\r\n    <h4>Customer</h4>\r\n    <hr />\r\n    <dl class=\"row\">\r\n        <dt class = \"col-sm-2\">\r\n            ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 15 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+=======
+#line 15 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 15 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
 >>>>>>> Stashed changes
@@ -98,7 +118,11 @@ using NeonTrees.Models;
             WriteLiteral("\r\n        </dt>\r\n        <dd class = \"col-sm-10\">\r\n            ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 18 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+=======
+#line 18 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 18 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
 >>>>>>> Stashed changes
@@ -110,7 +134,11 @@ using NeonTrees.Models;
             WriteLiteral("\r\n        </dd>\r\n        <dt class = \"col-sm-2\">\r\n            ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 21 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+=======
+#line 21 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 21 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
 >>>>>>> Stashed changes
@@ -122,7 +150,11 @@ using NeonTrees.Models;
             WriteLiteral("\r\n        </dt>\r\n        <dd class = \"col-sm-10\">\r\n            ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 24 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+=======
+#line 24 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 24 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
 >>>>>>> Stashed changes
@@ -134,7 +166,11 @@ using NeonTrees.Models;
             WriteLiteral("\r\n        </dd>\r\n        <dt class = \"col-sm-2\">\r\n            ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 27 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+=======
+#line 27 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 27 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
 >>>>>>> Stashed changes
@@ -146,7 +182,11 @@ using NeonTrees.Models;
             WriteLiteral("\r\n        </dt>\r\n        <dd class = \"col-sm-10\">\r\n            ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 30 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+=======
+#line 30 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 30 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
 >>>>>>> Stashed changes
@@ -158,7 +198,11 @@ using NeonTrees.Models;
             WriteLiteral("\r\n        </dd>\r\n        <dt class = \"col-sm-2\">\r\n            ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 33 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+=======
+#line 33 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 33 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
 >>>>>>> Stashed changes
@@ -170,7 +214,11 @@ using NeonTrees.Models;
             WriteLiteral("\r\n        </dt>\r\n        <dd class = \"col-sm-10\">\r\n            ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 36 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+=======
+#line 36 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 36 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
 >>>>>>> Stashed changes
@@ -182,7 +230,11 @@ using NeonTrees.Models;
             WriteLiteral("\r\n        </dd>\r\n        <dt class = \"col-sm-2\">\r\n            ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 39 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+=======
+#line 39 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 39 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
 >>>>>>> Stashed changes
@@ -194,7 +246,11 @@ using NeonTrees.Models;
             WriteLiteral("\r\n        </dt>\r\n        <dd class = \"col-sm-10\">\r\n            ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 42 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+=======
+#line 42 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 42 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
 >>>>>>> Stashed changes
@@ -206,7 +262,11 @@ using NeonTrees.Models;
             WriteLiteral("\r\n        </dd>\r\n        <dt class = \"col-sm-2\">\r\n            ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 45 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+=======
+#line 45 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 45 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
 >>>>>>> Stashed changes
@@ -218,7 +278,11 @@ using NeonTrees.Models;
             WriteLiteral("\r\n        </dt>\r\n        <dd class = \"col-sm-10\">\r\n            ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 48 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+=======
+#line 48 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 48 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
 >>>>>>> Stashed changes
@@ -230,7 +294,11 @@ using NeonTrees.Models;
             WriteLiteral("\r\n        </dd>\r\n        <dt class = \"col-sm-2\">\r\n            ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 51 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+=======
+#line 51 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 51 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
 >>>>>>> Stashed changes
@@ -242,7 +310,11 @@ using NeonTrees.Models;
             WriteLiteral("\r\n        </dt>\r\n        <dd class = \"col-sm-10\">\r\n            ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 54 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+=======
+#line 54 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 54 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Customer\Delete.cshtml"
 >>>>>>> Stashed changes
@@ -261,6 +333,9 @@ using NeonTrees.Models;
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bd869ce1382095b697e49bc257256dbe726a7ac58923", async() => {
                 WriteLiteral("\n        <input type=\"submit\" value=\"Delete\" class=\"btn btn-danger\" /> |\n        ");
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bd869ce1382095b697e49bc257256dbe726a7ac59266", async() => {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                     WriteLiteral("Back to List");
                 }

@@ -1,5 +1,9 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #pragma checksum "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "4b6bc9972631f9632edd5a80fcd8c13d45d9fe9a"
+=======
+#pragma checksum "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "a233dd4d465801631d196157b503be1fcdde2ed7"
+>>>>>>> Stashed changes
 =======
 #pragma checksum "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "a233dd4d465801631d196157b503be1fcdde2ed7"
 >>>>>>> Stashed changes
@@ -18,7 +22,11 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 1 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+=======
+#line 1 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 1 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
 >>>>>>> Stashed changes
@@ -29,7 +37,11 @@ using NeonTrees;
 #nullable disable
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 2 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+=======
+#line 2 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 2 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
 >>>>>>> Stashed changes

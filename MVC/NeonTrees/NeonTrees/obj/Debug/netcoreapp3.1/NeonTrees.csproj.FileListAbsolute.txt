@@ -2036,4 +2036,7 @@ C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreap
 C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.pdb
 C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\NeonTrees.genruntimeconfig.cache
 C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\obj\Debug\netcoreapp3.1\Razor\Views\Items\Index.cshtml.g.cs
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

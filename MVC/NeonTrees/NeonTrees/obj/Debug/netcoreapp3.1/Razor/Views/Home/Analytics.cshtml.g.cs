@@ -1,5 +1,9 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #pragma checksum "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Analytics.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "a2415d82a7a79db0e83740891e8a02a8180af8cd"
+=======
+#pragma checksum "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Analytics.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "5aa6a8de4b09cf572683db3a277e8a3698eda497"
+>>>>>>> Stashed changes
 =======
 #pragma checksum "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Analytics.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "5aa6a8de4b09cf572683db3a277e8a3698eda497"
 >>>>>>> Stashed changes
@@ -18,7 +22,11 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 1 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+=======
+#line 1 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 1 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
 >>>>>>> Stashed changes
@@ -29,7 +37,11 @@ using NeonTrees;
 #nullable disable
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 2 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+=======
+#line 2 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 2 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
 >>>>>>> Stashed changes
@@ -75,9 +87,15 @@ using NeonTrees.Models;
         {
             WriteLiteral("<html>\r\n\r\n");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a2415d82a7a79db0e83740891e8a02a8180af8cd5258", async() => {
                 WriteLiteral("\r\n    ");
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a2415d82a7a79db0e83740891e8a02a8180af8cd5520", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5aa6a8de4b09cf572683db3a277e8a3698eda4975243", async() => {
+                WriteLiteral("\r\n    ");
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5aa6a8de4b09cf572683db3a277e8a3698eda4975505", async() => {
+>>>>>>> Stashed changes
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5aa6a8de4b09cf572683db3a277e8a3698eda4975243", async() => {
                 WriteLiteral("\r\n    ");
@@ -97,7 +115,11 @@ using NeonTrees.Models;
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n    ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a2415d82a7a79db0e83740891e8a02a8180af8cd6619", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5aa6a8de4b09cf572683db3a277e8a3698eda4976604", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5aa6a8de4b09cf572683db3a277e8a3698eda4976604", async() => {
 >>>>>>> Stashed changes
@@ -115,7 +137,11 @@ using NeonTrees.Models;
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n    ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a2415d82a7a79db0e83740891e8a02a8180af8cd7718", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5aa6a8de4b09cf572683db3a277e8a3698eda4977703", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5aa6a8de4b09cf572683db3a277e8a3698eda4977703", async() => {
 >>>>>>> Stashed changes
@@ -133,7 +159,11 @@ using NeonTrees.Models;
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n    ");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a2415d82a7a79db0e83740891e8a02a8180af8cd8817", async() => {
+=======
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5aa6a8de4b09cf572683db3a277e8a3698eda4978802", async() => {
+>>>>>>> Stashed changes
 =======
                 __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5aa6a8de4b09cf572683db3a277e8a3698eda4978802", async() => {
 >>>>>>> Stashed changes
@@ -185,7 +215,11 @@ using NeonTrees.Models;
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n\r\n");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a2415d82a7a79db0e83740891e8a02a8180af8cd11143", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5aa6a8de4b09cf572683db3a277e8a3698eda49711128", async() => {
+>>>>>>> Stashed changes
 =======
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5aa6a8de4b09cf572683db3a277e8a3698eda49711128", async() => {
 >>>>>>> Stashed changes
@@ -208,7 +242,11 @@ using NeonTrees.Models;
         var buildArray = ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 46 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Analytics.cshtml"
+=======
+#line 46 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Analytics.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 46 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Analytics.cshtml"
 >>>>>>> Stashed changes
@@ -220,7 +258,11 @@ using NeonTrees.Models;
                 WriteLiteral(";\r\n        var price = ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 47 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Analytics.cshtml"
+=======
+#line 47 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Analytics.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 47 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Analytics.cshtml"
 >>>>>>> Stashed changes
@@ -279,7 +321,11 @@ using NeonTrees.Models;
         var monthArray = ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 93 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Analytics.cshtml"
+=======
+#line 93 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Analytics.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 93 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Analytics.cshtml"
 >>>>>>> Stashed changes
@@ -291,7 +337,11 @@ using NeonTrees.Models;
                 WriteLiteral(";\r\n        var month = ");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 94 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Analytics.cshtml"
+=======
+#line 94 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Analytics.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 94 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Analytics.cshtml"
 >>>>>>> Stashed changes

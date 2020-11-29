@@ -1,5 +1,9 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #pragma checksum "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Options.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "aebe3cd58bb60cad377f5bc903b08ea421bda0ec"
+=======
+#pragma checksum "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Options.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "8bc5c0b7873274de54c055cadabb4c212d43ece4"
+>>>>>>> Stashed changes
 =======
 #pragma checksum "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Options.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "8bc5c0b7873274de54c055cadabb4c212d43ece4"
 >>>>>>> Stashed changes
@@ -18,7 +22,11 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 1 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+=======
+#line 1 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 1 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
 >>>>>>> Stashed changes
@@ -29,7 +37,11 @@ using NeonTrees;
 #nullable disable
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 2 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+=======
+#line 2 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 2 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\_ViewImports.cshtml"
 >>>>>>> Stashed changes
@@ -71,7 +83,11 @@ using NeonTrees.Models;
         {
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 1 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Options.cshtml"
+=======
+#line 1 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Options.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 1 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Options.cshtml"
 >>>>>>> Stashed changes
@@ -84,7 +100,11 @@ using NeonTrees.Models;
             WriteLiteral("\r\n<h1>");
 #nullable restore
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 5 "C:\Users\Franco Bester\Desktop\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Options.cshtml"
+=======
+#line 5 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Options.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 5 "C:\Coding\CMPG 321\Backup\db_project\MVC\NeonTrees\NeonTrees\Views\Home\Options.cshtml"
 >>>>>>> Stashed changes
@@ -99,6 +119,9 @@ Write(ViewData["Title"]);
 =======
             WriteLiteral("</h1>\n\n<p> ");
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8bc5c0b7873274de54c055cadabb4c212d43ece44433", async() => {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                 WriteLiteral("CPU");
             }
@@ -124,6 +147,9 @@ Write(ViewData["Title"]);
 =======
             WriteLiteral(" </P>\n<p> ");
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8bc5c0b7873274de54c055cadabb4c212d43ece45998", async() => {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                 WriteLiteral("GPU");
             }
@@ -149,6 +175,9 @@ Write(ViewData["Title"]);
 =======
             WriteLiteral(" </p>\n<p> ");
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8bc5c0b7873274de54c055cadabb4c212d43ece47563", async() => {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                 WriteLiteral("Motherboard");
             }
@@ -174,6 +203,9 @@ Write(ViewData["Title"]);
 =======
             WriteLiteral(" </p>\n<p> ");
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8bc5c0b7873274de54c055cadabb4c212d43ece49136", async() => {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                 WriteLiteral("Powersupply");
             }
@@ -199,6 +231,9 @@ Write(ViewData["Title"]);
 =======
             WriteLiteral(" </p>\n<p> ");
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8bc5c0b7873274de54c055cadabb4c212d43ece410709", async() => {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                 WriteLiteral("SSD");
             }
@@ -224,6 +259,9 @@ Write(ViewData["Title"]);
 =======
             WriteLiteral(" </p>\n<p> ");
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8bc5c0b7873274de54c055cadabb4c212d43ece412275", async() => {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                 WriteLiteral("HDD");
             }
@@ -249,6 +287,9 @@ Write(ViewData["Title"]);
 =======
             WriteLiteral(" </p>\n<p> ");
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8bc5c0b7873274de54c055cadabb4c212d43ece413841", async() => {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                 WriteLiteral("RAM");
             }
@@ -274,6 +315,9 @@ Write(ViewData["Title"]);
 =======
             WriteLiteral(" </p>\n<p> ");
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8bc5c0b7873274de54c055cadabb4c212d43ece415407", async() => {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                 WriteLiteral("Cooler");
             }
@@ -299,6 +343,9 @@ Write(ViewData["Title"]);
 =======
             WriteLiteral(" </p>\n<p> ");
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8bc5c0b7873274de54c055cadabb4c212d43ece416976", async() => {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                 WriteLiteral("Case");
             }

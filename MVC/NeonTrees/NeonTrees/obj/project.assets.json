@@ -6231,11 +6231,19 @@
     "version": "1.0.0",
     "restore": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "projectUniqueName": "C:\\Users\\Franco Bester\\Desktop\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj",
       "projectName": "NeonTrees",
       "projectPath": "C:\\Users\\Franco Bester\\Desktop\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj",
       "packagesPath": "C:\\Users\\Franco Bester\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Franco Bester\\Desktop\\db_project\\MVC\\NeonTrees\\NeonTrees\\obj\\",
+=======
+      "projectUniqueName": "C:\\Coding\\CMPG 321\\Backup\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj",
+      "projectName": "NeonTrees",
+      "projectPath": "C:\\Coding\\CMPG 321\\Backup\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj",
+      "packagesPath": "C:\\Users\\John\\.nuget\\packages\\",
+      "outputPath": "C:\\Coding\\CMPG 321\\Backup\\db_project\\MVC\\NeonTrees\\NeonTrees\\obj\\",
+>>>>>>> Stashed changes
 =======
       "projectUniqueName": "C:\\Coding\\CMPG 321\\Backup\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj",
       "projectName": "NeonTrees",
