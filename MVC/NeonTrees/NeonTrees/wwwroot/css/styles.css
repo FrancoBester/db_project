@@ -1,6 +1,8 @@
 ﻿body {
    /* sexy body*/
 }
+<<<<<<< Updated upstream
+=======
 #wrapper {
     min-height: 100%;
     position: relative;
@@ -18,7 +20,15 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+    margin-top:1px;
+=======
     margin-top:10%;
+>>>>>>> Stashed changes
+=======
+    margin-top:10%;
+>>>>>>> Stashed changes
     white-space: nowrap; /* Vertically center the text there */
 }
 
@@ -36,7 +46,7 @@
     display: flex;
     align-items: self-start;
     flex-direction: column;
-    width: 20%;
+    width: 10%;
     height: 100%;
     float: left;
 }
@@ -55,7 +65,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 20%;
+    width: 15%;
     height: 100%;
     float: left;
     padding-top: 5px;
@@ -65,7 +75,10 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 20%;
+    width: 15%;
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     height: 100%;
     float: left;
     padding-top: 5px;
@@ -75,10 +88,45 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 20%;
+    width: 15%;
     height: 100%;
     float: left;
     padding-top: 5px;
+=======
+    height: 100%;
+    float: left;
+    padding-top: 5px;
+}
+
+#fifth-foot {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 15%;
+    height: 100%;
+    float: left;
+    padding-top: 5px;
+>>>>>>> Stashed changes
+=======
+=======
+>>>>>>> Stashed changes
+    height: 100%;
+    float: left;
+    padding-top: 5px;
+}
+
+#fifth-foot {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 15%;
+    height: 100%;
+    float: left;
+    padding-top: 5px;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 }
 
 
@@ -93,6 +141,11 @@
 li {
     list-style: none;
     margin:5px;
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> Stashed changes
 }
 
 #paddingAdd {
@@ -102,11 +155,12 @@ li {
     flex-direction: row;
     padding:10px;
 }
-button {
+
+#btn {
     background-color: #4CAF50; /* Green */
-    border-radius: 8px;
+    border: none;
     color: white;
-    padding: 8px 15px;
+    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -118,7 +172,7 @@ button {
     border: none;
     color: white;
     padding: 15px 32px;
-    margin:2px;
+    margin:auto;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -132,6 +186,27 @@ button {
     width: 12rem;
     height: 12rem;
     animation: spin 2s linear infinite;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+}
+>>>>>>> Stashed changes
+
+<<<<<<< Updated upstream
+.img_cooler{
+    width: 7rem;
+    height:5rem;
+=======
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+=======
 }
 
 @keyframes spin {
@@ -144,25 +219,15 @@ button {
     }
 }
 
+>>>>>>> Stashed changes
 .hidden {
     display: none;
 }
 
 .display {
     display: initial;
-}
-
-h1 {
-    font-size: 1.5rem;
-}
-
-fieldset {
-    flex: 1;
-    background-color: white;
-    box-shadow: #000000 5px 5px 5px 10px;
-    width: 99%;
-    height: 100%;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    padding: 15px;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 }
