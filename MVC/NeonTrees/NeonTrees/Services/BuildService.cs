@@ -38,6 +38,7 @@ namespace NeonTrees.Services
                         Build _build = new Build
                         {
                             ID = int.Parse(reader.GetValue(0).ToString()),
+                            CustomerID = int.Parse(reader.GetValue(2).ToString()),
                             Date = DateTime.Parse(reader.GetValue(1).ToString()).Date,
                             Total = double.Parse(reader.GetValue(3).ToString()),
                             OrderDetails = reader.GetValue(4).ToString(),
