@@ -104,16 +104,16 @@ namespace NeonTrees.Services
 
         }
 
-        public void AddProductJ(string[] data)
+        public void AddProductJ(string name, string description, string InventoryValue, string Parttype, string url)
         {
-            Console.WriteLine("!HELLLO" + data);
-           /* try
+            ///Console.WriteLine("!HELLLO" + data);
+            try
             {
                 using (OracleConnection con = new OracleConnection(_connectionString))
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
-                    cmd.CommandText = "INSERT INTO PRODUCT(productid,productname,description,inventoryvalue,parttype,url) VALUES('" + product.ID + "','" + product.Name + "','" + product.Description + "','" + product.InventoryValue + "','" + product.PartType + "','" + product.URL + "')";
+                    cmd.CommandText = "INSERT INTO PRODUCT(productname,description,inventoryvalue,parttype,url) VALUES('" + name + "','" + description + "','" + InventoryValue + "','" + Parttype + "','" + url + "')";
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
@@ -122,7 +122,7 @@ namespace NeonTrees.Services
             catch (Exception ex)
             {
                 string error = ex.ToString();
-            }*/
+            }
 
         }
 

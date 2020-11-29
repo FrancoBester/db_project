@@ -8,15 +8,18 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Creater" style="background-color:  #adbec5">
+        <form name="myform" id="myform" asp-action="Creater" style="background-color:  #adbec5" >
             <!-- hiddenFrame: put this in target when/if you don't want json confirmation, A script can be written for an alert, but I pref this output for an assignment <iframe name="hiddenFrame" class="hide"></iframe>-->
-
+            <b>Name:</b> <input type="text" name="X" id="X"><br>
+            <script>
+                document.getElementById('name').value = 'john';
+            </script>
             <p style="font-size: 2vh;">NodeJS Express REST</p><br>
-            <b>Name:</b> <input type="text" name="name" id="name" runat="server"><br>
+            <b>Name:</b> <input type="text" name="name" id="name"><br>
             <b>Description:</b> <input type="text" name="description" id="description"><br>
-            <b>Inventory Value:</b> <input type="text" name="InventoryValue" id="InventoryValue" runat="server"><br> <!-- width does not load out of css with the initial call -->
-            <b>Part Type:</b> <input id="PartType" type="text" name="PartType" runat="server"><br>
-            <b>URL:</b> <input type="text" name="url" id="url" runat="server"><br>
+            <b>Inventory Value:</b> <input type="text" name="InventoryValue" id="InventoryValue"><br> <!-- width does not load out of css with the initial call -->
+            <b>Part Type:</b> <input id="PartType" type="text" name="PartType"><br>
+            <b>URL:</b> <input type="text" name="url" id="url"><br>
             <div class="form-group">
                 <input id="saveIt" type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -30,8 +33,26 @@
 
         <ul id="authors"></ul>
         <ul id="fetchstuff"></ul>
-        <button>Authors</button>
+        <button id="clicker" onclick="PopulateScreen()">Authors</button>
 
+        <script>
+
+            function PopulateScreen() {
+                var str = "";
+
+
+                populate('0', '1', '4 ', '5 ', '6 ');
+                alert('time1');
+                window.setTimeout(function() {}, 2000);
+
+                populate('1', '1', '4 ', '5 ', '6 ');
+                alert('time2');
+                window.setTimeout(function() {}, 2000);
+                populate('22', '1', '4 ', '5 ', '6 ');
+                alert('time3');
+            }
+
+        </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript">
 
@@ -40,6 +61,7 @@
             const lInventoryValue = document.getElementById('InventoryValue');
             const lPartType = document.getElementById('PartType');
             const lurl = document.getElementById('url');
+            const fetchStuff = document.getElementById('fetchStuff');
 
 
             var arrStuff = [];
@@ -55,6 +77,35 @@
 
             var cout = 0;
 
+            var flag = false
+            function populate(name, description, InventoryValue, Parttype, url) {
+                try {
+                    document.getElementById('X').value = x;
+                    document.getElementById('name').value = name;
+                    document.getElementById('description').value = description;
+                    document.getElementById('InventoryValue').value = InventoryValue;
+                    document.getElementById('PartType').value = Parttype;
+                    document.getElementById('url').value = url;
+
+                    //arrStuff = new Product(name, description, InventoryValue, Parttype, url);
+
+                    //name = JSON.stringify();
+
+                    //alert(name + description + InventoryValue + Parttype + url );;
+                     // 
+                        //window.setTimeout(function () { document.getElementById("saveIt").click(); }, 2000);
+                        $.post('/Product/Creater', { name, description, InventoryValue, Parttype, url });
+                      //  asp - action="Creater" style = "background-color:  #adbec5"
+                     //  document.myform.action="Submit";
+                       
+
+              
+                    
+                } catch (err) { alert(err.message) }
+            }
+
+
+
             function Product(fname, des, val, parttypes, url) {
                 this.name = fname;
                 this.description = des;
@@ -62,10 +113,12 @@
                 this.PartType = parttypes;
                 this.url = url;
             };
-            async function getFile() {
 
+            var dataMem;
+            function getFile() {
+                populate('', '', '', '', '');
                 const url = 'https://nameless-forest-23875.herokuapp.com/RawProduct/';
-                await fetch(url, {
+                fetch(url, {
                     method: 'GET', // *GET, POST, PUT, DELETE, etc.
                     mode: 'cors', // no-cors, *cors, same-origin
                     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -79,128 +132,166 @@
                 })
                     .then((response) => {
                         return response.json()
+
                     })
-                    .then((data) => {
-                        // Work with JSON data here
-                        //console.log(JSON.stringify(data));
-                        
-                        //alert(JSON.stringify(data));
-                        parseDataStuff(data);
+                    .then((data) => {                       
+
+                        dataMem = data;
                        
+                        PopulateScreen();
                     })
                     .catch((err) => {
                         // Do something for an error here
                         console.log(err.message);
                     });
             };
+            var x = 0;
+            function PopulateScreen() {
+                try {
+                    x++;
+                    //for (var i = 0; i <= x; i++) {
+                    //   try {
+                  
+                    //   alert(JSON.stringify(dataMem[x].name));
+                           //let item = JSON.stringify(items);
 
-            
+                                //$.post('/Product/Creater', { item });
+                             //arrStuff = new product(item.name);
+//
+                       //     } catch (err) { alert(err.message); }
 
-            async function parseDataStuff(data = []) {
-                
-                for (var items of data) {
-                    //cout++;
-                    //items =JSON.stringify(items);
-                    obj.push(items);
-                    //let id = await items._id.replace(/['"]+/g, '');
-                    window.setTimeout(function () {
-                        $.each($('.alert'), function () {
-                            closeAlert(this);
-                        });
-                    }, 2000);
+                     //};
+                    //name = x.toString();
+                    if (x < dataMem.length) {
+                       
+                        //populate(x, '1', '4 ', '5 ', '6 ');
+                       
+                        window.setTimeout(function () {
+                            flag = true;
+                            populate(dataMem[x].name, dataMem[x].description, dataMem[x].InventoryValue, dataMem[x].PartType, dataMem[x].url);
+                            PopulateScreen();
+                        }, 3000);
+                      
+                    } else {
+                        alert("x has run out");
+                    }
 
-                    function closeAlert(alert) {
-                        $(alert).fadeTo(2000, 500).slideUp(500, function () {
-                            $(alert).hide();
-                        });
-                    };
-                    let name = await items.name;//.replace(/['"]+/g, '');
-                    let description = await items.description;//.replace(/['"]+/g, '');
-                    let InventoryValue1 = await items.InventoryValue;//.replace(/['"]+/g, '');
-                    //let InventoryValue2 = InventoryValue1.replace(",", ".");
-                    let PartType = await items.PartType;//.replace(/['"]+/g, '');
-                    let url = await items.url;//.replace(/['"]+/g, '');
-                    lName.value = name;//.replace(/['"]+/g, '');
-                    // let re = "/^(Dr|Mr|Mrs|Ms|Er)\.[A-z]+$/")
-                    //var myData = { Prop1: '', Prop2: '' }; // #1
 
-                    //$.post('/ProductController/Create', { arrStuff });
-                    window.setTimeout(function () {
-                        $.each($('.alert'), function () {
-                            closeAlert(this);
-                        });
-                    }, 2000);
+                } catch (e) { alert(e) }
+            }
 
-                    function closeAlert(alert) {
-                        $(alert).fadeTo(2000, 500).slideUp(500, function () {
-                            $(alert).hide();
-                        });
-                    };
-                                   
-                    var arrStuff = new Product(name, description, InventoryValue1, PartType, url);
-                    saveToOra(arrStuff);  
-                    //$.post('/Product/Create', { arrStuff });
-                };
+
+            function parseDataStuff(data) {
+
+
+
+                // for (var items of data) {
+                //     try {
+                //         cout++;
+                //         name = items.name;
+
+
+
+
+                //items =JSON.stringify(items);
+                //obj.push(items);
+                //let id = await items._id.replace(/['"]+/g, '');
+                //  if (items.Parttype == undefined || items.Parttype == null) {
+                //      items.Parttype = "Test PType";
+                //  }
+                // alert("desc: " + items.description);
+                // alert("2: " + items.InventoryValue);
+                //  alert("3: " + items.Parttype);
+                //  alert("4: " + items.url);
+                //  name = items.name;//.replace(/['"]+/g, '');
+                // description = items.description;//.replace(/['"]+/g, '');
+                // InventoryValue1 = items.InventoryValue;//.replace(/['"]+/g, '');
+                //let InventoryValue2 = InventoryValue1.replace(",", ".");
+                //  PartType = items.PartType;//.replace(/['"]+/g, '');
+                //url = items.url;//.replace(/['"]+/g, '');
+                //    lName.value = name;//.replace(/['"]+/g, '');
+                // let re = "/^(Dr|Mr|Mrs|Ms|Er)\.[A-z]+$/")
+                //var myData = { Prop1: '', Prop2: '' }; // #1
+
+                //$.post('/ProductController/Create', { arrStuff });
+                //saveToOra(name, description, InventoryValue, Parttype, url);
+
+                // let arrStuff = new Product(name, description, InventoryValue1, PartType, url);
+                //saveToOra(arrStuff);
+                //populate(items.name, items.description, items.InventoryValue, items.Parttype, items.url);
+                //    alert(cout + " " + name);
+
+                //   } catch (err) { alert("loop error: "+e.message);}
+                //
+                //   };
                 //console.log(id + name + description + + InventoryValue + PartType + url);
             };
 
-            async function saveToOra(data = []) {//this is the one that does only 1
-                //for()
-                //alert("Running the save function" + JSON.stringify(data) + "------Test name" + JSON.stringify(data.name));
-                window.setTimeout(function () {
-                    $.each($('.alert'), function () {
-                        closeAlert(this);
-                    });
-                }, 2000);
+            var x = 0;
+            async function saveToOra(name, description, InventoryValue, Parttype, url) {//this is the one that does only 1
+                try {
+                    x++;
 
-                function closeAlert(alert) {
-                    $(alert).fadeTo(2000, 500).slideUp(500, function () {
-                        $(alert).hide();
-                    });
-                };
-                //for (items of data) { console.log(items);}
-                //alert(data.name);
-                name = data.name;//.replace(/['"]+/g, '');
-                description = data.description;//.replace(/['"]+/g, '');
-                InventoryValue = data.InventoryValue;//.replace(/['"]+/g, '');
-                PartType = data.PartType;//.replace(/['"]+/g, '');
-                url = data.url;//.replace(/['"]+/g, '');
+                    //for (items of data) { console.log(items);}
+
+                    // for (var i in cout) { alert("hello we are counting on: " + cout); };
+                    //for (var k = 0; k <= cout; k++) { if(arrStuff[k]!=null)fetchstuff.innerText += arrStuff[k].name; };
+
+
+                    // lName.value = data.name;//.replace(/['"]+/g, '');
+                    // lDescription = data.description;//.replace(/['"]+/g, '');
+                    //  name = data.name;//.replace(/['"]+/g, '');
+
+                    // document.getElementById('InventoryValue').value = data.InventoryValue;//.replace(/['"]+/g, '');
+                    // lPartType.value = data.PartType;//.re    place(/['"]+/g, '');
+                    // lurl.value = data.url;//.replace(/['"]+/g, '');
+
+                    // fetchstuff.innerText += name;
+
+
+                    // document.getElementById("saveIt").click();
+
+
+                    //  populate(data.name, data.description, data.InventoryValue, "Test", data.url);
+                    //populate(name, description, InventoryValue, Parttype, url);
+
+                    alert(x + "  " + data.name + " == " + data.InventoryValue);
+
+
+                    //arrStuff.push(new Product(name, description, InventoryValue, PartType, url));
+
+                    // $.post('/Product/Create', { arrStuff });
+                } catch (e) { alert(e) }
+            };
+
+          //  async function SENDIT() {
+                //name = await data.name;//.replace(/['"]+/g, '');
+                //description = await data.description;//.replace(/['"]+/g, '');
+                //InventoryValue = await data.InventoryValue;//.replace(/['"]+/g, '');
+                //PartType = await data.PartType;//.replace(/['"]+/g, '');
+                //url = await data.url;//.replace(/['"]+/g, '');
                 //alert("STOPPPPU!");
-                console.log(name);  
-                lName.value = name;//.replace(/['"]+/g, '');
-                lDescription.value = description;//.replace(/['"]+/g, '');
-                document.getElementById('InventoryValue').value = InventoryValue;//.replace(/['"]+/g, '');
-                lPartType.value = PartType;//.re    place(/['"]+/g, '');
-                lurl.value = url;//.replace(/['"]+/g, '');
+                //fetchstuff.innerText += name;
+                //lName.value = name;//.replace(/['"]+/g, '');
+                //lDescription.value = description;//.replace(/['"]+/g, '');
+                //document.getElementById('InventoryValue').value = InventoryValue;//.replace(/['"]+/g, '');
+                //lPartType.value = PartType;//.re    place(/['"]+/g, '');
+                //lurl.value = url;//.replace(/['"]+/g, '');
                 // expected output: "resolved"
-                // 
-                SENDIT();
-                //alert("That's 1!");
+                //
+                //
 
-              
-
-
-
-                //arrStuff.push(new Product(name, description, InventoryValue, PartType, url));
-                
-               // $.post('/Product/Create', { arrStuff });
-            }
-
-            async function SENDIT() {
-                lName.value = name;
-                lDescription.value = description;
-                await document.getElementById("saveIt").click();
-            }
+          //  }
 
             async function postStu(data = []) {
                 console.log('calling');
                 //console.log(JSON.stringify(data).replace(/['"]+/g, ''));
                 //document.getElementById("PartType").value = JSON.stringify(data.PartType);
-               // console.log(JSON.stringify(data));
+                // console.log(JSON.stringify(data));
                 //fetchstuff.innerHtml = html;
 
                 //THESE GO TO THE CONTROLLER
-                var namer ="";
+                var namer = "";
                 var descr = "";
                 var vals = "";
                 var ptype = "";
@@ -210,14 +301,14 @@
 
 
                 let cleanData = await JSON.stringify(data).replace(/['"]+/g, '');
-               // if (cleanData.includes(" ")) {
-              //      cleanData = cleanData.replace(" ", "%20");
-              //  }
-                let cleanerData = await cleanData.replace(/({|})/g, "");  
+                // if (cleanData.includes(" ")) {
+                //      cleanData = cleanData.replace(" ", "%20");
+                //  }
+                let cleanerData = await cleanData.replace(/({|})/g, "");
                 alert('i am here ' + cleanerData);
                 var splitter1 = await cleanerData.split(",");
                 var someFlag = false;
-                
+
                 alert("splitter second" + splitter1[4]);
                 /*for (var ite of splitter1) {
 
@@ -235,7 +326,7 @@
                         var splitter2 = ite.split(":");
                     };
 
-                        
+
 
                     alert("This is ite: " + ite);
                     for (var items2 of splitter2) {
@@ -250,7 +341,7 @@
                         }
                         alert("this item of splitter 2:" + items2);
                         //alert("this is 2nd item of splitter 2:" + splitter1[2]);
-                    
+
 
                         if (items2 == 'name') { // this is quite redundant, i do know
                             prevVal = items2;
@@ -264,18 +355,18 @@
                         }//see we could use const var
 
                     };
-                   
+
                 };
                 //let cleanestData = a
                 if (someFlag) { fetchstuff.innerHtml = namer; }
-                
+
                 bflag = true;
                 //$.post('/Product/Create', { arrStuff });
-                
 
 
 
-         
+
+
                 for (var i = 0; i <= data.length; i++) {
                         lName.value = data[i].name;//.replace(/['"]+/g, '');
                     lDescription.value = data[i].description;//.replace(/['"]+/g, '');
@@ -283,11 +374,11 @@
                     lPartType.value = data[i].PartType;//.re    place(/['"]+/g, '');
                     lurl.value = data[i].url;//.replace(/['"]+/g, '');
                         // expected output: "resolved"
-                        // 
+                        //
 
                    // document.getElementById("saveIt").click();
-                    
-              
+
+
 
 */
 

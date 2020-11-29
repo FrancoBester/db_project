@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - NeonTrees</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+   
     <link rel="stylesheet" href="~/css/site.css" />
+    <script>
+        function Load() {
+            alert('Load');
+        }//onload="Load()"
+
+    </script>
 </head>
 <body>
     <header>
@@ -49,6 +56,7 @@
             @RenderBody()
         </main>
     </div>
+    
 
     <footer class="border-top footer text-muted">
         <div class="container">

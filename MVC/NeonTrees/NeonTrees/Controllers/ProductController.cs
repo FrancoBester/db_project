@@ -53,19 +53,13 @@ namespace NeonTrees.Controllers
         }
 
         [HttpPost]
-        public ActionResult Creater(Product product)
+        public ActionResult Creater(string name, string description, string InventoryValue, string Parttype, string url)
         {
-            productService.AddProduct(product);
+            productService.AddProductJ(name, description, InventoryValue, Parttype, url);
             return RedirectToAction(nameof(Create));
         }
 
 
-        [HttpPost]
-        public ActionResult ImportJSON(string[] data)
-        {            
-            productService.AddProductJ(data);
-            return RedirectToAction(nameof(Index));
-        }
 
         public ActionResult Edit(int id)
         {
