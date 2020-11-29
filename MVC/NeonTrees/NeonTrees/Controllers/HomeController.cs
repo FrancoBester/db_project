@@ -56,15 +56,15 @@ namespace NeonTrees.Controllers
 
 
             //working - shows amount of pc build per month
-            //List<int> count_list_month = buildService.GetBuildPerMonth();
-            //List<string> month_list = new List<string>();
+            List<int> count_list_month = buildService.GetBuildPerMonth();
+            List<string> month_list = new List<string>();
 
-            //string[] months = { "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC" };
-            //month_list.AddRange(months);
-            //var month_info = month_list;
+            string[] months = { "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC" };
+            month_list.AddRange(months);
+            var month_info = month_list;
 
-            //ViewBag.MONTH_INFO = month_info;
-            //ViewBag.MONTHREP = count_list_month.ToList();
+            ViewBag.MONTH_INFO = month_info;
+            ViewBag.MONTHREP = count_list_month.ToList();
 
             return View();
         }

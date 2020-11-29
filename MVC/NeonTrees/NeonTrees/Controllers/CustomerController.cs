@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NeonTrees.Interface;
 using NeonTrees.Models;
@@ -31,8 +32,23 @@ namespace NeonTrees.Controllers
         [HttpPost]
         public ActionResult Create(Customer customer)
         {
-            customerService.AddCustomer(customer);
-            return RedirectToAction(nameof(Index));
+            if (customerService.UniqueData(customer))
+            {
+                customerService.AddCustomer(customer);
+                int id = customerService.GetNewCustomerID(customer);
+                if (id == -1)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+                else
+                {
+                    HttpContext.Session.SetInt32("new_customer_id", id);
+                    return RedirectToAction("Create", "Login");
+                }
+            }
+            return RedirectToAction("Create", "Login");
+
+            //return RedirectToAction(nameof(Index));
         }
 
         public ActionResult Edit(int id)
@@ -44,8 +60,14 @@ namespace NeonTrees.Controllers
         [HttpPost]
         public ActionResult Edit(Customer customer)
         {
-            customerService.EditCustomer(customer);
-            return RedirectToAction(nameof(Index));
+            if (customerService.UniqueData(customer))
+            {
+                customerService.EditCustomer(customer);
+                return RedirectToAction(nameof(Index));
+            }
+
+            ViewBag.Message = string.Format("Test1");
+            return View(customer);
         }
 
         public ActionResult Delete(int id)

@@ -32,6 +32,7 @@ namespace NeonTrees
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<IBuildService, BuildService>();
             services.AddTransient<ILoginService, LoginService>();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +52,8 @@ namespace NeonTrees
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseSession();
 
             app.UseAuthorization();
 

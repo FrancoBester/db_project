@@ -163,9 +163,10 @@ namespace NeonTrees.Services
             {
                 con.Open();
                 OracleCommand cmd = new OracleCommand();
-                cmd.CommandText = "Select CustomerID from Customer Where CustomerName = '" + customer.Name + "', CustomerSurname = '"+customer.Surname+"', email = '"+customer.Email+"'";
+                cmd.CommandText = "Select CustomerID from Customer Where CustomerName = '" + customer.Name + "'AND CustomerSurname = '"+customer.Surname+"' AND email = '"+customer.Email+"'";
                 cmd.Connection = con;
                 cmd.CommandType = CommandType.Text;
+
                 OracleDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
@@ -173,6 +174,26 @@ namespace NeonTrees.Services
                 }
             }
             return new_customer_id;
+        }
+
+        public bool UniqueData(Customer customer)
+        {
+            bool isUnique = true;
+            using (OracleConnection con = new OracleConnection(_connectionString))
+            {
+                con.Open();
+                OracleCommand cmd = new OracleCommand();
+                cmd.CommandText = "Select CustomerID from Customer Where phone = '" + customer.Phone + "' AND email = '" + customer.Email + "'";
+                cmd.Connection = con;
+                cmd.CommandType = CommandType.Text;
+
+                OracleDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    isUnique = false;
+                }
+            }
+            return isUnique;
         }
     }
 }

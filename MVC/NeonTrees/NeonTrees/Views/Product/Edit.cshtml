@@ -28,19 +28,19 @@
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
+                <label asp-for="InventoryValue" class="control-label"></label>
+                <input asp-for="InventoryValue" class="form-control" />
+                <span asp-validation-for="InventoryValue" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Brand" class="control-label"></label>
-                <input asp-for="Brand" class="form-control" />
-                <span asp-validation-for="Brand" class="text-danger"></span>
+                <label asp-for="PartType" class="control-label"></label>
+                <input asp-for="PartType" class="form-control" />
+                <span asp-validation-for="PartType" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Category" class="control-label"></label>
-                <input asp-for="Category" class="form-control" />
-                <span asp-validation-for="Category" class="text-danger"></span>
+                <label asp-for="URL" class="control-label"></label>
+                <input asp-for="URL" class="form-control" />
+                <span asp-validation-for="URL" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
@@ -50,7 +50,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <button class="btn btn-secondary" asp-action="Index">Back to List</button>
 </div>
 
 @section Scripts {

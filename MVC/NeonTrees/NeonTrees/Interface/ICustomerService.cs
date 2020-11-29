@@ -13,5 +13,7 @@ namespace NeonTrees.Interface
         void AddCustomer(Customer customer);
         void EditCustomer(Customer customer);
         void DeleteCustomer(Customer customer);
+        public int GetNewCustomerID(Customer customer);
+        public bool UniqueData(Customer customer);
     }
 }

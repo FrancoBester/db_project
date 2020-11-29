@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NeonTrees.Interface;
 using NeonTrees.Models;
@@ -12,11 +13,14 @@ namespace NeonTrees.Controllers
     public class LoginController : Controller
     {
         ILoginService loginService;
+        ICustomerService customerService;
 
-        public LoginController(ILoginService _loginService)
+        public LoginController(ILoginService _loginService,ICustomerService _customerService)
         {
             loginService = _loginService;
+            customerService = _customerService;
         }
+
         //public IActionResult Index(string username)
         //{
         //    Login login = loginService.GetLoginByUser(username);
@@ -31,8 +35,19 @@ namespace NeonTrees.Controllers
         [HttpPost]
         public ActionResult Create(Login login)
         {
-            loginService.AddLogin(login);
-            return RedirectToAction();
+            if (loginService.CheckUserName(login))
+            {
+                int value = (int)HttpContext.Session.GetInt32("new_customer_id");
+                login.CustomerID = value;
+                loginService.AddLogin(login);
+                int login_id = loginService.GetNewLoginId(login);
+                UpdateCustomerInfo(value, login_id);
+                return RedirectToAction();
+            }
+
+            ViewBag.Message = string.Format("TestLogin");
+            return View();
+
         }
 
         public ActionResult Login()
@@ -45,6 +60,14 @@ namespace NeonTrees.Controllers
         {
             bool validLogin = loginService.GetLoginByUser(login);
             return View();
+        }
+
+        public void UpdateCustomerInfo(int customerID,int loginID)
+        {
+            Customer customer = customerService.GetCustomerById(customerID);
+            customer.LoginID = loginID;
+            customerService.EditCustomer(customer);
+
         }
     }
 }

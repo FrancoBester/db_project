@@ -4,17 +4,15 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+
+<h1>Customer</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <button class="btn-primary" asp-action="Create">Create New</button>
 </p>
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ID)
-            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Name)
             </th>
@@ -27,45 +25,46 @@
             <th>
                 @Html.DisplayNameFor(model => model.Email)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Registered)
+            <!--<th>
+                Html.DisplayNameFor(model => model.Registered)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.LoginID)
-            </th>
+                Html.DisplayNameFor(model => model.LoginID)
+            </th> -->
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Surname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Phone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Registered)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LoginID)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Surname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <!-- <td>
+                    @Html.DisplayFor(modelItem => item.Registered)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LoginID)
+                </td> -->
+                <td>
+                    <a class="btn btn-primary text-white" asp-action="Edit" asp-route-id="@item.ID">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <a class="btn btn-danger text-white" asp-action="Delete" asp-route-id="@item.ID">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
