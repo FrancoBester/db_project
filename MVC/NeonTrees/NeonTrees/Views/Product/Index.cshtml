@@ -34,6 +34,7 @@
         </tr>
     </thead>
     <tbody>
+<<<<<<< Updated upstream
 @foreach (var item in Model) {
         <tr>
             <td>
@@ -61,5 +62,64 @@
             </td>
         </tr>
 }
+=======
+        @foreach (var item in Model)
+        {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.ID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Description)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.InventoryValue)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PartType)
+    </td>
+    <td>
+        <img src="@Html.DisplayFor(modelItem => item.URL)" />
+    </td>
+    <td>
+
+
+    <td style="width:100%">
+        <div class="btn-group" role="group">
+            <a class="btn btn-primary text-white" asp-action="Edit" asp-route-id="@item.ID">
+                <i class="fas fa-edit"></i>
+            </a>
+            <a class="btn btn-danger text-white" asp-action="Delete" asp-route-id="@item.ID">
+                <i class="fas fa-trash"></i>
+            </a>
+        </div>
+    </td>
+</tr>}
+>>>>>>> Stashed changes
     </tbody>
 </table>
+<<<<<<< Updated upstream
+=======
+
+<button onload="DoneLoading()" onclick="topFunction()" id="ScrollToTop" title="Go to top">Top</button>
+<script>
+    //ScrollToTop button
+    var mybutton = document.getElementById("ScrollToTop");
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }</script>}
+>>>>>>> Stashed changes

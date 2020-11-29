@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "rAXNWJsSrRG/SSnPjFGuFRL1gz85R1ukHNpvaFrUr1KrIL7osrVfMTOFsWayAzPFLikzwqQik37f6ySwY7Zvog==",
   "success": true,
   "projectFilePath": "C:\\Users\\Franco Bester\\Desktop\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj",
+=======
+  "dgSpecHash": "MyifeFoJZ/f/ukLSAKFpTSRwyHUCl1oVTXvRIy7UqD16MGlGmULpySypR2StDrVvx3xjOo5y8oaEOiwCTvNgqw==",
+  "success": true,
+  "projectFilePath": "C:\\Coding\\CMPG 321\\Backup\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj",
+>>>>>>> Stashed changes
   "expectedPackageFiles": [
     "C:\\Users\\Franco Bester\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Franco Bester\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\3.1.8\\microsoft.aspnetcore.mvc.razor.extensions.3.1.8.nupkg.sha512",

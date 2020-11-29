@@ -6,8 +6,14 @@
     <title>@ViewData["Title"] - NeonTrees</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+<<<<<<< Updated upstream
+=======
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <script src="https://kit.fontawesome.com/ecddb1c16f.js" crossorigin="anonymous"></script>
+
+>>>>>>> Stashed changes
 </head>
-<body>
+<body onload="DoneLoading();">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
@@ -17,6 +23,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+<<<<<<< Updated upstream
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
@@ -24,20 +31,26 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+=======
+                    <ul class="navbar-nav flex-grow-1  ">
+                        <!-- <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li> -->
+>>>>>>> Stashed changes
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Analytics">Analytics</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Analytics" onclick="busyLoading();">Analytics</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Build" asp-action="Index">Build</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Build" asp-action="Index" onclick="busyLoading();">Build</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Customer" asp-action="Index">Customer</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Customer" asp-action="Index" onclick="busyLoading();">Customer</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Items" asp-action="Index">Items</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Items" asp-action="Index" onclick="busyLoading();">Items</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index">Product</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index" onclick="busyLoading();">Product</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Customer" asp-action="Create">Register</a>
@@ -63,12 +76,23 @@
                     <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Login">Login</a>
                 </li>
             </ul>
+<<<<<<< Updated upstream
             </nav>
+>>>>>>> Stashed changes
+=======
+        </nav>
 >>>>>>> Stashed changes
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
+        <div id="loader"></div>
+        <main id="loaded" role="main" class="pb-3">
+
             @RenderBody()
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
             <button onclick="topFunction()" id="ScrollToTop" title="Go to top">Top</button>
             <script>
                 //ScrollToTop button
@@ -134,7 +158,17 @@
                     <li><a href="www.instagram.com"><i class="fa fa-instagram"></i></a></li>
                 </div>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+            </div>
+            <div class="vl"></div>
+            <div id="fifth-foot">
+                &copy; Neon Trees<br>
+                North West Univirsity<br>
+                Hendrick Van Eck Boulevard<br>
+                Vanderbijlpark
+>>>>>>> Stashed changes
             </div>
             <div class="vl"></div>
             <div id="fifth-foot">
@@ -158,6 +192,26 @@
             &copy; 2020 - NeonTrees - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+<<<<<<< Updated upstream
+=======
+    <script type="text/javascript">
+
+        function busyLoading() {
+            const loaded = document.getElementById("loaded");
+            loaded.classList.add("display");
+            const loader = document.getElementById("loader");
+            loader.classList.add("hidden");
+        }
+
+        function DoneLoading() {
+            const loader = document.getElementById("loader");
+            loader.classList.add("hidden");
+            const loaded = document.getElementById("loaded");
+            loaded.classList.add("display");
+        }
+
+    </script>
+>>>>>>> Stashed changes
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

@@ -49,9 +49,18 @@
                 @Html.DisplayFor(modelItem => item.OrderDetails)
             </td>
             <td>
+<<<<<<< Updated upstream
                 <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+=======
+                <a class="btn btn-primary text-white" asp-action="Edit" asp-route-id="@item.ID">
+                    <i class="fas fa-edit"></i>
+                </a>
+                <a class="btn btn-danger text-white" asp-action="Delete" asp-route-id="@item.ID">
+                    <i class="fas fa-trash"></i>
+                </a>
+>>>>>>> Stashed changes
             </td>
         </tr>
 }
