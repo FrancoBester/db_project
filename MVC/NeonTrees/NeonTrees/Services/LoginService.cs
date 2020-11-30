@@ -165,7 +165,7 @@ namespace NeonTrees.Services
             return isUnique;
         }
 
-        public bool CheckPasswprd(Login login)
+        public bool CheckPassward(Login login)
         {
             string db_password = "";
             bool isValid = false;

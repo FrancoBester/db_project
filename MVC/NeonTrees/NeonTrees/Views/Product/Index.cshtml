@@ -5,11 +5,14 @@
 <h1>Products</h1>
 
 <p>
-    <a asp-action="Create">Import List</a>
+    <button class="btn-primary"  asp-action="Create">Import List</button>
 </p>
 <table class="table" style="overflow-y:auto;">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Name)
             </th>
@@ -32,7 +35,9 @@
         @foreach (var item in Model)
         {
 <tr>
-   
+    <td>
+        @Html.DisplayFor(modelItem => item.ID)
+    </td>
     <td>
         @Html.DisplayFor(modelItem => item.Name)
     </td>
@@ -56,11 +61,6 @@
             <a class="btn btn-primary text-white" asp-action="Edit" asp-route-id="@item.ID">
                 <i class="fas fa-edit"></i>
             </a>
-
-            <!-- <a class="btn btn-success text-white" asp-action="Details" asp-route-id="@item.ID">
-                <i class="fas fa-list"></i>
-            </a> -->
-
             <a class="btn btn-danger text-white" asp-action="Delete" asp-route-id="@item.ID">
                 <i class="fas fa-trash"></i>
             </a>
@@ -71,7 +71,7 @@
 
 </table>
 
-<button onclick="topFunction()" id="ScrollToTop" title="Go to top">Top</button>
+<button onload="DoneLoading()" onclick="topFunction()" id="ScrollToTop" title="Go to top">Top</button>
 <script>
     //ScrollToTop button
     var mybutton = document.getElementById("ScrollToTop");

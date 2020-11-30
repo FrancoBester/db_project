@@ -1,0 +1,98 @@
+﻿@model IEnumerable<NeonTrees.Models.Product>
+@{ ViewData["Title"] = "Items"; }
+
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <button class="btn-primary" asp-action="Create">View Build</button>
+</p>
+
+<div>
+
+    <button id="btn1">@Html.ActionLink("Case", "Index", new { sortOrder = "Case", currentFilter = ViewBag.CurrentFilter })</button>
+    <button id="btn1">@Html.ActionLink("CPU", "Index", new { sortOrder = "CPU", currentFilter = ViewBag.CurrentFilter })</button>
+    <button id="btn1">@Html.ActionLink("GPU", "Index", new { sortOrder = "GPU", currentFilter = ViewBag.CurrentFilter })</button>
+    <button id="btn1">@Html.ActionLink("Motherboard", "Index", new { sortOrder = "Motherboard", currentFilter = ViewBag.CurrentFilter })</button>
+    <button id="btn1">@Html.ActionLink("Ram", "Index", new { sortOrder = "Ram", currentFilter = ViewBag.CurrentFilter })</button>
+    <button id="btn1">@Html.ActionLink("Storage", "Index", new { sortOrder = "Storage", currentFilter = ViewBag.CurrentFilter })</button>
+    <button id="btn1">@Html.ActionLink("Chair", "Index", new { sortOrder = "Chair", currentFilter = ViewBag.CurrentFilter })</button>
+    <button id="btn1">@Html.ActionLink("MousePad", "Index", new { sortOrder = "MousePad", currentFilter = ViewBag.CurrentFilter })</button>
+    <button id="btn1">@Html.ActionLink("Headset", "Index", new { sortOrder = "Headset", currentFilter = ViewBag.CurrentFilter })</button>
+    <button id="btn1">@Html.ActionLink("Gaming Combo", "Index", new { sortOrder = "Gaming Combo", currentFilter = ViewBag.CurrentFilter })</button>
+    <button id="btn1">@Html.ActionLink("Wrist Rest", "Index", new { sortOrder = "Wrist Rest", currentFilter = ViewBag.CurrentFilter })</button>
+    <button id="btn1">@Html.ActionLink("Network Cable", "Index", new { sortOrder = "Network Cable", currentFilter = ViewBag.CurrentFilter })</button>
+    <button id="btn1">@Html.ActionLink("Switch", "Index", new { sortOrder = "Switch", currentFilter = ViewBag.CurrentFilter })</button>
+    <button id="btn1">@Html.ActionLink("Workstation", "Index", new { sortOrder = "Workstation", currentFilter = ViewBag.CurrentFilter })</button>
+    <button id="btn1">@Html.ActionLink("UpgradeKit", "Index", new { sortOrder = "UpgradeKit", currentFilter = ViewBag.CurrentFilter })</button>
+    <button id="btn1">@Html.ActionLink("Speakers", "Index", new { sortOrder = "Speakers", currentFilter = ViewBag.CurrentFilter })</button>
+    <button id="btn1">@Html.ActionLink("Adapter", "Index", new { sortOrder = "Adapter", currentFilter = ViewBag.CurrentFilter })</button>
+    <button id="btn1">@Html.ActionLink("Mouse", "Index", new { sortOrder = "Mouse", currentFilter = ViewBag.CurrentFilter })</button>
+    <button id="btn1">@Html.ActionLink("Keycap", "Index", new { sortOrder = "Keycap", currentFilter = ViewBag.CurrentFilter })</button>
+    <button id="btn1">@Html.ActionLink("NVLink", "Index", new { sortOrder = "NVLink", currentFilter = ViewBag.CurrentFilter })</button>
+    <button id="btn1">@Html.ActionLink("Mouse Keyboard combo", "Index", new { sortOrder = "Mouse Keyboard combo", currentFilter = ViewBag.CurrentFilter })</button>
+    <button id="btn1">@Html.ActionLink("Keyboard", "Index", new { sortOrder = "Keyboard", currentFilter = ViewBag.CurrentFilter })</button>
+</div>
+<table class="table" style="overflow-y:auto;">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InventoryValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PartType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.URL)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            // @if (item.PartType.Contains(ViewBag.Item) || (ViewBag.Item == ""))
+            // {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.InventoryValue)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PartType)
+                    </td>
+                    <td>
+                        <img src="@Html.DisplayFor(modelItem => item.URL)" />
+                    </td>                  
+                 
+                    <td style="" >
+                        <div class="btn-group" role="group">
+                            <a class="btn btn-primary text-white" asp-action="Edit" asp-route-id="@item.ID">
+                                <i class="fas fa-plus"></i>
+                            </a>
+
+                            <a ></a>
+                        </div><!-- JOHN PLZ ENTER PLUS-->
+                    </td>
+                </tr>// }
+            }
+    </tbody>
+
+</table>

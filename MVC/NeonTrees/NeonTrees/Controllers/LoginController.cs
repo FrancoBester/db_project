@@ -15,7 +15,7 @@ namespace NeonTrees.Controllers
         ILoginService loginService;
         ICustomerService customerService;
 
-        public LoginController(ILoginService _loginService,ICustomerService _customerService)
+        public LoginController(ILoginService _loginService, ICustomerService _customerService)
         {
             loginService = _loginService;
             customerService = _customerService;
@@ -50,7 +50,7 @@ namespace NeonTrees.Controllers
             {
                 ViewBag.Message = "Username already taken";
                 return View();
-            }          
+            }
         }
 
         public ActionResult Login()
@@ -63,11 +63,11 @@ namespace NeonTrees.Controllers
         {
             if (!loginService.CheckUserName(login))
             {
-                if(loginService.CheckPasswprd(login))
+                if (loginService.CheckPassward(login))
                 {
                     int user_id = loginService.GetUserID(login);
                     HttpContext.Session.SetInt32("UserID", user_id);
-                    return RedirectToAction("Index","Build");
+                    return RedirectToAction("Index", "Build");
                 }
                 else
                 {
@@ -83,7 +83,7 @@ namespace NeonTrees.Controllers
 
         }
 
-        public void UpdateCustomerInfo(int customerID,int loginID)
+        public void UpdateCustomerInfo(int customerID, int loginID)
         {
             Customer customer = customerService.GetCustomerById(customerID);
             customer.LoginID = loginID;
@@ -93,11 +93,11 @@ namespace NeonTrees.Controllers
         public bool ValidPassword(string password)
         {
             bool isValid = false;
-            if(password.Length >= 8)
+            if (password.Length >= 8)
             {
                 if (password.Any(char.IsUpper))
                 {
-                    if (System.Text.RegularExpressions.Regex.IsMatch(password, ":;!@#%&"))
+                    if (System.Text.RegularExpressions.Regex.IsMatch(password, "[^a - zA - Z0 - 9]"))
                     {
                         isValid = true;
                     }
