@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NeonTrees.Interface;
 using NeonTrees.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace NeonTrees.Controllers
 {
@@ -20,8 +21,16 @@ namespace NeonTrees.Controllers
 
         public IActionResult Index()
         {
-            IEnumerable<Customer> customer = customerService.GetAllCustomer();
-            return View(customer);
+            var user_id = HttpContext.Session.GetInt32("UserID");
+            int id_user;
+            if (int.TryParse(user_id.ToString(), out id_user))
+            {
+                return RedirectToAction("Edit", "Customer", new { id = id_user });
+            }
+            else
+            {
+                return RedirectToAction("Login", "Login");
+            }
         }
 
         public ActionResult Create()
@@ -32,23 +41,42 @@ namespace NeonTrees.Controllers
         [HttpPost]
         public ActionResult Create(Customer customer)
         {
-            if (customerService.UniqueData(customer))
+            if (ValidPhone(customer.Phone))
             {
-                customerService.AddCustomer(customer);
-                int id = customerService.GetNewCustomerID(customer);
-                if (id == -1)
+                if (ValidEmail(customer.Email))
                 {
-                    return RedirectToAction("Login", "Login");
+                    if (customerService.UniqueData(customer))
+                    {
+                        customerService.AddCustomer(customer);
+                        int id = customerService.GetNewCustomerID(customer);
+                        if (id == -1)
+                        {
+                            ViewBag.Message = "An error occurred. Please try again";
+                            return View();
+                        }
+                        else
+                        {
+                            HttpContext.Session.SetInt32("new_customer_id", id);
+                            return RedirectToAction("Create", "Login");
+                        }
+                    }
+                    else
+                    {
+                        ViewBag.Message = "Phone number and email address are not valid";
+                        return View();
+                    }
                 }
                 else
                 {
-                    HttpContext.Session.SetInt32("new_customer_id", id);
-                    return RedirectToAction("Create", "Login");
+                    ViewBag.Message = "Email format is incorrect";
+                    return View();
                 }
             }
-            return RedirectToAction("Create", "Login");
-
-            //return RedirectToAction(nameof(Index));
+            else
+            {
+                ViewBag.Message = "Phone number is invalid";
+                return View();
+            }
         }
 
         public ActionResult Edit(int id)
@@ -60,14 +88,32 @@ namespace NeonTrees.Controllers
         [HttpPost]
         public ActionResult Edit(Customer customer)
         {
-            if (customerService.UniqueData(customer))
+            if (ValidPhone(customer.Phone))
             {
-                customerService.EditCustomer(customer);
-                return RedirectToAction(nameof(Index));
+                if (ValidEmail(customer.Email))
+                {
+                    if (customerService.UniqueData(customer))
+                    {
+                        customerService.EditCustomer(customer);
+                        return RedirectToAction(nameof(Index));
+                    }
+                    else
+                    {
+                        ViewBag.Message = "Invalid email or phone number";
+                        return View();
+                    }
+                }
+                else
+                {
+                    ViewBag.Message = "Email format is incorrect";
+                    return View();
+                }
             }
-
-            ViewBag.Message = string.Format("Test1");
-            return View(customer);
+            else
+            {
+                ViewBag.Message = "Phone number is invalid";
+                return View();
+            }
         }
 
         public ActionResult Delete(int id)
@@ -80,6 +126,25 @@ namespace NeonTrees.Controllers
         {
             customerService.DeleteCustomer(customer);
             return RedirectToAction(nameof(Index));
+        }
+
+        public bool ValidEmail(string email)
+        {
+            return new EmailAddressAttribute().IsValid(email);
+        }
+
+        public bool ValidPhone(string number)
+        {
+            bool isValid = false;
+            if (number.Length == 10)
+            {
+                int temp;
+                if (int.TryParse(number, out temp))
+                {
+                    isValid = true;
+                }
+            }
+            return isValid;
         }
     }
 }

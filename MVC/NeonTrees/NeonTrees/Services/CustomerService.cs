@@ -25,7 +25,7 @@ namespace NeonTrees.Services
 
             try
             {
-                using(OracleConnection con = new OracleConnection(_connectionString))
+                using (OracleConnection con = new OracleConnection(_connectionString))
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
@@ -33,25 +33,25 @@ namespace NeonTrees.Services
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     OracleDataReader reader = cmd.ExecuteReader();
-                    while(reader.Read())
+                    while (reader.Read())
                     {
                         string stest = reader.GetValue(0).ToString();
-                          Customer _customer = new Customer
-                          {
-                              ID = int.Parse(reader.GetValue(0).ToString()),
-                              Name = reader.GetValue(1).ToString(),
-                              Surname = reader.GetValue(2).ToString(),
-                              Phone = reader.GetValue(3).ToString(),
-                              Email = reader.GetValue(4).ToString(),
-                              Registered = char.Parse(reader.GetValue(5).ToString()),
-                              LoginID = int.Parse(reader.GetValue(6).ToString()),
-                          };
+                        Customer _customer = new Customer
+                        {
+                            ID = int.Parse(reader.GetValue(0).ToString()),
+                            Name = reader.GetValue(1).ToString(),
+                            Surname = reader.GetValue(2).ToString(),
+                            Phone = reader.GetValue(3).ToString(),
+                            Email = reader.GetValue(4).ToString(),
+                            Registered = char.Parse(reader.GetValue(5).ToString()),
+                            LoginID = int.Parse(reader.GetValue(6).ToString()),
+                        };
                         customerList.Add(_customer);
                     }
                     con.Close();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 string error = ex.ToString();
             }
@@ -62,7 +62,7 @@ namespace NeonTrees.Services
         public Customer GetCustomerById(int id)
         {
             Customer customer = new Customer();
-            using(OracleConnection con = new OracleConnection(_connectionString))
+            using (OracleConnection con = new OracleConnection(_connectionString))
             {
                 con.Open();
                 OracleCommand cmd = new OracleCommand();
@@ -70,7 +70,7 @@ namespace NeonTrees.Services
                 cmd.Connection = con;
                 cmd.CommandType = CommandType.Text;
                 OracleDataReader reader = cmd.ExecuteReader();
-                while(reader.Read())
+                while (reader.Read())
                 {
                     Customer _customer = new Customer
                     {
@@ -97,8 +97,8 @@ namespace NeonTrees.Services
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
-                    cmd.CommandText = "Insert Into Customer(CustomerName,CustomerSurname,Phone,Email,Registered,LoginID) "+
-                        "Values('"+customer.Name+"','"+customer.Surname+"','"+customer.Phone+"','"+customer.Email+"','"+customer.Registered+"',0)";
+                    cmd.CommandText = "Insert Into Customer(CustomerName,CustomerSurname,Phone,Email,Registered,LoginID) " +
+                        "Values('" + customer.Name + "','" + customer.Surname + "','" + customer.Phone + "','" + customer.Email + "','" + customer.Registered + "',0)";
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
@@ -114,22 +114,22 @@ namespace NeonTrees.Services
 
         public void EditCustomer(Customer customer)
         {
-            try 
+            try
             {
                 using (OracleConnection con = new OracleConnection(_connectionString))
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
                     cmd.CommandText = "Update Customer Set CustomerName = '" + customer.Name + "' ,CustomerSurname = '" + customer.Surname + "+" +
-                        "',Phone = '" + customer.Phone + "',Email = '" + customer.Email + "' ,Registered = '" + customer.Registered + "' Where CustomerID ="+ customer.ID+"";
+                        "',Phone = '" + customer.Phone + "',Email = '" + customer.Email + "' ,Registered = '" + customer.Registered + "' Where CustomerID =" + customer.ID + "";
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
                     con.Close();
                 }
-                
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 string error = ex.ToString();
             }
@@ -143,14 +143,14 @@ namespace NeonTrees.Services
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
-                    cmd.CommandText = "Delete From Customer Where CustomerID ="+customer.ID+"";
+                    cmd.CommandText = "Delete From Customer Where CustomerID =" + customer.ID + "";
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
                     con.Close();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 string error = ex.ToString();
             }
@@ -163,7 +163,7 @@ namespace NeonTrees.Services
             {
                 con.Open();
                 OracleCommand cmd = new OracleCommand();
-                cmd.CommandText = "Select CustomerID from Customer Where CustomerName = '" + customer.Name + "'AND CustomerSurname = '"+customer.Surname+"' AND email = '"+customer.Email+"'";
+                cmd.CommandText = "Select CustomerID from Customer Where CustomerName = '" + customer.Name + "'AND CustomerSurname = '" + customer.Surname + "' AND email = '" + customer.Email + "'";
                 cmd.Connection = con;
                 cmd.CommandType = CommandType.Text;
 

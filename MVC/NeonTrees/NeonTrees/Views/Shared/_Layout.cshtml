@@ -46,7 +46,7 @@
 
             </div>
         </nav>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm float-right navbar-light border-bottom box-shadow mb-3" style="        position: absolute;
+        <nav id="islogged" class="navbar navbar-expand-sm navbar-toggleable-sm float-right navbar-light border-bottom box-shadow mb-3" style="        position: absolute;
         right: 10%;
         top:0;
 ">
@@ -153,6 +153,12 @@
             loader.classList.add("hidden");
             const loaded = document.getElementById("loaded");
             loaded.classList.add("display");
+        }
+
+        function islogged() {
+            const logged = document.getElementById("islogged");
+            logged.classList.add("hidden");
+
         }
 
     </script>

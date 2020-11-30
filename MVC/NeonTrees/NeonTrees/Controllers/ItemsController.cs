@@ -15,10 +15,13 @@ namespace NeonTrees.Controllers
     public class ItemsController : Controller
     {
         IProductService productService;
+        IBuildService buildService;
+        bool created;
 
-        public ItemsController(IProductService _productService)
+        public ItemsController(IProductService _productService, IBuildService _buildService)
         {
             productService = _productService;
+            buildService = _buildService;
         }
 
 
@@ -118,21 +121,24 @@ namespace NeonTrees.Controllers
                 case "Keyboard":
                     product = product.Where(s => s.PartType.Contains("Keyboard"));
                     break;
-
-
             }
-
-
-
             return View(product);
         }
 
+        public ActionResult AddItem(Product product)
+        {
+            if (created)
+            {
+                int id = int.Parse(product.ID);
+               // buildService.AddItem(id);
+                return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                //buildService.AddBuild(product);
+                return RedirectToAction(nameof(Index));
+            }
 
-
-
-
-
-
-
+        }
     }
 }
