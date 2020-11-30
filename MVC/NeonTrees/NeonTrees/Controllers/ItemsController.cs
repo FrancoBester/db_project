@@ -15,11 +15,7 @@ namespace NeonTrees.Controllers
     {
         IProductService productService;
         IBuildService buildService;
-<<<<<<< Updated upstream
         bool created;
-=======
-
->>>>>>> Stashed changes
 
         public ItemsController(IProductService _productService, IBuildService _buildService)
         {
@@ -130,7 +126,7 @@ namespace NeonTrees.Controllers
             if (created)
             {
                 int id = int.Parse(product.ID);
-               // buildService.AddItem(id);
+                // buildService.AddItem(id);
                 return RedirectToAction(nameof(Index));
             }
             else
@@ -139,8 +135,7 @@ namespace NeonTrees.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-<<<<<<< Updated upstream
-=======
+        }
         public ActionResult Edit(int id)
         {
             var id_build = HttpContext.Session.GetInt32("BuildID");
@@ -165,7 +160,6 @@ namespace NeonTrees.Controllers
             buildService.EditBuild(build);
 
             return RedirectToAction("Index","Items");
->>>>>>> Stashed changes
         }
     }
 }
