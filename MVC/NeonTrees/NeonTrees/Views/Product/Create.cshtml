@@ -1,0 +1,167 @@
+﻿@model NeonTrees.Models.Product
+
+@{ ViewData["Title"] = "Create"; }
+
+<h1>Create</h1>
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form name="myform" id="myform" asp-action="Creater" style="background-color:  #adbec5">
+            <!-- hiddenFrame: put this in target when/if you don't want json confirmation, A script can be written for an alert, but I pref this output for an assignment <iframe name="hiddenFrame" class="hide"></iframe>-->
+            <b>Name:</b> <input type="text" name="X" id="X"><br>
+            <script>
+                document.getElementById('name').value = 'john';
+            </script>
+            <p style="font-size: 2vh;">NodeJS Express REST</p><br>
+            <b>Name:</b> <input type="text" name="name" id="name"><br>
+            <b>Description:</b> <input type="text" name="description" id="description"><br>
+            <b>Inventory Value:</b> <input type="text" name="InventoryValue" id="InventoryValue"><br> <!-- width does not load out of css with the initial call -->
+            <b>Part Type:</b> <input id="PartType" type="text" name="PartType"><br>
+            <b>URL:</b> <input type="text" name="url" id="url"><br>
+            <div class="form-group">
+                <input id="saveIt" type="submit" value="Create" class="btn btn-primary" />
+            </div>
+            <button type="reset" name="button"><b>Reset</b></button><br>
+            <!-- Upload resume: <input type="file" name="" value="" accept="pdf"> -->
+        </form>
+
+
+
+
+
+        <ul id="authors"></ul>
+        <ul id="fetchstuff"></ul>
+        <button id="clicker" onclick="PopulateScreen()">Import</button>
+
+        <script>
+
+            function PopulateScreen() {
+                var str = "";
+
+
+                populate('0', '1', '4 ', '5 ', '6 ');
+                alert('time1');
+                window.setTimeout(function () { }, 2000);
+
+                populate('1', '1', '4 ', '5 ', '6 ');
+                alert('time2');
+                window.setTimeout(function () { }, 2000);
+                populate('22', '1', '4 ', '5 ', '6 ');
+                alert('time3');
+            }
+
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript">
+
+
+            var arrStuff = [];
+            var obj = [];
+            getFile();
+            let bflag = false;
+
+            var name = "";
+            var description = "";
+            var InventoryValue = "";
+            var PartType = "";
+            var url = "";
+
+            var cout = 0;
+
+            var flag = false
+            function populate(name, description, InventoryValue, Parttype, url) {
+                try {
+                    document.getElementById('X').value = x;
+                    document.getElementById('name').value = name;
+                    document.getElementById('description').value = description;
+                    document.getElementById('InventoryValue').value = InventoryValue;
+                    document.getElementById('PartType').value = Parttype;
+                    document.getElementById('url').value = url;
+
+                    //arrStuff = new Product(name, description, InventoryValue, Parttype, url);
+
+                    //name = JSON.stringify();
+
+                    //alert(name + description + InventoryValue + Parttype + url );;
+                    //
+                    //window.setTimeout(function () { document.getElementById("saveIt").click(); }, 2000);
+                    $.post('/Product/Creater', { name, description, InventoryValue, Parttype, url });
+                    //  asp - action="Creater" style = "background-color:  #adbec5"
+                    //  document.myform.action="Submit";
+
+
+
+
+                } catch (err) { alert(err.message) }
+            }
+
+
+            function Product(fname, des, val, parttypes, url) {
+                this.name = fname;
+                this.description = des;
+                this.InventoryValue = val;
+                this.PartType = parttypes;
+                this.url = url;
+            };
+
+            var dataMem;
+            function getFile() {
+                populate('', '', '', '', '');
+                const url = 'https://nameless-forest-23875.herokuapp.com/RawProduct/';
+                fetch(url, {
+                    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+                    mode: 'cors', // no-cors, *cors, same-origin
+                    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+                    credentials: 'same-origin', // include, *same-origin, omit
+                    headers: {
+                        'Content-Type': 'application/json'
+                        // 'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    // redirect: 'follow', // manual, *follow, error
+                    referrerPolicy: 'origin', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+                })
+                    .then((response) => {
+                        return response.json()
+
+                    })
+                    .then((data) => {
+
+                        dataMem = data;
+
+                        PopulateScreen();
+                    })
+                    .catch((err) => {
+                        // Do something for an error here
+                        console.log(err.message);
+                    });
+            };
+            var x = 0;
+            function PopulateScreen() {
+                try {
+                    if (x < dataMem.length) {
+
+                        window.setTimeout(function () {
+                            flag = true;
+                            populate(dataMem[x].name, dataMem[x].description, dataMem[x].InventoryValue, dataMem[x].PartType, dataMem[x].url);
+                            PopulateScreen();
+                        }, 3000);
+
+                    } else {
+                        alert("x has run out");
+                    }
+
+                } catch (e) { alert(e) }
+            }
+        </script>
+    </div>
+</div>
+
+<div>
+    <button class="btn btn-secondary" asp-action="Index">Back to List</button>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

@@ -6,40 +6,167 @@
     <title>@ViewData["Title"] - NeonTrees</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <script src="https://kit.fontawesome.com/ecddb1c16f.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <style>
+        footer i {
+            color: #f35d9d;
+        }
+    </style>
 </head>
-<body>
+<body class="gradientCon" onload="DoneLoading();">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">NeonTrees</a>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3 maincolor" >
+            <div class="container white">
+                <a class="navbar-brand" style="color:white" asp-area="" asp-controller="Home" asp-action="Index"><b>NeonTrees</b></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
+                    <ul class="navbar-nav flex-grow-1  ">
+                        <!-- <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link textColor" asp-area="" asp-controller="Home" asp-action="Analytics" onclick="busyLoading();">Analytics</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link textColor" asp-area="" asp-controller="Build" asp-action="Index" onclick="busyLoading();">Build</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link textColor" asp-area="" asp-controller="Customer" asp-action="Index" onclick="busyLoading();">Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link textColor" asp-area="" asp-controller="Items" asp-action="Index" onclick="busyLoading();">Items</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link textColor" asp-area="" asp-controller="Product" asp-action="Index" onclick="busyLoading();">Product</a>
+                        </li>
+
                     </ul>
+
                 </div>
+
             </div>
         </nav>
+        <nav id="islogged" class="navbar navbar-expand-sm navbar-toggleable-sm float-right navbar-light border-bottom box-shadow mb-3" style="        position: absolute;
+        right: 10%;
+        top:0;
+">
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Customer" asp-action="Create">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Login">Login</a>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - NeonTrees - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div id="loader"></div>
+        <main id="loaded" role="main" class="pb-3">
+
+            <fieldset>
+                @RenderBody()
+
+
+                <button onclick="topFunction()" id="ScrollToTop" title="Go to top">Top</button>
+                <script>
+                    //ScrollToTop button
+                    var mybutton = document.getElementById("ScrollToTop");
+                    window.onscroll = function () { scrollFunction() };
+
+                    function scrollFunction() {
+                        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                            mybutton.style.display = "block";
+                        } else {
+                            mybutton.style.display = "none";
+                        }
+                    }
+
+                    function topFunction() {
+                        document.body.scrollTop = 0;
+                        document.documentElement.scrollTop = 0;
+                    }
+                </script>
+            </fieldset>
+        </main>
+
+    <hr />
+    <footer class="border-top footer text-white-50" style="background-color: #343a40;">
+        <div id="foot-flexer">
+            <div id="first-foot">
+                <img src="~/images/NeonLogo.jpg" alt="Neon Trees Logo" style="height:100%;" />
+                <div class="vl"></div>
+            </div>
+            <div id="second-foot">
+                <h1>Need Help?</h1>
+                <a href="#">Terms &amp; Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <div class="row" id="paddingAdd">
+                    <li><a href="#"><i class="fa fa-info-circle"></i></a></li>
+                    <li><a href="#"><i class="fa fa-cog"></i></a></li>
+                    <li><a href="#"><i class="fa fa-question-circle-o"></i></a></li>
+                    <li><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
+                </div>
+            </div>
+            <div class="vl"></div>
+            <div id="third-foot">
+                <h1>More</h1>
+                <a href="#">Information</a>
+                <a href="#" >More Information</a>
+                <div class="row" id="paddingAdd">
+                    <li><a href="#"><i class="fa fa-phone"></i></a></li>
+                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                    <li><a href="#"><i class="fa fa-link"></i></a></li>
+                </div>
+            </div>
+            <div class="vl"></div>
+            <div id="fourth-foot">
+                <h1>Follow Us</h1>
+                <div class="row" id="paddingAdd">
+                    <li><a href="www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="www.instagram.com"><i class="fa fa-instagram"></i></a></li>
+                </div>
+            </div>
+            <div class="vl"></div>
+            <div id="fifth-foot">
+                &copy; Neon Trees<br>
+                North West University<br>
+                Hendrick Van Eck Boulevard<br>
+                Vanderbijlpark
+            </div>
+
         </div>
     </footer>
+    <script type="text/javascript">
+
+        function busyLoading() {
+            const loaded = document.getElementById("loaded");
+            loaded.classList.add("display");
+            const loader = document.getElementById("loader");
+            loader.classList.add("hidden");
+        }
+
+        function DoneLoading() {
+            const loader = document.getElementById("loader");
+            loader.classList.add("hidden");
+            const loaded = document.getElementById("loaded");
+            loaded.classList.add("display");
+        }
+
+        function islogged() {
+            const logged = document.getElementById("islogged");
+            logged.classList.add("hidden");
+
+        }
+
+    </script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

@@ -1,0 +1,142 @@
+﻿<html>
+
+<head>
+    <script src="~/js/Chart.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <!--script-- src="~/lib/bootstrap/dist/js/bootstrap.min.js"></!--script-->
+    <!--link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" /-->
+    <style>
+        
+
+        #chart_container {
+            height: 300px;
+            width: 500px;
+            border: 1px solid #ddd;
+            padding: 1px;
+            border-radius: 4px;
+        }
+
+        #chart_div {
+            padding: 3rem;
+        }
+
+        #big_chart {
+            height: 200px;
+            border: 1px solid #ddd;
+            padding: 1px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <P>Prices</P>
+    <div id="big_chart">
+        Total cost of builds
+        <canvas id="build_prices"></canvas>
+    </div>
+
+    <p>Month</p>
+    <div id="big_chart">
+        Builds per month
+        <canvas id="build_month"></canvas>
+    </div>
+
+
+
+    <script>
+        var buildArray = @Html.Raw(Json.Serialize(ViewBag.PRICEREP));
+        var price = @Html.Raw(Json.Serialize(ViewBag.PRICE_INFO));
+
+        var ctx = $("#build_prices");
+        var pricechart = new Chart(ctx, {
+
+            type: 'bar',
+            data: {
+                labels: price,
+                datasets: [{
+                    data: buildArray,
+                    backgroundColor: ["Red", "Green", "Red", "Green", "Red", "Green"],
+
+                    borderColor: ["Red", "Green", "Red", "Green", "Red", "Green"],
+
+                    borderWidth: 1,
+                    barThickness: 'flex',
+                }]
+            },
+            options: {
+
+                maintainAspectRatio: false,
+                scales: {
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Amount',
+                            fontSize: 25
+                        }
+                    }],
+                    xAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Prices',
+                            fontSize: 25
+                        }
+                    }],
+                    xAxes: [{ ticks: { beginAtZero: true } }],
+                    yAxes: [{ ticks: { beginAtZero: true } }]
+                },
+                legend: { display: false }
+            },
+        });
+    </script>
+
+
+    <script>
+        var monthArray = @Html.Raw(Json.Serialize(ViewBag.MONTHREP));
+        var month = @Html.Raw(Json.Serialize(ViewBag.MONTH_INFO));
+
+        var ctx = $("#build_month");
+        var pricechart = new Chart(ctx, {
+
+            type: 'bar',
+            data: {
+                labels: month,
+                datasets: [{
+                    data: monthArray,
+                    backgroundColor: ["Red", "Turquoise", "Red", "Turquoise", "Red", "Turquoise", "Red", "Turquoise", "Red", "Turquoise", "Red", "Turquoise"],
+
+                    borderColor: ["Red", "Turquoise", "Red", "Turquoise", "Red", "Turquoise", "Red", "Turquoise", "Red", "Turquoise", "Red", "Turquoise"],
+
+                    borderWidth: 1,
+                    barThickness: 'flex',
+                }]
+            },
+            options: {
+
+                maintainAspectRatio: false,
+                scales: {
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Amount',
+                            fontSize: 25
+                        }
+                    }],
+                    xAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Prices',
+                            fontSize: 25
+                        }
+                    }],
+                    xAxes: [{ ticks: { beginAtZero: true } }],
+                    yAxes: [{ ticks: { beginAtZero: true } }]
+                },
+                legend: { display: false }
+            },
+        });
+    </script>
+</body>
+
+</html>
+

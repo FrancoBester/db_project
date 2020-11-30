@@ -1,0 +1,195 @@
+﻿body {
+   /* sexy body*/
+}
+#wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 45px; /* Needed for fixed headers/menu */
+    padding-bottom: 60px; /* Height of the footer */
+}
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-top:10%;
+    white-space: nowrap; /* Vertically center the text there */
+}
+
+    .footer a{
+        color: white;
+    }
+    .footer a :hover{
+        color: red;
+    }
+
+
+
+    #foot-flexer {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 18vh;
+        color: white;
+    }
+
+#first-foot {
+    display: flex;
+    align-items: self-start;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+#second-foot {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+    float: left;
+    padding-top: 15px;
+}
+
+#third-foot {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+    float: left;
+    padding-top: 15px;
+}
+
+#fourth-foot {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+    float: left;
+    padding-top: 15px;
+}
+
+#fifth-foot {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+    float: left;
+    padding-top: 25px;
+}
+
+
+
+.vl {
+    margin-top: 1%;
+    border-left: 0px solid black;
+    box-shadow: 1px 5px 5px 5px #6152cf;
+    height: 90%;
+}
+
+li {
+    list-style: none;
+    margin:5px;
+}
+
+#paddingAdd {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    flex-direction: row;
+    padding:10px;
+}
+button {
+    background-color: #4CAF50; /* Green */
+    border-radius: 8px;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#btn1 {
+    background-color: #313F98; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#loader {
+    border: 1.6rem solid white;
+    border-radius: 50%;
+    border-top: 1.6rem solid #56a5eb;
+    width: 12rem;
+    height: 12rem;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.display {
+    display: initial;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+fieldset {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: #1c2457 7px 7px 5px 10px;
+    min-width: 50vh;
+    max-width: 95%;
+    height: 100%;
+    margin-top: 30px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+#mainColor {
+    background-color:#474747;
+}
+
+#textColor {
+    color: #475bda
+}
+
+.textColor {
+    color: #eceefb
+}
+
+

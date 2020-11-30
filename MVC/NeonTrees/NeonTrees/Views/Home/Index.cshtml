@@ -1,8 +1,172 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@{ ViewData["Title"] = "Home Page"; }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+<button id="clicker" onclick="ChartPartType();">Authors</button>
+<div onload="PopulateScreen();" style="margin:1px">
+    <canvas id="chartContainer"></canvas>
+</div>
+<hr />
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+    var arrStuff = [];
+    var obj = [];
+    getFile();
+    let bflag = false;
+
+    var name = "";
+    var description = "";
+    var InventoryValue = "";
+    var PartType = "";
+    var url = "";
+
+    var cout = 0;
+
+    var ChartData;
+
+
+   
+
+    var flag = false
+    function populate(name, description, InventoryValue, Parttype, url) {
+        try {
+            //document.getElementById('X').value = x;
+           //document.getElementById('name').value = name;
+            //document.getElementById('description').value = description;
+            //document.getElementById('InventoryValue').value = InventoryValue;
+            //document.getElementById('PartType').value = Parttype;
+            //document.getElementById('url').value = url;
+
+            
+            
+
+
+            /arrStuff = new Product(name, description, InventoryValue, Parttype, url);
+            //alert(JSON.stringify(arrStuff));
+
+            //name = JSON.stringify();
+
+            //alert(name + description + InventoryValue + Parttype + url );;
+            //
+            //window.setTimeout(function () { document.getElementById("saveIt").click(); }, 2000);
+            //$.post('/Product/Creater', { name, description, InventoryValue, Parttype, url });
+            //  asp - action="Creater" style = "background-color:  #adbec5"
+            //  document.myform.action="Submit";
+
+
+
+ 
+
+
+
+            /*/PIE
+            ctx = document.getElementById('pieContainer').getContext('2d');
+            var dataPie = {
+                datasets: [{
+                    data: repArrD, hoverBackgroundColor: '#E91E63'
+                }],
+
+                // These labels appear in the legend and in the tooltips when hovering different arcs
+                labels: departments
+            };
+
+            var pieChart = new Chart(ctx, {
+                type: 'pie',
+                labels: departments,
+                data: dataPie,
+                options: {
+                    title: {
+                        display: true,
+                        text: 'Role distribution'
+                    },
+                    responsive: true
+                }
+            });*/
+
+
+        } catch (err) { alert(err.message) }
+    }
+
+
+    function Product(fname, des, val, parttypes, url) {
+        this.name = fname;
+        this.description = des;
+        this.InventoryValue = val;
+        this.PartType = parttypes;
+        this.url = url;
+    };
+
+    var dataMem;
+    function getFile() {
+        populate('', '', '', '', '');
+        const url = 'https://nameless-forest-23875.herokuapp.com/RawProduct/';
+        fetch(url, {
+            method: 'GET', // *GET, POST, PUT, DELETE, etc.
+            mode: 'cors', // no-cors, *cors, same-origin
+            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+            credentials: 'same-origin', // include, *same-origin, omit
+            headers: {
+                'Content-Type': 'application/json'
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            // redirect: 'follow', // manual, *follow, error
+            referrerPolicy: 'origin', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+        })
+            .then((response) => {
+                return response.json()
+
+            })
+            .then((data) => {
+
+                dataMem = data;
+
+                PopulateScreen();
+            })
+            .catch((err) => {
+                // Do something for an error here
+                console.log(err.message);
+            });
+    };
+    var x = 0;
+    function PopulateScreen() {
+        try {
+            if (x < dataMem.length) {
+
+                window.setTimeout(function () {
+                    flag = true;
+                    populate(dataMem[x].name, dataMem[x].description, dataMem[x].InventoryValue, dataMem[x].PartType, dataMem[x].url);
+                    PopulateScreen();
+                    arrStuff.push(dataMem[x].PartType)
+                }, 3000);
+
+            } else {
+                alert("x has run out");
+            }
+
+        } catch (e) { alert(e) }
+    }
+
+
+    function ChartPartType() {
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: JSON.stringify(dataMem.PartType),
+            options: {
+                title: {
+                    display: true,
+                    text: 'Sum of employees per department'
+                }
+            }
+        });
+    }
+
+    
+
+
+
+
+</script>

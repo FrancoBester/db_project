@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using NeonTrees.Interface;
+using NeonTrees.Services;
 
 namespace NeonTrees
 {
@@ -23,7 +25,14 @@ namespace NeonTrees
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IConfiguration>(Configuration);
             services.AddControllersWithViews();
+            services.AddRazorPages();
+            services.AddTransient<ICustomerService, CustomerService>();
+            services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<IBuildService, BuildService>();
+            services.AddTransient<ILoginService, LoginService>();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +52,8 @@ namespace NeonTrees
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseSession();
 
             app.UseAuthorization();
 
