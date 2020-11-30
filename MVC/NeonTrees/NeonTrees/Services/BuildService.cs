@@ -73,6 +73,7 @@ namespace NeonTrees.Services
                         Date = DateTime.Parse(reader.GetValue(1).ToString()),
                         Total = double.Parse(reader.GetValue(3).ToString()),
                         OrderDetails = reader.GetValue(4).ToString(),
+                        ProductIDs = reader.GetValue(5).ToString(),
                     };
                     build = _build;
                 }
@@ -115,7 +116,7 @@ namespace NeonTrees.Services
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
-                    cmd.CommandText = "Update build Set Builddate = '" + formated_date + "',Total = " + build.Total + ",OrderDetails = '" + build.OrderDetails + "', productIDs = '"+ build.OrderDetails +"' Where BuildID = "+build.ID+"";
+                    cmd.CommandText = "Update build Set Builddate = '" + formated_date + "',Total = " + build.Total + ",OrderDetails = '" + build.OrderDetails + "', productIDs = '"+ build.ProductIDs +"' Where BuildID = "+build.ID+"";
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();

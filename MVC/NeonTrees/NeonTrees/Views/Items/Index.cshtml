@@ -64,36 +64,36 @@
         {
             // @if (item.PartType.Contains(ViewBag.Item) || (ViewBag.Item == ""))
             // {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.ID)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Name)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Description)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.InventoryValue)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.PartType)
-    </td>
-    <td>
-        <img src="@Html.DisplayFor(modelItem => item.URL)" />
-    </td>
-    <td>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.InventoryValue)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PartType)
+                    </td>
+                    <td>
+                        <img src="@Html.DisplayFor(modelItem => item.URL)" />
+                    </td>                  
+                 
+                    <td style="width:100%">
+                        <div class="btn-group" role="group">
+                            <a class="btn btn-primary text-white" asp-action="Edit" asp-route-id="@item.ID">
+                                <i class="fas fa-plus"></i>
+                            </a>
 
-
-    <td style="width:100%">
-        <div class="btn-group" role="group">
-            <a class="btn btn-primary text-white" asp-action="Edit" asp-route-id="@item.ID">
-                <i class="fas fa-plus"></i>
-            </a>
-        </div><!-- JOHN PLZ ENTER PLUS-->
-    </td>
-</tr>// }
+                            <a ></a>
+                        </div><!-- JOHN PLZ ENTER PLUS-->
+                    </td>
+                </tr>// }
             }
     </tbody>
 

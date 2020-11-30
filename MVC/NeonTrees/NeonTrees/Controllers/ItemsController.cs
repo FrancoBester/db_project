@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using NeonTrees.Interface;
 using NeonTrees.Models;
-using NeonTrees.Interface;
 using NeonTrees.Services;
 
 namespace NeonTrees.Controllers
@@ -16,7 +15,11 @@ namespace NeonTrees.Controllers
     {
         IProductService productService;
         IBuildService buildService;
+<<<<<<< Updated upstream
         bool created;
+=======
+
+>>>>>>> Stashed changes
 
         public ItemsController(IProductService _productService, IBuildService _buildService)
         {
@@ -25,10 +28,7 @@ namespace NeonTrees.Controllers
         }
 
 
-        public IActionResult Index(
-            string sortOrder,
-            string currentFilter,
-            string searchString)
+        public IActionResult Index(string sortOrder,string currentFilter,string searchString)
         {
             ViewBag.CurrentSort = sortOrder;
             ViewBag.CurrentFilter = currentFilter;
@@ -139,6 +139,33 @@ namespace NeonTrees.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
+<<<<<<< Updated upstream
+=======
+        public ActionResult Edit(int id)
+        {
+            var id_build = HttpContext.Session.GetInt32("BuildID");
+            int build_id = int.Parse(id_build.ToString());
+
+            Build build = buildService.GetBuildById(build_id);
+            build.ProductIDs = build.ProductIDs + "," + id.ToString();
+
+            buildService.EditBuild(build);
+
+            return RedirectToAction("Index", "Items");
+        }
+
+        public ActionResult Update(int productID)
+        {
+            var id_build = HttpContext.Session.GetInt32("BuildID");
+            int build_id = int.Parse(id_build.ToString());
+
+            Build build = buildService.GetBuildById(build_id);
+            build.ProductIDs = build.ProductIDs + "," + productID.ToString();
+
+            buildService.EditBuild(build);
+
+            return RedirectToAction("Index","Items");
+>>>>>>> Stashed changes
         }
     }
 }

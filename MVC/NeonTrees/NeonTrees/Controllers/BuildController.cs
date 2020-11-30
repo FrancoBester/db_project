@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NeonTrees.Interface;
 using NeonTrees.Models;
@@ -37,6 +38,8 @@ namespace NeonTrees.Controllers
 
         public ActionResult Edit(int id)
         {
+            HttpContext.Session.SetInt32("BuildID", id);
+            return RedirectToAction("Index", "Items");
             Build build = buildService.GetBuildById(id);
             return View(build);
         }
@@ -60,5 +63,7 @@ namespace NeonTrees.Controllers
             buildService.DeleteBuild(build);
             return RedirectToAction(nameof(Index));
         }
+
+       
     }
 }
