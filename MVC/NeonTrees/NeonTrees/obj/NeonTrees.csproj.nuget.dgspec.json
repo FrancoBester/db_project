@@ -1,21 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Franco Bester\\Desktop\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj": {}
+    "C:\\Users\\EnricoIT\\Desktop\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Franco Bester\\Desktop\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj": {
+    "C:\\Users\\EnricoIT\\Desktop\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Franco Bester\\Desktop\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj",
+        "projectUniqueName": "C:\\Users\\EnricoIT\\Desktop\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj",
         "projectName": "NeonTrees",
-        "projectPath": "C:\\Users\\Franco Bester\\Desktop\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj",
-        "packagesPath": "C:\\Users\\Franco Bester\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Franco Bester\\Desktop\\db_project\\MVC\\NeonTrees\\NeonTrees\\obj\\",
+        "projectPath": "C:\\Users\\EnricoIT\\Desktop\\db_project\\MVC\\NeonTrees\\NeonTrees\\NeonTrees.csproj",
+        "packagesPath": "C:\\Users\\EnricoIT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\EnricoIT\\Desktop\\db_project\\MVC\\NeonTrees\\NeonTrees\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Franco Bester\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\EnricoIT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -26,6 +31,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +43,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
@@ -69,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
