@@ -120,8 +120,8 @@ namespace NeonTrees.Services
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
-                    cmd.CommandText = "Update Customer Set CustomerName = '" + customer.Name + "' ,CustomerSurname = '" + customer.Surname + "+" +
-                        "',Phone = '" + customer.Phone + "',Email = '" + customer.Email + "' ,Registered = '" + customer.Registered + "' Where CustomerID ="+ customer.ID+"";
+                    cmd.CommandText = "Update Customer Set CustomerName = '" + customer.Name + "' ,CustomerSurname = '" + customer.Surname  +
+                        "',Phone = '" + customer.Phone + "',Email = '" + customer.Email + "' ,Registered = '" + customer.Registered + "', LoginID = "+customer.LoginID+" Where CustomerID ="+ customer.ID+"";
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();

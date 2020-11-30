@@ -24,8 +24,15 @@ namespace NeonTrees.Controllers
             int id_user;
             if (int.TryParse(user_id.ToString(), out id_user))
             {
-                IEnumerable<Build> build = buildService.GetAllUserBuilds(id_user);
-                return View(build);   
+                if (id_user == -1)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+                else
+                {
+                    IEnumerable<Build> build = buildService.GetAllUserBuilds(id_user);
+                    return View(build);
+                }
             }
             else
             {
@@ -35,7 +42,19 @@ namespace NeonTrees.Controllers
 
         public ActionResult Create()
         {
-            return View();
+            var id_user = HttpContext.Session.GetInt32("UserID");
+
+            Build build = new Build();
+            build.CustomerID = int.Parse(id_user.ToString());
+            build.Date = DateTime.Now.Date;
+            build.OrderDetails = "?";
+            build.Total = 0.0;
+            build.ProductIDs = "";
+
+
+            buildService.AddBuild(build);
+            HttpContext.Session.SetInt32("BuildID", buildService.GetBuildId(build));
+            return RedirectToAction("Index","Items");
         }
 
         [HttpPost]
@@ -49,8 +68,8 @@ namespace NeonTrees.Controllers
         {
             HttpContext.Session.SetInt32("BuildID", id);
             return RedirectToAction("Index", "Items");
-            Build build = buildService.GetBuildById(id);
-            return View(build);
+            //Build build = buildService.GetBuildById(id);
+            //return View(build);
         }
 
         [HttpPost]

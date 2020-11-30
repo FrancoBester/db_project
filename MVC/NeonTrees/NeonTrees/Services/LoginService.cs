@@ -91,7 +91,7 @@ namespace NeonTrees.Services
             }
         }
 
-        public void DeleteLogin(Login login)
+        public void DeleteLogin(int id)
         {
             try
             {
@@ -100,7 +100,7 @@ namespace NeonTrees.Services
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
                     cmd.Connection = con;
-                    cmd.CommandText = "Delete From Login Where LoginID = " + login.ID + "";
+                    cmd.CommandText = "Delete From Login Where LoginID = " + id + "";
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
                 }

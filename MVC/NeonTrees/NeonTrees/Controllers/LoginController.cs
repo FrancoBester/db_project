@@ -38,7 +38,8 @@ namespace NeonTrees.Controllers
                     loginService.AddLogin(login);
                     int login_id = loginService.GetNewLoginId(login);
                     UpdateCustomerInfo(value, login_id);
-                    return RedirectToAction();
+                    HttpContext.Session.SetInt32("UserID", value);
+                    return RedirectToAction("Index","Build");
                 }
                 else
                 {

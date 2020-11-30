@@ -142,7 +142,14 @@ namespace NeonTrees.Controllers
             int build_id = int.Parse(id_build.ToString());
 
             Build build = buildService.GetBuildById(build_id);
-            build.ProductIDs = build.ProductIDs + "," + id.ToString();
+            if (build.ProductIDs == "")
+            {
+                build.ProductIDs = build.ProductIDs + id.ToString();
+            }
+            else
+            {
+                build.ProductIDs = build.ProductIDs + "," + id.ToString();
+            }
 
             buildService.EditBuild(build);
 

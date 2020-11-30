@@ -82,6 +82,27 @@ namespace NeonTrees.Services
             return build;
         }
 
+        public int GetBuildId(Build build)
+        {
+            string buildDate = ConvertDate(build.Date);
+            int build_id = -1;
+            using (OracleConnection con = new OracleConnection(_connectionString))
+            {
+                con.Open();
+                OracleCommand cmd = new OracleCommand();
+                cmd.CommandText = "Select * from Build Where  customerId = " + build.CustomerID + " and buildDate = '"+ buildDate +"'";
+                cmd.Connection = con;
+                cmd.CommandType = CommandType.Text;
+                OracleDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    build_id = int.Parse(reader.GetValue(0).ToString());
+                }
+
+            }
+            return build_id;
+        }
+
         public void AddBuild(Build build)
         {
             try
@@ -95,7 +116,7 @@ namespace NeonTrees.Services
                     //    "Values('"+ formated_date + "',0," + build.Total + ",'" + build.OrderDetails + "','"+build.ProductIDs+"')";
 
                     cmd.CommandText = "Insert into Build(Builddate,customerID,Total,ORderDetails,ProductIds)" +
-                        "Values('" + formated_date + "',0,"+build.Total+",'"+build.OrderDetails+"','"+build.ProductIDs+"')";
+                        "Values('" + formated_date + "',"+build.CustomerID +","+build.Total+",'"+build.OrderDetails+"','"+build.ProductIDs+"')";
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
