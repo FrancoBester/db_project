@@ -29,7 +29,7 @@ namespace NeonTrees.Services
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
                     cmd.Connection = con;
-                    cmd.CommandText = "Select loginID from login where Password = '" + login.Password + "' and username = '" + login.Name + "'";
+                    cmd.CommandText = "Select CustomerID from login where Password = '" + login.Password + "' and username = '" + login.Name + "'";
                     cmd.CommandType = CommandType.Text;
                     OracleDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
