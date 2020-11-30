@@ -38,7 +38,8 @@ namespace NeonTrees.Controllers
                 int id = customerService.GetNewCustomerID(customer);
                 if (id == -1)
                 {
-                    return RedirectToAction("Login", "Login");
+                    ViewBag.Message = "An error occurred. Please try again";
+                    return View();
                 }
                 else
                 {
@@ -46,7 +47,11 @@ namespace NeonTrees.Controllers
                     return RedirectToAction("Create", "Login");
                 }
             }
-            return RedirectToAction("Create", "Login");
+            else
+            {
+                ViewBag.Message = "Phone number and email address are not valid";
+                return View();
+            }
         }
 
         public ActionResult Edit(int id)
@@ -63,9 +68,11 @@ namespace NeonTrees.Controllers
                 customerService.EditCustomer(customer);
                 return RedirectToAction(nameof(Index));
             }
-
-            ViewBag.Message = string.Format("Test1");
-            return View(customer);
+            else
+            {
+                ViewBag.Message = "Invalid email or phone number";
+                return View();
+            }
         }
 
         public ActionResult Delete(int id)
