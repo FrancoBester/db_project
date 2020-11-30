@@ -40,11 +40,17 @@ namespace NeonTrees.Controllers
                     UpdateCustomerInfo(value, login_id);
                     return RedirectToAction();
                 }
+                else
+                {
+                    ViewBag.Message = "Password invalid";
+                    return View();
+                }
             }
-
-            ViewBag.Message = string.Format("TestLogin");
-            return View();
-
+            else
+            {
+                ViewBag.Message = "Username already taken";
+                return View();
+            }          
         }
 
         public ActionResult Login()
@@ -55,7 +61,6 @@ namespace NeonTrees.Controllers
         [HttpPost]
         public ActionResult Login(Login login)
         {
-            //bool value = ValidPassword(login.Name);
             if (!loginService.CheckUserName(login))
             {
                 if(loginService.CheckPasswprd(login))
@@ -66,12 +71,14 @@ namespace NeonTrees.Controllers
                 }
                 else
                 {
-                    return View();//show error msg pass incorrect
+                    ViewBag.Message = "Username and password are not valid";
+                    return View();
                 }
             }
             else
             {
-                return View();//show error msg user incorrect
+                ViewBag.Message = "Username and password are not valid";
+                return View();
             }
 
         }

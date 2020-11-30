@@ -21,19 +21,16 @@ namespace NeonTrees.Controllers
         public IActionResult Index()
         {
             var user_id = HttpContext.Session.GetInt32("UserID");
-            int id_user = (int)user_id;
-            if(id_user != 0)
+            int id_user;
+            if (int.TryParse(user_id.ToString(), out id_user))
             {
                 IEnumerable<Build> build = buildService.GetAllUserBuilds(id_user);
-                return View(build);
+                return View(build);   
             }
             else
             {
-                return View();
+                return RedirectToAction("Login", "Login");
             }
-            
-            //IEnumerable<Build> build = buildService.GetAllBuilds();
-            //return View(build);
         }
 
         public ActionResult Create()
