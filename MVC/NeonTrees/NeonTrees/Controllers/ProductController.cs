@@ -35,6 +35,14 @@ namespace NeonTrees.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        //NO-SQL import
+        [HttpPost]
+        public ActionResult Creater(string name, string description, string InventoryValue, string Parttype, string url)
+        {
+            productService.AddProductJ(name, description, InventoryValue, Parttype, url);
+            return RedirectToAction(nameof(Create));
+        }
+
         public ActionResult Edit(int id)
         {
             Product product = productService.GetProductById(id);
@@ -59,5 +67,6 @@ namespace NeonTrees.Controllers
             productService.DeleteProduct(product);
             return RedirectToAction(nameof(Index));
         }
+
     }
 }

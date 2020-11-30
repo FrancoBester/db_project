@@ -1,20 +1,15 @@
 ﻿@model IEnumerable<NeonTrees.Models.Product>
 
-@{
-    ViewData["Title"] = "Index";
-}
+@{ ViewData["Title"] = "Index"; }
 
-<h1>Index</h1>
+<h1>Products</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Import List</a>
 </p>
-<table class="table">
+<table class="table" style="overflow-y:auto;">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ID)
-            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Name)
             </th>
@@ -22,43 +17,75 @@
                 @Html.DisplayNameFor(model => model.Description)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                @Html.DisplayNameFor(model => model.InventoryValue)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Brand)
+                @Html.DisplayNameFor(model => model.PartType)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Category)
+                @Html.DisplayNameFor(model => model.URL)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Brand)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+<tr>
+   
+    <td>
+        @Html.DisplayFor(modelItem => item.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Description)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.InventoryValue)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PartType)
+    </td>
+    <td>
+        <img src="@Html.DisplayFor(modelItem => item.URL)" />
+    </td>
+    <td>
+
+
+    <td style="width:100%">
+        <div class="btn-group" role="group">
+            <a class="btn btn-primary text-white" asp-action="Edit" asp-route-id="@item.ID">
+                <i class="fas fa-edit"></i>
+            </a>
+
+            <a class="btn btn-success text-white" asp-action="Details" asp-route-id="@item.ID">
+                <i class="fas fa-list"></i>
+            </a>
+
+            <a class="btn btn-danger text-white" asp-action="Delete" asp-route-id="@item.ID">
+                <i class="fas fa-trash"></i>
+            </a>
+        </div>
+    </td>
+</tr>}
     </tbody>
+
 </table>
+
+<button onclick="topFunction()" id="ScrollToTop" title="Go to top">Top</button>
+<script>
+    //ScrollToTop button
+    var mybutton = document.getElementById("ScrollToTop");
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }</script>}

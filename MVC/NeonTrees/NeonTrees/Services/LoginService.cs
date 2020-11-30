@@ -19,24 +19,34 @@ namespace NeonTrees.Services
             _connectionString = _configuration.GetConnectionString("DefaultConnection");
         }
 
-        public bool GetLoginByUser(Login login)
+        public int GetUserID(Login login)
         {
-            bool isValid = false;
-            using (OracleConnection con = new OracleConnection(_connectionString))
+            int new_login_id = -1;
+            try
             {
-                con.Open();
-                OracleCommand cmd = new OracleCommand();
-                cmd.CommandText = "Select * from Login Where userName = '" + login.Name + "' AND password = '"+login.Password+"'";
-                cmd.Connection = con;
-                cmd.CommandType = CommandType.Text;
-                OracleDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
+                using (OracleConnection con = new OracleConnection(_connectionString))
                 {
-                    isValid = true;
+                    con.Open();
+                    OracleCommand cmd = new OracleCommand();
+                    cmd.Connection = con;
+                    cmd.CommandText = "Select loginID from login where Password = '" + login.Password + "' and username = '" + login.Name + "'";
+                    cmd.CommandType = CommandType.Text;
+                    OracleDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        new_login_id = int.Parse(reader.GetValue(0).ToString());
+                    }
                 }
             }
-            return isValid;
+            catch (Exception ex)
+            {
+                string error = ex.ToString();
+            }
+
+            return new_login_id;
         }
+
+        
 
         public void EditLogin(Login login)
         {
@@ -154,5 +164,32 @@ namespace NeonTrees.Services
 
             return isUnique;
         }
+
+        public bool CheckPasswprd(Login login)
+        {
+            string db_password = "";
+            bool isValid = false;
+            using (OracleConnection con = new OracleConnection(_connectionString))
+            {
+                con.Open();
+                OracleCommand cmd = new OracleCommand();
+                cmd.CommandText = "Select password from Login Where userName = '" + login.Name + "'";
+                cmd.Connection = con;
+                cmd.CommandType = CommandType.Text;
+                OracleDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    db_password = reader.GetValue(0).ToString();
+                }
+            }
+
+            if (db_password == login.Password)
+            {
+                isValid = true;
+            }
+
+            return isValid;
+        }
+
     }
 }
