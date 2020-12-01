@@ -1,0 +1,26 @@
+{
+  "name": "mongodbcv",
+  "version": "1.0.0",
+  "description": "NeonTrees Webcrawler",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "mongoose": "^5.10.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "author": "John King",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrancoBester/db_project"
+  },
+  "homepage": "https://github.com/FrancoBester/db_project"
+}

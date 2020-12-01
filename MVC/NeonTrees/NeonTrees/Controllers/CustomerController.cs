@@ -16,7 +16,7 @@ namespace NeonTrees.Controllers
         ICustomerService customerService;
         ILoginService loginService;
 
-        public CustomerController(ICustomerService _customerService,ILoginService _loginService)
+        public CustomerController(ICustomerService _customerService, ILoginService _loginService)
         {
             customerService = _customerService;
             loginService = _loginService;
@@ -142,21 +142,21 @@ namespace NeonTrees.Controllers
 
             customerService.DeleteCustomer(_customer);
             HttpContext.Session.SetInt32("UserID", -1);
-            return RedirectToAction("Create","Customer");
+            return RedirectToAction("Create", "Customer");
         }
 
         public bool ValidEmail(string email)
-        { 
+        {
             return new EmailAddressAttribute().IsValid(email);
         }
 
         public bool ValidPhone(string number)
         {
             bool isValid = false;
-            if(number.Length == 10)
+            if (number.Length == 10)
             {
                 int temp;
-                if(int.TryParse(number, out temp))
+                if (int.TryParse(number, out temp))
                 {
                     isValid = true;
                 }

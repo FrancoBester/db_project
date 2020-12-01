@@ -46,7 +46,7 @@ namespace NeonTrees.Services
             return new_login_id;
         }
 
-        
+
 
         public void EditLogin(Login login)
         {
@@ -121,10 +121,10 @@ namespace NeonTrees.Services
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
                     cmd.Connection = con;
-                    cmd.CommandText = "Select loginID from login where CustomerID = "+login.CustomerID+" AND Password = '"+ login.Password +"' and username = '"+ login.Name +"'";
+                    cmd.CommandText = "Select loginID from login where CustomerID = " + login.CustomerID + " AND Password = '" + login.Password + "' and username = '" + login.Name + "'";
                     cmd.CommandType = CommandType.Text;
                     OracleDataReader reader = cmd.ExecuteReader();
-                    while(reader.Read())
+                    while (reader.Read())
                     {
                         new_login_id = int.Parse(reader.GetValue(0).ToString());
                     }

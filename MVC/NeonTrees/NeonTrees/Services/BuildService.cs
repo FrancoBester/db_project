@@ -25,7 +25,7 @@ namespace NeonTrees.Services
 
             try
             {
-                using(OracleConnection con = new OracleConnection(_connectionString))
+                using (OracleConnection con = new OracleConnection(_connectionString))
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
@@ -33,7 +33,7 @@ namespace NeonTrees.Services
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     OracleDataReader reader = cmd.ExecuteReader();
-                    while(reader.Read())
+                    while (reader.Read())
                     {
                         Build _build = new Build
                         {
@@ -47,7 +47,7 @@ namespace NeonTrees.Services
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 string error = ex.ToString();
             }
@@ -65,7 +65,7 @@ namespace NeonTrees.Services
                 cmd.Connection = con;
                 cmd.CommandType = CommandType.Text;
                 OracleDataReader reader = cmd.ExecuteReader();
-                while(reader.Read())
+                while (reader.Read())
                 {
                     Build _build = new Build
                     {
@@ -90,7 +90,7 @@ namespace NeonTrees.Services
             {
                 con.Open();
                 OracleCommand cmd = new OracleCommand();
-                cmd.CommandText = "Select * from Build Where  customerId = " + build.CustomerID + " and buildDate = '"+ buildDate +"'";
+                cmd.CommandText = "Select * from Build Where  customerId = " + build.CustomerID + " and buildDate = '" + buildDate + "'";
                 cmd.Connection = con;
                 cmd.CommandType = CommandType.Text;
                 OracleDataReader reader = cmd.ExecuteReader();
@@ -116,7 +116,7 @@ namespace NeonTrees.Services
                     //    "Values('"+ formated_date + "',0," + build.Total + ",'" + build.OrderDetails + "','"+build.ProductIDs+"')";
 
                     cmd.CommandText = "Insert into Build(Builddate,customerID,Total,ORderDetails,ProductIds)" +
-                        "Values('" + formated_date + "',"+build.CustomerID +","+build.Total+",'"+build.OrderDetails+"','"+build.ProductIDs+"')";
+                        "Values('" + formated_date + "'," + build.CustomerID + "," + build.Total + ",'" + build.OrderDetails + "','" + build.ProductIDs + "')";
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
@@ -137,7 +137,7 @@ namespace NeonTrees.Services
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
-                    cmd.CommandText = "Update build Set Builddate = '" + formated_date + "',Total = " + build.Total + ",OrderDetails = '" + build.OrderDetails + "', productIDs = '"+ build.ProductIDs +"' Where BuildID = "+build.ID+"";
+                    cmd.CommandText = "Update build Set Builddate = '" + formated_date + "',Total = " + build.Total + ",OrderDetails = '" + build.OrderDetails + "', productIDs = '" + build.ProductIDs + "' Where BuildID = " + build.ID + "";
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
@@ -174,31 +174,43 @@ namespace NeonTrees.Services
             string returnValue = model_date.Day.ToString() + "/";
             int month = model_date.Month;
 
-            switch(month)
+            switch (month)
             {
-                case 1: returnValue = returnValue + "JAN/";
+                case 1:
+                    returnValue = returnValue + "JAN/";
                     break;
-                case 2: returnValue = returnValue + "FEB/";
+                case 2:
+                    returnValue = returnValue + "FEB/";
                     break;
-                case 3: returnValue = returnValue + "MAR/";
+                case 3:
+                    returnValue = returnValue + "MAR/";
                     break;
-                case 4: returnValue = returnValue + "APR/";
+                case 4:
+                    returnValue = returnValue + "APR/";
                     break;
-                case 5: returnValue = returnValue + "MAY/";
+                case 5:
+                    returnValue = returnValue + "MAY/";
                     break;
-                case 6: returnValue = returnValue + "JUN/";
+                case 6:
+                    returnValue = returnValue + "JUN/";
                     break;
-                case 7: returnValue = returnValue + "JUL/";
+                case 7:
+                    returnValue = returnValue + "JUL/";
                     break;
-                case 8: returnValue = returnValue + "AUG/";
+                case 8:
+                    returnValue = returnValue + "AUG/";
                     break;
-                case 9: returnValue = returnValue + "SEP/";
+                case 9:
+                    returnValue = returnValue + "SEP/";
                     break;
-                case 10: returnValue = returnValue + "OCT/";
+                case 10:
+                    returnValue = returnValue + "OCT/";
                     break;
-                case 11: returnValue = returnValue + "NOV/";
+                case 11:
+                    returnValue = returnValue + "NOV/";
                     break;
-                case 12: returnValue = returnValue + "DEC/";
+                case 12:
+                    returnValue = returnValue + "DEC/";
                     break;
             }
 
@@ -222,7 +234,7 @@ namespace NeonTrees.Services
 
                         con.Open();
                         OracleCommand cmd = new OracleCommand();
-                        cmd.CommandText = "Select count(*) from Build Where Total  Between "+i+" ANd "+(i+5000)+"";
+                        cmd.CommandText = "Select count(*) from Build Where Total  Between " + i + " ANd " + (i + 5000) + "";
                         cmd.Connection = con;
                         cmd.CommandType = CommandType.Text;
                         OracleDataReader reader = cmd.ExecuteReader();
@@ -232,9 +244,9 @@ namespace NeonTrees.Services
                         }
                     }
                 }
-                
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 string error = ex.ToString();
             }
@@ -244,7 +256,7 @@ namespace NeonTrees.Services
         private double MaxBuildCost()
         {
             double maxTotal = 0;
-            using(OracleConnection con = new OracleConnection(_connectionString))
+            using (OracleConnection con = new OracleConnection(_connectionString))
             {
                 con.Open();
                 OracleCommand cmd = new OracleCommand();
@@ -252,7 +264,7 @@ namespace NeonTrees.Services
                 cmd.CommandText = "Select Max(Total) from Build";
                 cmd.CommandType = CommandType.Text;
                 OracleDataReader reader = cmd.ExecuteReader();
-                while(reader.Read())
+                while (reader.Read())
                 {
                     maxTotal = double.Parse(reader.GetValue(0).ToString());
                 }
@@ -296,7 +308,7 @@ namespace NeonTrees.Services
             string[] months = { "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC" };
             string year_string = (DateTime.Now.Year).ToString();
             string year_short = year_string[2].ToString() + year_string[3].ToString();
-            string start_date,end_date,month;
+            string start_date, end_date, month;
 
             try
             {
@@ -307,11 +319,11 @@ namespace NeonTrees.Services
 
                     start_date = "01/" + month + "/" + year_short;
 
-                    if(i == 2)
+                    if (i == 2)
                     {
                         end_date = "28/" + month + "/" + year_short;
                     }
-                    else if( i == 4 || i == 6 || i == 9 || i == 11)
+                    else if (i == 4 || i == 6 || i == 9 || i == 11)
                     {
                         end_date = "30/" + month + "/" + year_short;
                     }
@@ -319,17 +331,17 @@ namespace NeonTrees.Services
                     {
                         end_date = "31/" + month + "/" + year_short;
                     }
-                    
+
 
                     using (OracleConnection con = new OracleConnection(_connectionString))
                     {
                         con.Open();
                         OracleCommand cmd = new OracleCommand();
-                        cmd.CommandText = "Select count(*) from Build Where buildDate between '"+start_date+"' and '"+end_date+"'";
+                        cmd.CommandText = "Select count(*) from Build Where buildDate between '" + start_date + "' and '" + end_date + "'";
                         cmd.Connection = con;
                         cmd.CommandType = CommandType.Text;
                         OracleDataReader reader = cmd.ExecuteReader();
-                        while(reader.Read())
+                        while (reader.Read())
                         {
                             info_list.Add(int.Parse(reader.GetValue(0).ToString()));
                         }
@@ -354,7 +366,7 @@ namespace NeonTrees.Services
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
-                    cmd.CommandText = "Select * from Build Where customerid = "+user_id+"";
+                    cmd.CommandText = "Select * from Build Where customerid = " + user_id + "";
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     OracleDataReader reader = cmd.ExecuteReader();

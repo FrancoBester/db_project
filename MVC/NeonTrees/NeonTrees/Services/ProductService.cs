@@ -25,7 +25,7 @@ namespace NeonTrees.Services
 
             try
             {
-                using(OracleConnection con = new OracleConnection(_connectionString))
+                using (OracleConnection con = new OracleConnection(_connectionString))
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
@@ -33,7 +33,7 @@ namespace NeonTrees.Services
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     OracleDataReader reader = cmd.ExecuteReader();
-                    while(reader.Read())
+                    while (reader.Read())
                     {
                         Product _product = new Product
                         {
@@ -48,7 +48,7 @@ namespace NeonTrees.Services
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 string error = ex.ToString();
             }
@@ -58,15 +58,15 @@ namespace NeonTrees.Services
         public Product GetProductById(int id)
         {
             Product product = new Product();
-            using(OracleConnection con = new OracleConnection(_connectionString))
+            using (OracleConnection con = new OracleConnection(_connectionString))
             {
                 con.Open();
                 OracleCommand cmd = new OracleCommand();
-                cmd.CommandText = "Select * from Product Where ProductID = "+ id +"";
+                cmd.CommandText = "Select * from Product Where ProductID = " + id + "";
                 cmd.Connection = con;
                 cmd.CommandType = CommandType.Text;
                 OracleDataReader reader = cmd.ExecuteReader();
-                while(reader.Read())
+                while (reader.Read())
                 {
                     Product _product = new Product
                     {
@@ -122,7 +122,6 @@ namespace NeonTrees.Services
             {
                 string error = ex.ToString();
             }
-
         }
 
         public void EditProduct(Product product)
@@ -141,7 +140,7 @@ namespace NeonTrees.Services
 
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 string error = ex.ToString();
             }
@@ -155,13 +154,13 @@ namespace NeonTrees.Services
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
-                    cmd.CommandText = "Delete From Product Where ProductID ="+product.ID+"";
+                    cmd.CommandText = "Delete From Product Where ProductID =" + product.ID + "";
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 string error = ex.ToString();
             }
@@ -177,7 +176,7 @@ namespace NeonTrees.Services
                 {
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
-                    cmd.CommandText = "Select * from Product Where parttype = '"+product_category+"'";
+                    cmd.CommandText = "Select * from Product Where parttype = '" + product_category + "'";
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     OracleDataReader reader = cmd.ExecuteReader();

@@ -54,7 +54,7 @@ namespace NeonTrees.Controllers
 
             buildService.AddBuild(build);
             HttpContext.Session.SetInt32("BuildID", buildService.GetBuildId(build));
-            return RedirectToAction("Index","Items");
+            return RedirectToAction("Index", "Items");
         }
 
         [HttpPost]
@@ -92,6 +92,6 @@ namespace NeonTrees.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-       
+
     }
 }

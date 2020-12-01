@@ -9,7 +9,7 @@ namespace NeonTrees.Models
     {
         public int ID { get; set; }
 
-        public DateTime Date {get;set;}
+        public DateTime Date { get; set; }
 
         public int CustomerID { get; set; }
 

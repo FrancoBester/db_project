@@ -1,11 +1,15 @@
 ﻿@model IEnumerable<NeonTrees.Models.Product>
 @{ ViewData["Title"] = "Items"; }
 
-
+<style>
+    button a {
+        color: white;
+    }
+</style>
 <h1>@ViewData["Title"]</h1>
 
 <p>
-    <button class="btn-primary" asp-action="Create">View Build</button>
+    <a class="btn btn-primary" asp-area="" asp-controller="Build" asp-action="Index">View Build</a>
 </p>
 
 <div>
@@ -33,7 +37,7 @@
     <button id="btn1">@Html.ActionLink("Mouse Keyboard combo", "Index", new { sortOrder = "Mouse Keyboard combo", currentFilter = ViewBag.CurrentFilter })</button>
     <button id="btn1">@Html.ActionLink("Keyboard", "Index", new { sortOrder = "Keyboard", currentFilter = ViewBag.CurrentFilter })</button>
 </div>
-<table class="table" style="overflow-y:auto;">
+<table class="table" style="flex:1;overflow-y:auto; width:100%">
     <thead>
         <tr>
             <th>
@@ -57,42 +61,43 @@
             <th></th>
         </tr>
     </thead>
-    <tbody>
+    <tbody style="flex:1;overflow-y:auto; width:100%">
         @foreach (var item in Model)
         {
             // @if (item.PartType.Contains(ViewBag.Item) || (ViewBag.Item == ""))
             // {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ID)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Description)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.InventoryValue)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.PartType)
-                    </td>
-                    <td>
-                        <img src="@Html.DisplayFor(modelItem => item.URL)" />
-                    </td>                  
-                 
-                    <td style="" >
-                        <div class="btn-group" role="group">
-                            <a class="btn btn-primary text-white" asp-action="Edit" asp-route-id="@item.ID">
-                                <i class="fas fa-plus"></i>
-                            </a>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.ID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Description)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.InventoryValue)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PartType)
+    </td>
+    <td>
+        <img src="@Html.DisplayFor(modelItem => item.URL)" />
+    </td>
+    <td>
 
-                            <a ></a>
-                        </div><!-- JOHN PLZ ENTER PLUS-->
-                    </td>
-                </tr>// }
-            }
+
+    <td style="justify-content:flex-end">
+        <div class="btn-group" role="group">
+            <a class="btn btn-primary text-white" asp-action="Edit" onclick="AddedItem();" asp-route-id="@item.ID">
+                <i class="fas fa-plus"></i>
+            </a>
+        </div><!-- JOHN PLZ ENTER PLUS-->
+    </td>
+</tr>
+// }
+}
     </tbody>
 
 </table>

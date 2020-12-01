@@ -1,19 +1,17 @@
 ﻿@model NeonTrees.Models.Customer
 
-@{
-    ViewData["Title"] = "Edit";
-}
+@{ ViewData["Title"] = "Edit"; }
 
 <h1>Edit</h1>
 
 <h4>Customer</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col">
         <form asp-action="Edit">
             <div>
                 <a class="btn btn-danger text-white" asp-action="Delete">
-                    <i class="fas fa-trash"></i>
+                    Delete Account    <i class="fas fa-trash"></i>
                 </a>
             </div>
 
@@ -44,16 +42,13 @@
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Save" onclick="Saved();" class="btn btn-primary" />
             </div>
 
         </form>
     </div>
 </div>
 
-<div>
-    <button class="btn btn-secondary" asp-action="Index">Back to List</button>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

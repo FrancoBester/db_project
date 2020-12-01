@@ -8,13 +8,18 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/styles.css" />
     <script src="https://kit.fontawesome.com/ecddb1c16f.js" crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <style>
+        footer i {
+            color: #f35d9d;
+        }
+    </style>
 </head>
-<body onload="DoneLoading();">
+<body class="gradientCon" onload="DoneLoading();">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">NeonTrees</a>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3 maincolor" >
+            <div class="container white">
+                <a class="navbar-brand" style="color:white" asp-area="" asp-controller="Home" asp-action="Index"><b>NeonTrees</b></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -25,19 +30,19 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li> -->
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Analytics" onclick="busyLoading();">Analytics</a>
+                            <a class="nav-link textColor" asp-area="" asp-controller="Home" asp-action="Analytics" onclick="busyLoading();">Analytics</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Build" asp-action="Index" onclick="busyLoading();">Build</a>
+                            <a class="nav-link textColor" asp-area="" asp-controller="Build" asp-action="Index" onclick="busyLoading();">Build</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Customer" asp-action="Index" onclick="busyLoading();">Customer</a>
+                            <a class="nav-link textColor" asp-area="" asp-controller="Customer" asp-action="Index" onclick="busyLoading();">Customer</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Items" asp-action="Index" onclick="busyLoading();">Items</a>
+                            <a class="nav-link textColor" asp-area="" asp-controller="Items" asp-action="Index" onclick="busyLoading();">Items</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index" onclick="busyLoading();">Product</a>
+                            <a class="nav-link textColor" asp-area="" asp-controller="Product" asp-action="Index" onclick="busyLoading();">Product</a>
                         </li>
 
                     </ul>
@@ -46,21 +51,21 @@
 
             </div>
         </nav>
-        <nav id="islogged" class="navbar navbar-expand-sm navbar-toggleable-sm float-right navbar-light border-bottom box-shadow mb-3" style="        position: absolute;
+        <nav id="islogged" class="navbar navbar-expand-sm navbar-toggleable-sm float-right border-bottom box-shadow mb-3 maincolor " style="        position: absolute;
         right: 10%;
         top:0;
 ">
             <ul class="navbar-nav flex-grow-1">
                 <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Customer" asp-action="Create">Register</a>
+                    <a class="nav-link textColor" asp-area="" asp-controller="Customer" asp-action="Create">Register</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Login">Login</a>
+                    <a class="nav-link textColor" asp-area="" asp-controller="Login" asp-action="Login">Login</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <div class="container">
+
         <div id="loader"></div>
         <main id="loaded" role="main" class="pb-3">
 
@@ -89,7 +94,7 @@
                 </script>
             </fieldset>
         </main>
-    </div>
+
     <hr />
     <footer class="border-top footer text-white-50" style="background-color: #343a40;">
         <div id="foot-flexer">
@@ -112,7 +117,7 @@
             <div id="third-foot">
                 <h1>More</h1>
                 <a href="#">Information</a>
-                <a href="#">More Information</a>
+                <a href="#" >More Information</a>
                 <div class="row" id="paddingAdd">
                     <li><a href="#"><i class="fa fa-phone"></i></a></li>
                     <li><a href="#"><i class="fa fa-envelope"></i></a></li>
@@ -159,6 +164,25 @@
             const logged = document.getElementById("islogged");
             logged.classList.add("hidden");
 
+        }
+            function iDelete() {
+                alert("Your item has been delete!");
+        }
+
+        function Saved() {
+            alert("Your item has been saved!");
+        }
+
+        function Registered() {
+            alert("Now please confirm your password.");
+        }
+
+        function RegDone() {
+            alert("You are now registered.");
+        }
+
+        function AddedItem() {
+            alert("You have added an item to your build.");
         }
 
     </script>

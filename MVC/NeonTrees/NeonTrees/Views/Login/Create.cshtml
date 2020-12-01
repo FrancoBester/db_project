@@ -1,8 +1,6 @@
 ﻿@model NeonTrees.Models.Login
 
-@{
-    ViewData["Title"] = "Create";
-}
+@{ ViewData["Title"] = "Create"; }
 
 <h1>Setup Login</h1>
 
@@ -12,12 +10,12 @@
         <form asp-action="Create">
             @if (ViewBag.Message != null)
             {
-                <script type="text/javascript">
+<script type="text/javascript">
                     window.onload = function () {
                         alert("@ViewBag.Message");
                     };
-                </script>
-            }
+</script>
+}
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label">User Name</label>
@@ -30,7 +28,7 @@
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" oclick="RegDone();" class="btn btn-primary" />
             </div>
         </form>
     </div>

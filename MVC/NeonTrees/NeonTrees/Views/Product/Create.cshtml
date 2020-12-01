@@ -7,13 +7,11 @@
 <h4>Product</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col">
         <form name="myform" id="myform" asp-action="Creater" style="background-color:  #adbec5">
             <!-- hiddenFrame: put this in target when/if you don't want json confirmation, A script can be written for an alert, but I pref this output for an assignment <iframe name="hiddenFrame" class="hide"></iframe>-->
             <b>Name:</b> <input type="text" name="X" id="X"><br>
-            <script>
-                document.getElementById('name').value = 'john';
-            </script>
+
             <p style="font-size: 2vh;">NodeJS Express REST</p><br>
             <b>Name:</b> <input type="text" name="name" id="name"><br>
             <b>Description:</b> <input type="text" name="description" id="description"><br>
@@ -33,7 +31,7 @@
 
         <ul id="authors"></ul>
         <ul id="fetchstuff"></ul>
-        <button id="clicker" onclick="PopulateScreen()">Authors</button>
+        <a class="btn btn-success" id="clicker" onclick="PopulateScreen()" style="margin-bottom:10px;">Import</a>
 
         <script>
 
@@ -68,6 +66,8 @@
             var PartType = "";
             var url = "";
 
+
+            var dataMem;
             var cout = 0;
 
             var flag = false
@@ -105,8 +105,6 @@
                 this.PartType = parttypes;
                 this.url = url;
             };
-
-            var dataMem;
             function getFile() {
                 populate('', '', '', '', '');
                 const url = 'https://nameless-forest-23875.herokuapp.com/RawProduct/';
@@ -149,7 +147,7 @@
                         }, 3000);
 
                     } else {
-                        alert("x has run out");
+                        alert("Import to Oracle done!");
                     }
 
                 } catch (e) { alert(e) }

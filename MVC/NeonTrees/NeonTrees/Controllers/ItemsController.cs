@@ -24,7 +24,7 @@ namespace NeonTrees.Controllers
         }
 
 
-        public IActionResult Index(string sortOrder,string currentFilter,string searchString)
+        public IActionResult Index(string sortOrder, string currentFilter, string searchString)
         {
             ViewBag.CurrentSort = sortOrder;
             ViewBag.CurrentFilter = currentFilter;
@@ -34,7 +34,8 @@ namespace NeonTrees.Controllers
             if (String.IsNullOrEmpty(sortOrder))
             {
                 product = productService.FilterProduct("CPU");
-            }else
+            }
+            else
             {
                 product = productService.FilterProduct(sortOrder);
             }
@@ -166,7 +167,7 @@ namespace NeonTrees.Controllers
 
             buildService.EditBuild(build);
 
-            return RedirectToAction("Index","Items");
+            return RedirectToAction("Index", "Items");
         }
     }
 }
