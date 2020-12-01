@@ -139,22 +139,29 @@ namespace NeonTrees.Controllers
         }
         public ActionResult Edit(int id)
         {
-            var id_build = HttpContext.Session.GetInt32("BuildID");
-            int build_id = int.Parse(id_build.ToString());
-
-            Build build = buildService.GetBuildById(build_id);
-            if (build.ProductIDs == "")
+            try
             {
-                build.ProductIDs = build.ProductIDs + id.ToString();
+                var id_build = HttpContext.Session.GetInt32("BuildID");
+                int build_id = int.Parse(id_build.ToString());
+
+                Build build = buildService.GetBuildById(build_id);
+                if (build.ProductIDs == "")
+                {
+                    build.ProductIDs = build.ProductIDs + id.ToString();
+                }
+                else
+                {
+                    build.ProductIDs = build.ProductIDs + "," + id.ToString();
+                }
+
+                buildService.EditBuild(build);
+
+                return RedirectToAction("Index", "Items");
             }
-            else
+            catch
             {
-                build.ProductIDs = build.ProductIDs + "," + id.ToString();
+                return RedirectToAction("Login", "Login");
             }
-
-            buildService.EditBuild(build);
-
-            return RedirectToAction("Index", "Items");
         }
 
         public ActionResult Update(int productID)
