@@ -42,12 +42,16 @@ namespace NeonTrees.Controllers
 
         public ActionResult Create()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Build build)
+        {
             var id_user = HttpContext.Session.GetInt32("UserID");
 
-            Build build = new Build();
             build.CustomerID = int.Parse(id_user.ToString());
             build.Date = DateTime.Now.Date;
-            build.OrderDetails = "?";
             build.Total = 0.0;
             build.ProductIDs = "";
 
@@ -57,19 +61,10 @@ namespace NeonTrees.Controllers
             return RedirectToAction("Index", "Items");
         }
 
-        [HttpPost]
-        public ActionResult Create(Build build)
-        {
-            buildService.AddBuild(build);
-            return RedirectToAction(nameof(Index));
-        }
-
         public ActionResult Edit(int id)
         {
             HttpContext.Session.SetInt32("BuildID", id);
             return RedirectToAction("Index", "Items");
-            //Build build = buildService.GetBuildById(id);
-            //return View(build);
         }
 
         [HttpPost]
@@ -92,6 +87,12 @@ namespace NeonTrees.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-
+        public ActionResult View(int id)
+        {
+            Build build = buildService.GetBuildById(id);
+            string product_ids = build.ProductIDs;
+            HttpContext.Session.SetString("IdsProduct",product_ids);
+            return RedirectToAction("ViewProducts","Items");
+        }
     }
 }

@@ -145,6 +145,13 @@ namespace NeonTrees.Controllers
                 int build_id = int.Parse(id_build.ToString());
 
                 Build build = buildService.GetBuildById(build_id);
+                string product_price = productService.GetProductPrice(id);
+                int ling = product_price.Length;
+                product_price = product_price.Substring(1, ling -1);
+                product_price = fixPrice(product_price, ling -2);
+                double price = double.Parse(product_price);
+                build.Total = build.Total + price;
+
                 if (build.ProductIDs == "")
                 {
                     build.ProductIDs = build.ProductIDs + id.ToString();
@@ -155,11 +162,12 @@ namespace NeonTrees.Controllers
                 }
 
                 buildService.EditBuild(build);
-
+                ViewBag.Message = "Product added to build";
                 return RedirectToAction("Index", "Items");
             }
-            catch
+            catch(Exception ex)
             {
+                string error = ex.ToString();
                 return RedirectToAction("Login", "Login");
             }
         }
@@ -175,6 +183,29 @@ namespace NeonTrees.Controllers
             buildService.EditBuild(build);
 
             return RedirectToAction("Index", "Items");
+        }
+
+        public IActionResult ViewProducts()
+        {
+            var productids = HttpContext.Session.GetString("IdsProduct");
+
+            IEnumerable<Product> product = productService.GetBuildComponents(productids.ToString());
+            return View(product);
+        }
+
+        public string fixPrice(string price,int ilength)
+        {
+            string returnstring = "";
+            int itemp;
+            for(int i = 0; i <= ilength; i++)
+            {
+                if(int.TryParse(price[i].ToString(), out itemp))
+                {
+                    returnstring = returnstring + price[i];
+                }
+            }
+
+            return returnstring;
         }
     }
 }

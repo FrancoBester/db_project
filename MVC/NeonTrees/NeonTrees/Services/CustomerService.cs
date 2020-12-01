@@ -98,7 +98,7 @@ namespace NeonTrees.Services
                     con.Open();
                     OracleCommand cmd = new OracleCommand();
                     cmd.CommandText = "Insert Into Customer(CustomerName,CustomerSurname,Phone,Email,Registered,LoginID) " +
-                        "Values('" + customer.Name + "','" + customer.Surname + "','" + customer.Phone + "','" + customer.Email + "','" + customer.Registered + "',0)";
+                        "Values('" + customer.Name + "','" + customer.Surname + "','" + customer.Phone + "','" + customer.Email + "','Y',0)";
                     cmd.Connection = con;
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();

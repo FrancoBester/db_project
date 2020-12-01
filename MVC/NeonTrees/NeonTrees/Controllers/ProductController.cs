@@ -67,6 +67,5 @@ namespace NeonTrees.Controllers
             productService.DeleteProduct(product);
             return RedirectToAction(nameof(Index));
         }
-
     }
 }

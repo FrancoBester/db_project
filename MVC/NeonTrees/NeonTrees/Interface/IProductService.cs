@@ -15,5 +15,7 @@ namespace NeonTrees.Interface
         void EditProduct(Product product);
         void DeleteProduct(Product product);
         public IEnumerable<Product> FilterProduct(string product_category);
+        public IEnumerable<Product> GetBuildComponents(string build_comp);
+        public string GetProductPrice(int id);
     }
 }

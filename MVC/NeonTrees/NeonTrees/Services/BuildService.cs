@@ -169,6 +169,26 @@ namespace NeonTrees.Services
             }
         }
 
+        public void DeleteBuildId(int id)
+        {
+            try
+            {
+                using (OracleConnection con = new OracleConnection(_connectionString))
+                {
+                    con.Open();
+                    OracleCommand cmd = new OracleCommand();
+                    cmd.CommandText = "Delete From Build Where CustomerID =" + id + "";
+                    cmd.Connection = con;
+                    cmd.CommandType = CommandType.Text;
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                string error = ex.ToString();
+            }
+        }
+
         private string ConvertDate(DateTime model_date)
         {
             string returnValue = model_date.Day.ToString() + "/";
@@ -271,36 +291,6 @@ namespace NeonTrees.Services
             }
             return maxTotal;
         }
-
-
-        //public List<int> GetCpuData()
-        //{
-        //    List<int> repeat_cpu = new List<int>();
-        //    try
-        //    {
-
-        //    }
-        //    catch(Exception ex)
-        //    {
-        //        string error = ex.ToString();
-        //    }
-        //}
-
-        //public List<int> GetAverageCustomerBuild()
-        //{
-        //    List<int> list_info = new List<int>();
-        //    try
-        //    {
-        //        using (OracleConnection con = new OracleConnection(_connectionString))
-        //        {
-
-        //        }
-        //    }
-        //    catch(Exception ex)
-        //    {
-
-        //    }
-        //}
 
         public List<int> GetBuildPerMonth()
         {

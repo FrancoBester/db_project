@@ -15,11 +15,13 @@ namespace NeonTrees.Controllers
     {
         ICustomerService customerService;
         ILoginService loginService;
+        IBuildService buildService;
 
-        public CustomerController(ICustomerService _customerService, ILoginService _loginService)
+        public CustomerController(ICustomerService _customerService, ILoginService _loginService, IBuildService _buildService)
         {
             customerService = _customerService;
             loginService = _loginService;
+            buildService = _buildService;
         }
 
         public IActionResult Index()
@@ -139,7 +141,7 @@ namespace NeonTrees.Controllers
             var id_user = HttpContext.Session.GetInt32("UserID");
             Customer _customer = customerService.GetCustomerById(int.Parse(id_user.ToString()));
             loginService.DeleteLogin(_customer.LoginID);
-
+            buildService.DeleteBuildId(int.Parse(id_user.ToString()));
             customerService.DeleteCustomer(_customer);
             HttpContext.Session.SetInt32("UserID", -1);
             return RedirectToAction("Create", "Customer");

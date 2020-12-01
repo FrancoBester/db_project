@@ -42,6 +42,9 @@
         @Html.DisplayFor(modelItem => item.OrderDetails)
     </td>
     <td>
+        <a class="btn btn-primary text-white" asp-action="View" asp-route-id="@item.ID">
+            @*<i class="fas fa-edit"></i>*@View
+        </a>
         <a class="btn btn-primary text-white" asp-action="Edit" asp-route-id="@item.ID">
             <i class="fas fa-edit"></i>
         </a>
